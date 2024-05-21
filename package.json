@@ -1,0 +1,89 @@
+{
+  "name": "@coqueirodigital/react-components",
+  "private": false,
+  "version": "1.0.0",
+  "type": "module",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "./styles.css": {
+    "require": "./dist/styles.css",
+    "default": "./dist/styles.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "restricted"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build:lib": "tsc && vite build && npm run build:css && npm run",
+    "build:css": "tailwindcss -m -i ./src/tailwind.css -o ./dist/styles.css",
+    "prepublishOnly": "npm run build:lib",
+    "tag": "npm version patch && git tag -a v$npm_package_version -m 'v$npm_package_version'",
+    "publish:lib": "npm publish",
+    "storybook": "start-storybook -p 6006",
+    "storybook:css": "tailwindcss -w -i ./src/tailwind.css -o ./src/tailwind.css",
+    "build:storybook": "storybook build",
+    "storybook:serve": "npx serve ./storybook-static",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint:fix": "npm run lint -- --fix",
+    "prepare": "husky install",
+    "preview": "vite preview",
+    "test": "vitest",
+    "test:deploy": "vitest --run",
+    "coverage": "vitest run --coverage"
+  },
+  "lint-staged": {
+    "src/**/*.+(ts|tsx)": [
+      "eslint --fix"
+    ],
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ],
+    "*.js": "eslint --cache --fix"
+  },
+  "peerDependencies": {
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwindcss": "^3.4.3"
+  },
+  "dependencies": {
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwindcss": "^3.4.3",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@storybook/react-vite": "^8.1.1",
+    "@testing-library/react": "^15.0.7",
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
+    "@vitejs/plugin-react-swc": "^3.5.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "husky": "^9.0.11",
+    "jsdom": "^24.0.0",
+    "rollup-plugin-preserve-directives": "^0.4.0",
+    "tailwind-merge": "^2.3.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0",
+    "vite-plugin-dts": "^3.9.1",
+    "vite-tsconfig-paths": "^4.3.2",
+    "vitest": "^1.6.0"
+  }
+}
