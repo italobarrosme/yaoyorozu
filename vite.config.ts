@@ -4,11 +4,10 @@ import tsConfigPaths from "vite-tsconfig-paths";
 import { resolve } from 'path'
 import dts from 'vite-plugin-dts'
 import {default as preserveDirectives} from 'rollup-plugin-preserve-directives'
-import { libInjectCss } from 'vite-plugin-lib-inject-css'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), tsConfigPaths(), dts(), libInjectCss()],
+  plugins: [react(), tsConfigPaths(), dts()],
   test: {
     globals: true,
     environment: 'jsdom',
@@ -33,7 +32,7 @@ export default defineConfig({
           react: 'React',
           'react-dom': 'ReactDOM',
         },
-        // preserveModules: true,
+        preserveModules: true,
       },
       plugins: [
         preserveDirectives()
