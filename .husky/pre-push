@@ -8,7 +8,7 @@ fi
 echo "🧪  Tests passed. Pushing to the repository."
 
 echo "📦  Starting a build check"
-npm run build
+npm run build:lib
 if [ $? -ne 0 ]; then
   echo "📦⚠️  The construction has failed. No push is possible."
   exit 1
