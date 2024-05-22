@@ -1,12 +1,11 @@
 {
   "compilerOptions": {
     "composite": true,
-    "skipLibCheck": true,
     "module": "ESNext",
-    "moduleResolution": "bundler",
+    "moduleResolution": "Node",
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
-    "types": ["node", "jest", "@testing-library/jest-dom"],
+    "types": ["node", "jest"],
   },
-  "include": ["vite.config.ts", "package.json"]
+  "include": ["vite.config.ts","package.json"]
 }
