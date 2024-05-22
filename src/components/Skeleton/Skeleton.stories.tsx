@@ -13,13 +13,11 @@ const SkeletonMeta: Meta<typeof Skeleton> = {
       defaultValue: 1.6,
     },
     className: {
-      control: 'inactive',
       description: `CSS classes are essential for achieving a satisfactory visual result, with particular importance placed on the width and height styles.
         Additionally, other classes can be utilized to further customize the appearance.
         Tailwind classes are fully supported in this context.`,
     },
     children: {
-      control: 'inactive',
       description: `The content of the Skeleton component. It can be another Skeleton or any other component. Ideal for make complex skeletons.`,
     },
   },

@@ -7,7 +7,6 @@
     "allowJs": false,
     "skipLibCheck": true,
     "esModuleInterop": false,
-    "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "module": "ESNext",
@@ -15,10 +14,12 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "declaration": true,
+    "allowSyntheticDefaultImports": true,
     "noEmit": true,
+    "outDir": "./dist",
     "types": ["node", "jest", "@testing-library/jest-dom"],
   },
-  "include": ["src", "index.ts"],
+  "include": ["index.ts", "src"],
   "exclude": ["**/*.spec.ts", "**/*.spec.tsx", "**/*.stories.tsx", "**/*.stories.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
