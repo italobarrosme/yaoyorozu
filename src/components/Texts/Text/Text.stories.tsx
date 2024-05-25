@@ -47,7 +47,7 @@ export const SizeWeightCombinations = [
 ]
 
 const TextMeta: Meta<typeof Text> = {
-  title: 'Components/Text',
+  title: 'Components/Texts/Text',
   component: Text,
   tags: ['autodocs'],
   argTypes: {

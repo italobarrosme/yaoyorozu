@@ -8,5 +8,5 @@
     "types": ["node", "jest"],
   },
   "exclude": ["**/*.spec.ts", "**/*.spec.tsx", "**/*.stories.tsx", "**/*.stories.ts"],
-  "include": ["vite.config.ts","package.json"]
+  "include": ["vite.config.mts","package.json"]
 }

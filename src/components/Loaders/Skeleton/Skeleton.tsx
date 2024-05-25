@@ -1,5 +1,5 @@
-import { Component } from '../../types/component'
-import { cn } from '../../utils/cn'
+import { Component } from '../../../types/component'
+import { cn } from '../../../utils/cn'
 
 export type SkeletonProps = {
   animationDuration?: number

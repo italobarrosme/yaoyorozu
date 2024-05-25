@@ -23,7 +23,7 @@ export default defineConfig({
           react: 'React',
           'react-dom': 'ReactDOM',
         },
-        preserveModules: true,
+        preserveModules: false,
       },
       plugins: [
         preserveDirectives()

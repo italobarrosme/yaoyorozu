@@ -1,9 +1,8 @@
-import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
 import { Skeleton } from '.'
 
 const SkeletonMeta: Meta<typeof Skeleton> = {
-  title: 'Components/Load/Skeleton',
+  title: 'Components/Loaders/Skeleton',
   component: Skeleton,
   tags: ['autodocs'],
   argTypes: {
