@@ -17,37 +17,33 @@ export default {
       },
       colors: {
         primary: {
-          regular: '#008542',
-          light: '#DFF5EC',
-          medium: '#36AA6F',
-          dark: '#005A2D',
+          regular: '#fda000',
+          light: '#FFD7A0',
+          medium: '#FFB000',
+          dark: '#FFA000',
         },
         secondary: {
-          regular: '#FFC52B',
-          light: '#FFF8E5',
+          regular: '#121e1e',
+          light: '#1d2b2b',
         },
         neutral: {
           black: '#000000',
-          dark: 'rgba(0,0,0,0.5)', // black with 50% opacity
-          light: 'rgba(0,0,0,0.1)', // black with 10% opacity
-          lightest: 'rgba(0,0,0,0.04)', // black with 4% opacity
-          ghost: 'rgba(255,255,255,0.3)', // white with 30% opacity
-          white: '#ffffff',
+          dark: '#00000080', // black with 50% opacity
+          light: '#0000001a', // black with 10% opacity
+          lightest: '#0000000a', // black with 4% opacity
+          ghost: '#ffffff4d', // white with 30% opacity
+          white: '#f9f9f9',
         },
         feedback: {
           error: '#C22020',
           'error-light': '#FBE9E9',
         },
         complementary: {
-          darkGreen: '#004415',
-          highlight: '#a8b400',
+          highlight: '#fd6600',
         },
         interactive: {
           'gray-light': '#F2F2F2',
         },
-      },
-      spacing: {
-        'vb-1': '0.25rem', // 4px
       },
       keyframes: {
         wave: {
