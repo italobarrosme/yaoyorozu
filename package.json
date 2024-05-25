@@ -22,7 +22,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build:lib": "tsc && vite build && npm run build:css",
+    "build:lib": "tsc -p tsconfig.lib.json && vite build && npm run build:css",
     "build:css": "tailwindcss -m -i ./src/tailwind.css -o ./dist/styles.css",
     "prepublishOnly": "npm run build:lib",
     "tag": "npm version patch && git tag -a v$npm_package_version -m 'v$npm_package_version'",

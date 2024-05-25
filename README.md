@@ -1,8 +1,9 @@
-# coqueirodigital react components
+# Coqueirodigital react components
 
+A Coqueiro Digital está disponibilizando esta biblioteca de componentes frontend, que oferece uma base sólida e consistente para projetos futuros. Com componentes reutilizáveis e padronizados, garantimos a uniformidade visual e funcional em todos os projetos, promovendo eficiência e coesão na equipe de desenvolvimento. Além disso, realizamos manutenção mensal para garantir que a biblioteca esteja sempre atualizada e pronta para uso.
 
+![NPM Version](https://img.shields.io/npm/v/%40coqueirodigital%2Freact-components?style=for-the-badge)
 
-[![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-blue.svg)]()
 
 ## Instalação
 

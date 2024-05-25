@@ -5,8 +5,8 @@
     "moduleResolution": "Node",
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
+    "jsx": "react-jsx",
     "types": ["node", "jest"],
   },
-  "exclude": ["**/*.spec.ts", "**/*.spec.tsx", "**/*.stories.tsx", "**/*.stories.ts"],
-  "include": ["vite.config.mts","package.json"]
+  "include": ["vite.config.mts","package.json", "src/**/*.ts", "src/**/*.tsx", "src/**/*.d.ts", "src/**/*.json"],
 }

@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+  },
+  "exclude": ["src/App.tsx", "src/main.tsx", "src/test/", "**/*.test.ts", "**/*.spec.ts", "**/*.test.tsx", "**/*.spec.tsx", "**/*.stories.ts", "**/*.stories.tsx", "**/*.stories.d.ts"],
+  "include": ["src", "index.ts"],
+  "extends": "./tsconfig.json"
+}

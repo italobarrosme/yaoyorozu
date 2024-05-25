@@ -1,6 +1,6 @@
-import { Component } from '@/types/component'
+import { Component } from '../../../types/component'
 import { cva, VariantProps } from 'class-variance-authority'
-import { cn } from '@/utils/cn'
+import { cn } from './../../../utils/cn'
 import { ElementType, HTMLProps } from 'react'
 
 const textStyles = cva([], {

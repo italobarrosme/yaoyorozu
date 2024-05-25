@@ -1,7 +1,7 @@
-import '@testing-library/jest-dom'
 import { render, screen } from '@testing-library/react'
 import { Skeleton } from '.'
 import { expect } from 'vitest'
+import './../../../test/setup'
 
 const mockChildren = () => {
   return <div>Child Element</div>
