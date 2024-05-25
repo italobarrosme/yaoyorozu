@@ -31,4 +31,28 @@ describe('<Skeleton/>', () => {
 
     expect(childContent).toBeInTheDocument()
   })
+
+  it('should render circle skeleton', () => {
+    render(<Skeleton size="circle" />)
+
+    const loader = screen.getByTestId(/skeleton/i)
+
+    expect(loader).toHaveClass('rounded-full h-10 w-10')
+  })
+
+  it('should render line skeleton', () => {
+    render(<Skeleton size="line" />)
+
+    const loader = screen.getByTestId(/skeleton/i)
+
+    expect(loader).toHaveClass('h-10 w-full')
+  })
+
+  it('should render extendLine skeleton', () => {
+    render(<Skeleton size="extendLine" />)
+
+    const loader = screen.getByTestId(/skeleton/i)
+
+    expect(loader).toHaveClass('h-40 w-full')
+  })
 })

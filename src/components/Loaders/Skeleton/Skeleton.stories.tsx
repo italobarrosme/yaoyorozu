@@ -11,6 +11,14 @@ const SkeletonMeta: Meta<typeof Skeleton> = {
       description: `Specifies the duration of the animation for the skeleton loading effect. The default value is 1.6 seconds.`,
       defaultValue: 1.6,
     },
+    size: {
+      control: {
+        type: 'select',
+        options: ['circle', 'line', 'extendLine'],
+      },
+      description: `Specifies the size of the Skeleton component. The default value is 'line'.`,
+      defaultValue: 'line',
+    },
     className: {
       description: `CSS classes are essential for achieving a satisfactory visual result, with particular importance placed on the width and height styles.
         Additionally, other classes can be utilized to further customize the appearance.
@@ -22,7 +30,6 @@ const SkeletonMeta: Meta<typeof Skeleton> = {
   },
   args: {
     animationDuration: 1.6,
-    className: 'w-40 h-40',
   },
   parameters: {
     backgrounds: { default: 'dark' },
@@ -50,7 +57,7 @@ type SkeletonStory = StoryObj<typeof Skeleton>
 
 export const Default: SkeletonStory = {
   args: {
-    className: 'w-40 h-40',
+    size: 'line',
   },
 }
 
@@ -60,16 +67,16 @@ export const Default: SkeletonStory = {
 
 export const Nested: SkeletonStory = {
   args: {
-    className: 'w-full h-44',
+    className: 'w-full h-full',
     animationDuration: 2,
     children: (
       <div className="flex flex-col gap-4 px-6 py-2">
         <div className="flex gap-4">
-          <Skeleton className="h-10 w-10 rounded-full" animationDuration={1} />
-          <Skeleton className="h-10 w-full" animationDuration={1.2} />
+          <Skeleton size="circle" animationDuration={1} />
+          <Skeleton size="line" animationDuration={1.2} />
         </div>
-        <Skeleton className="h-10 w-full" animationDuration={1.3} />
-        <Skeleton className="h-10 w-full" animationDuration={1.4} />
+        <Skeleton size="extendLine" animationDuration={1.3} />
+        <Skeleton size="line" animationDuration={1.4} />
       </div>
     ),
   },

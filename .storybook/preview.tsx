@@ -1,4 +1,4 @@
-import '@/tailwind.css'
+import '../src/tailwind.css'
 import React from 'react';
 import { Preview } from '@storybook/react'
 

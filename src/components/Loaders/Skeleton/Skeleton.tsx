@@ -1,19 +1,38 @@
+import { cva, VariantProps } from 'class-variance-authority'
 import { Component } from '../../../types/component'
 import { cn } from '../../../utils/cn'
 
+const skeletonStyles = cva([], {
+  variants: {
+    size: {
+      circle: 'rounded-full h-10 w-10',
+      line: 'h-10 w-full',
+      extendLine: 'h-40 w-full',
+    },
+  },
+  defaultVariants: {
+    size: 'line',
+  },
+})
+
+type SkeletonStylesProps = VariantProps<typeof skeletonStyles>
+
 export type SkeletonProps = {
   animationDuration?: number
-}
+} & SkeletonStylesProps
 
 export const Skeleton: Component<SkeletonProps> = ({
   animationDuration = 1.6,
+  size,
   className,
   children,
 }) => {
   return (
     <div
+      data-testid="skeleton"
       className={cn(
-        'relative overflow-hidden bg-[#f6f7f8] align-middle opacity-60',
+        'relative overflow-hidden bg-[#f9f9f9] align-middle opacity-60',
+        skeletonStyles({ size }),
         className
       )}
     >

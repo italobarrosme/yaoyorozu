@@ -5,8 +5,7 @@ const config = {
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
-    "@storybook/addon-styling",
-    "@chromatic-com/storybook"
+    "@storybook/addon-styling"
   ],
 
   framework: {
