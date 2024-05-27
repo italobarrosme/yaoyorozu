@@ -1,5 +1,7 @@
 import { useRef } from 'react'
 import { InputImage, InputImageProps } from '..'
+import { Tooltip } from '../../../Texts/Tooltip'
+import { Text } from '../../../Texts/Text'
 
 export const CodeDecorator = () => {
   const codeRef = useRef<HTMLPreElement>(null)
@@ -14,12 +16,13 @@ export const CodeDecorator = () => {
   }
 
   return (
-    <div style={{ position: 'relative', marginBottom: '20px' }}>
-      <button
-        onClick={handleCopy}
-        className="absolute top-2 right-10 text-primary-dark"
-      >
-        Copy
+    <div className="relative">
+      <button onClick={handleCopy} className="absolute top-2 right-10 ">
+        <Tooltip trigger="click" content="Copy code" side="top">
+          <Text variant="sm/semibold" className="text-primary-dark">
+            Copy
+          </Text>
+        </Tooltip>
       </button>
       <pre
         ref={codeRef}

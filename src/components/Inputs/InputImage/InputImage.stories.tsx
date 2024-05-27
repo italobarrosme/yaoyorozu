@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { InputImage } from '.'
-import { CodeDecorator, DefaultComponent } from './Default/CodeDecorator'
+import { CodeDecorator, DefaultComponent } from './Default'
 
 const InputImageMeta: Meta<typeof InputImage> = {
   title: 'Components/Inputs/InputImage',

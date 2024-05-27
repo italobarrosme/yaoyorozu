@@ -7,6 +7,7 @@ import {
   useEffect,
   useState,
   useImperativeHandle,
+  useCallback,
 } from 'react'
 import { useDropzone } from 'react-dropzone'
 import { Text } from '../../Texts/Text'
@@ -68,9 +69,9 @@ const InputImage = forwardRef<InputImageRef, InputImageProps>(
       }
     }, [files, onUpload])
 
-    const clearFiles = () => {
+    const clearFiles = useCallback(() => {
       setFiles([])
-    }
+    }, [])
 
     useImperativeHandle(ref, () => ({
       clearFiles: clearFiles,
