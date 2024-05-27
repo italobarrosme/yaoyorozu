@@ -8,5 +8,5 @@
     "jsx": "react-jsx",
     "types": ["node", "jest"],
   },
-  "include": ["vite.config.ts","package.json", "src/**/*.ts", "src/**/*.tsx", "src/**/*.d.ts", "src/**/*.json"],
+  "include": ["vite.config.ts","package.json", "src/**/*.ts", "src/**/*.tsx", "src/**/*.d.ts", "src/**/*.json", "addUseClientDirective.ts"],
 }
