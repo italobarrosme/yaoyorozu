@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { Tooltip } from '.'
-import { CodeDecorator, DefaultComponent } from './Default'
+import { CodeDecorator, DefaultComponent } from './Decorators'
 
 const TooltipMeta: Meta<typeof Tooltip> = {
   title: 'Components/Texts/Tooltip',
