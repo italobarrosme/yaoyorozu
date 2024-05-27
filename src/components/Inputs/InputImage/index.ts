@@ -1,1 +1,1 @@
-export { InputImage, type InputImageProps } from './InputImage'
+export { InputImage, type InputImageProps, InputImageRef } from './InputImage'
