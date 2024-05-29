@@ -1,8 +1,9 @@
 import { useRef } from 'react'
-import { Tooltip } from '../../Tooltip'
-import { Text, TextProps } from '..'
+import { Tooltip } from '../../../Texts/Tooltip/'
+import { Text } from '../../../Texts/Text'
+import { Skeleton, SkeletonProps } from '../Skeleton'
 
-export const CodeDecorator = () => {
+export const CodeDecoratorDefault = () => {
   const codeRef = useRef<HTMLPreElement>(null)
 
   const handleCopy = () => {
@@ -25,11 +26,9 @@ export const CodeDecorator = () => {
       </button>
       <pre ref={codeRef} className="font-thin text-neutral-white text-xs py-16">
         {`
-          import { Text, TextProps } from '@coqueirodigital/react-components'
+          import { Skeleton, SkeletonProps } from '@coqueirodigital/react-components'
 
-          <Text variant="md/normal" className="text-secondary-regular">
-            Hello, world!
-          </Text>
+          <Skeleton animationDuration="1.6" size="line" />
         `}
       </pre>
     </div>
@@ -37,13 +36,11 @@ export const CodeDecorator = () => {
 }
 
 export const DefaultComponent = ({
-  children,
-  variant = 'md/normal',
-  className,
-}: TextProps) => {
+  animationDuration,
+  size,
+  ...props
+}: SkeletonProps) => {
   return (
-    <Text variant={variant} className={className}>
-      {children}
-    </Text>
+    <Skeleton animationDuration={animationDuration} size={size} {...props} />
   )
 }

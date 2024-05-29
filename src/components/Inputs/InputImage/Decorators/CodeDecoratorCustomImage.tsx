@@ -64,6 +64,7 @@ export const CodeDecoratorCustomImage = () => {
 export const CustomImageComponent = ({
   accept,
   textIndicator,
+  sizePreview,
   onUpload,
 }: InputImageProps) => {
   const inputImageRef = useRef<InputImageRef>(null)
@@ -82,8 +83,9 @@ export const CustomImageComponent = ({
           accept={accept}
           textIndicator={textIndicator}
           onUpload={onUpload}
-          children={({ src, alt, height, width }) => (
-            <img src={src} alt={alt} height={height} width={width} />
+          sizePreview={sizePreview}
+          children={({ src, alt, className }) => (
+            <img src={src} alt={alt} className={className} />
           )}
         />
         <button

@@ -11,6 +11,23 @@ import {
 } from 'react'
 import { useDropzone } from 'react-dropzone'
 import { Text } from '../../Texts/Text'
+import { cva, VariantProps } from 'class-variance-authority'
+import { cn } from '../../../utils/cn'
+
+const inputImageStyles = cva([], {
+  variants: {
+    size: {
+      sm: 'w-20 h-20',
+      md: 'w-24 h-24',
+      lg: 'w-32 h-32',
+    },
+  },
+  defaultVariants: {
+    size: 'md',
+  },
+})
+
+type InputImageStylesProps = VariantProps<typeof inputImageStyles>
 
 type FormatTypes = ['jpg', 'jpeg', 'png', 'gif', 'bmp', 'webp']
 
@@ -30,11 +47,11 @@ export type InputImageProps = {
   onUpload: (files: FileImageProps[]) => void
   accept: AcceptFormat
   textIndicator?: string
+  sizePreview?: InputImageStylesProps['size']
   children?: (props: {
     src: string
     alt: string
-    width: number
-    height: number
+    className: string
   }) => ReactNode
 }
 
@@ -45,6 +62,7 @@ const InputImage = forwardRef<InputImageRef, InputImageProps>(
       accept,
       textIndicator = `Drag n drop some files here, or click to select files`,
       children,
+      sizePreview = 'md',
     },
     ref
   ) => {
@@ -99,14 +117,18 @@ const InputImage = forwardRef<InputImageRef, InputImageProps>(
                     children({
                       src: file.preview,
                       alt: file.name,
-                      width: 220,
-                      height: 220,
+                      className: `${inputImageStyles({
+                        size: sizePreview,
+                      })} object-cover rounded-md`,
                     })
                   ) : (
                     <img
                       src={file.preview}
                       alt={file.name}
-                      className="w-20 h-20 object-cover rounded-md"
+                      className={cn(
+                        inputImageStyles({ size: sizePreview }),
+                        'object-cover rounded-md'
+                      )}
                     />
                   )}
                   <span className="text-xs">{file.name}</span>

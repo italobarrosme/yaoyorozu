@@ -2,7 +2,7 @@ import { useRef } from 'react'
 import { Tooltip, TooltipProps } from '..'
 import { Text } from '../../Text'
 
-export const CodeDecorator = () => {
+export const CodeDecoratorDefault = () => {
   const codeRef = useRef<HTMLPreElement>(null)
 
   const handleCopy = () => {
@@ -27,17 +27,9 @@ export const CodeDecorator = () => {
         {`
           import { Tooltip, TooltipProps } from '@coqueirodigital/react-components'
 
-          export const DefaultComponent = ({ 
-            children, 
-            content, 
-            side = 'top', 
-            ...props }: TooltipProps) => {
-            return (
-              <Tooltip content={content} side={side} {...props}>
-                {children}
-              </Tooltip>
-            )
-          }
+          <Tooltip content="Hover me" side="top" >
+            Hello world
+          </Tooltip>
         `}
       </pre>
     </div>

@@ -30,6 +30,11 @@ const InputImageMeta: Meta<typeof InputImage> = {
       action: 'onUpload',
       description: 'The function to be called when the files are uploaded.',
     },
+    sizePreview: {
+      control: 'select',
+      options: ['sm', 'md', 'lg'],
+      description: 'The size of the prepreview image.',
+    },
     children: {
       description: 'Choose to render a custom component for the image preview.',
     },
@@ -78,11 +83,12 @@ export const Default: InputImageStory = {
     textIndicator: 'Drag n drop some files here, or click to select files',
     onUpload: (files) => console.log(files),
   },
-  render: ({ accept, textIndicator, onUpload }) => {
+  render: ({ accept, textIndicator, onUpload, sizePreview }) => {
     return (
       <DefaultComponent
         accept={accept}
         textIndicator={textIndicator}
+        sizePreview={sizePreview}
         onUpload={onUpload}
       />
     )
@@ -112,10 +118,11 @@ export const CustomImage: InputImageStory = {
     textIndicator: 'Drag n drop some files here, or click to select files',
     onUpload: (files) => console.log(files),
   },
-  render: ({ accept, textIndicator, onUpload }) => {
+  render: ({ accept, textIndicator, onUpload, sizePreview }) => {
     return (
       <CustomImageComponent
         accept={accept}
+        sizePreview={sizePreview}
         textIndicator={textIndicator}
         onUpload={onUpload}
       />

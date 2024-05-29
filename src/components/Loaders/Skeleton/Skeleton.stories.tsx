@@ -1,5 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { Skeleton } from '.'
+import { Text } from '../../Texts/Text'
+import {
+  CodeDecoratorDefault,
+  DefaultComponent,
+  CodeDecoratorNested,
+  NestedComponent,
+} from './Decorators'
 
 const SkeletonMeta: Meta<typeof Skeleton> = {
   title: 'Components/Loaders/Skeleton',
@@ -32,11 +39,10 @@ const SkeletonMeta: Meta<typeof Skeleton> = {
     animationDuration: 1.6,
   },
   parameters: {
-    backgrounds: { default: 'dark' },
     controls: { expanded: true },
     docs: {
       story: { inline: true },
-      canvas: { sourceState: 'shown' },
+      canvas: { sourceState: 'none' },
       description: {
         component: `The Skeleton component can be used to display a skeleton loading effect while content is being loaded or fetched asynchronously.
         It provides a visually appealing placeholder that mimics the expected layout and structure of the content.
@@ -56,28 +62,64 @@ type SkeletonStory = StoryObj<typeof Skeleton>
  */
 
 export const Default: SkeletonStory = {
+  decorators: [
+    (Story) => (
+      <div className="flex flex-col gap-4 w-full">
+        <Text variant="xs/semibold">
+          copy the code below to use the component in your project. You can also
+        </Text>
+        <CodeDecoratorDefault />
+        <hr />
+        <Text variant="xl/bold" tag="h3">
+          Playground
+        </Text>
+        <Story />
+      </div>
+    ),
+  ],
   args: {
     size: 'line',
+    animationDuration: 1.6,
+  },
+  render: ({ animationDuration, size, ...props }) => {
+    return (
+      <DefaultComponent
+        animationDuration={animationDuration}
+        size={size}
+        {...props}
+      />
+    )
   },
 }
 
-/**
- * Nested Skeleton components. Ideal for make complex skeletons.
- */
-
 export const Nested: SkeletonStory = {
+  decorators: [
+    (Story) => (
+      <div className="flex flex-col gap-4 w-full">
+        <Text variant="xs/semibold">
+          copy the code below to use the component in your project. You can also
+        </Text>
+        <CodeDecoratorNested />
+        <hr />
+        <Text variant="xl/bold" tag="h3">
+          Playground
+        </Text>
+        <Story />
+      </div>
+    ),
+  ],
   args: {
     className: 'w-full h-full',
     animationDuration: 2,
-    children: (
-      <div className="flex flex-col gap-4 px-6 py-2">
-        <div className="flex gap-4">
-          <Skeleton size="circle" animationDuration={1} />
-          <Skeleton size="line" animationDuration={1.2} />
-        </div>
-        <Skeleton size="extendLine" animationDuration={1.3} />
-        <Skeleton size="line" animationDuration={1.4} />
-      </div>
-    ),
+    size: 'extendLine',
+  },
+  render: ({ animationDuration, size, ...props }) => {
+    return (
+      <NestedComponent
+        animationDuration={animationDuration}
+        size={size}
+        {...props}
+      />
+    )
   },
 }

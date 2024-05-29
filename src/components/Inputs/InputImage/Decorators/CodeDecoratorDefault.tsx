@@ -61,6 +61,7 @@ export const CodeDecoratorDefault = () => {
 export const DefaultComponent = ({
   accept,
   textIndicator,
+  sizePreview,
   onUpload,
 }: InputImageProps) => {
   const inputImageRef = useRef<InputImageRef>(null)
@@ -77,6 +78,7 @@ export const DefaultComponent = ({
         <InputImage
           ref={inputImageRef}
           accept={accept}
+          sizePreview={sizePreview}
           textIndicator={textIndicator}
           onUpload={onUpload}
         />

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { Text } from '.'
-import { CodeDecorator } from './Decorators'
+import { CodeDecoratorDefault, DefaultComponent } from './Decorators'
 
 const SizeWeightCombinations = [
   'xs/light',
@@ -117,7 +117,7 @@ export const Default: TextStory = {
         <Text variant="xs/semibold">
           copy the code below to use the component in your project. You can also
         </Text>
-        <CodeDecorator />
+        <CodeDecoratorDefault />
         <hr />
         <Text variant="xl/bold" tag="h3">
           Playground
@@ -131,8 +131,8 @@ export const Default: TextStory = {
     children: 'Hello, World!',
   },
   render: ({ children, variant, tag, className }) => (
-    <Text variant={variant} tag={tag} className={className}>
+    <DefaultComponent variant={variant} tag={tag} className={className}>
       {children}
-    </Text>
+    </DefaultComponent>
   ),
 }

@@ -1,6 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { Tooltip } from '.'
-import { CodeDecorator, DefaultComponent } from './Decorators'
+import {
+  CodeDecoratorDefault,
+  DefaultComponent,
+  CodeDecoratorClick,
+  ClickComponent,
+} from './Decorators'
+import { Text } from '../Text'
 
 const TooltipMeta: Meta<typeof Tooltip> = {
   title: 'Components/Texts/Tooltip',
@@ -56,23 +62,66 @@ type TooltipStory = StoryObj<typeof Tooltip>
 export const Default: TooltipStory = {
   decorators: [
     (Story) => (
-      <div className="flex flex-col gap-12 items-center">
-        <CodeDecorator />
+      <div className="flex flex-col gap-4 w-full">
+        <Text variant="xs/semibold">
+          copy the code below to use the component in your project. You can also
+        </Text>
+        <CodeDecoratorDefault />
+        <hr />
+        <Text variant="xl/bold" tag="h3">
+          Playground
+        </Text>
         <Story />
       </div>
     ),
   ],
   args: {
     children: (
-      <button className="bg-primary-medium p-4 rounded-lg">Hover me</button>
+      <button className="bg-primary-medium p-2 rounded-lg">Hover me</button>
     ),
-    content: 'Tooltip',
+    content: 'Hover me',
     side: 'top',
     trigger: 'hover',
   },
   render: ({ children, content, side, trigger }) => {
     return (
       <DefaultComponent
+        children={children}
+        content={content}
+        side={side}
+        trigger={trigger}
+      />
+    )
+  },
+}
+
+export const ClickTooltip: TooltipStory = {
+  decorators: [
+    (Story) => (
+      <div className="flex flex-col gap-4 w-full">
+        <Text variant="xs/semibold">
+          copy the code below to use the component in your project. You can also
+        </Text>
+        <CodeDecoratorClick />
+        <hr />
+        <Text variant="xl/bold" tag="h3">
+          Playground
+        </Text>
+        <Story />
+      </div>
+    ),
+  ],
+  args: {
+    children: (
+      <button className="bg-primary-medium p-2 rounded-lg">Click me</button>
+    ),
+    content: 'Click me',
+    side: 'top',
+    trigger: 'click',
+  },
+  render: ({ children, content, side, trigger }) => {
+    return (
+      <ClickComponent
         children={children}
         content={content}
         side={side}
