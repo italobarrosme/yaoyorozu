@@ -50,8 +50,8 @@ export const CodeDecoratorCustomImage = () => {
               acceptOptions={['image/jpeg']}
               textIndicator='Drag n drop some files here, or click to select files'
               onUpload={onUpload}
-              children={({src, alt, height, width}) => (
-                <img src={src} alt={alt} height={height} width={width}  />
+              children={({src, alt, className }) => (
+                <img src={src} alt={alt} className={className}  />
               )}
             />
               <button

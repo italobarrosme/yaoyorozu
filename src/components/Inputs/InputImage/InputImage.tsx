@@ -44,9 +44,11 @@ export type FileImageProps = File & {
   preview: string
 }
 
+export type AcceptOptions = FormatTypes[]
+
 export type InputImageProps = {
   onUpload: (files: FileImageProps[]) => void
-  acceptOptions?: FormatTypes[]
+  acceptOptions?: AcceptOptions
   textIndicator?: string
   sizePreview?: InputImageStylesProps['size']
   children?: (props: {
