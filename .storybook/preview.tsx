@@ -10,7 +10,7 @@ const preview: Preview = {
         <Story />
       </div>
     )
-  ]
+  ],
 }
 
 export default preview

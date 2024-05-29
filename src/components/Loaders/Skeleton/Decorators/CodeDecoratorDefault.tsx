@@ -1,5 +1,5 @@
 import { useRef } from 'react'
-import { Tooltip } from '../../../Texts/Tooltip/'
+import { Tooltip } from '../../../Texts/Tooltip'
 import { Text } from '../../../Texts/Text'
 import { Skeleton, SkeletonProps } from '../Skeleton'
 

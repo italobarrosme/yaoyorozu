@@ -1,11 +1,18 @@
 const config = {
   stories: ["../src/**/*.@(mdx|stories.@(js|jsx|ts|tsx))"],
+  docs: {
+    theme: "@storybook/addon-docs",
+    source: {
+      type: "dynamic",
+    },
+  },
 
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
-    "@storybook/addon-styling"
+    "@storybook/addon-styling",
+    "@storybook/manager-api",
   ],
 
   framework: {
@@ -19,8 +26,6 @@ const config = {
       }
     },
   },
-
-  docs: {},
 
   typescript: {
     reactDocgen: "react-docgen-typescript"
