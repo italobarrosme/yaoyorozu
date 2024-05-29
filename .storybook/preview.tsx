@@ -5,7 +5,7 @@ import { Preview } from '@storybook/react'
 const preview: Preview = {
   decorators: [
     (Story) => (
-      <div className="m-4 flex items-center justify-center">
+      <div className="w-full">
         {/* 👇 Decorators in Storybook also accept a function. Replace <Story/> with Story() to enable it  */}
         <Story />
       </div>

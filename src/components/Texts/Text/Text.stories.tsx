@@ -1,7 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { Text } from '.'
+import { CodeDecorator } from './Decorators'
 
-export const SizeWeightCombinations = [
+const SizeWeightCombinations = [
   'xs/light',
   'xs/normal',
   'xs/medium',
@@ -91,10 +92,9 @@ const TextMeta: Meta<typeof Text> = {
     variant: 'md/normal',
   },
   parameters: {
-    controls: { expanded: true },
     docs: {
       story: { inline: true },
-      canvas: { sourceState: 'shown' },
+      canvas: { sourceState: 'none' },
       description: {
         component: `The Text component is used to display any text content. It can render plain text or any ReactNode.
         You can select the font size and weight using the \`variant\` prop.
@@ -110,34 +110,29 @@ export default TextMeta
 
 type TextStory = StoryObj<typeof Text>
 
-/**
- * A Regular use case of the Text component
- */
-export const Preview: TextStory = {
+export const Default: TextStory = {
+  decorators: [
+    (Story) => (
+      <div className="flex flex-col gap-4 w-full">
+        <Text variant="xs/semibold">
+          copy the code below to use the component in your project. You can also
+        </Text>
+        <CodeDecorator />
+        <hr />
+        <Text variant="xl/bold" tag="h3">
+          Playground
+        </Text>
+        <Story />
+      </div>
+    ),
+  ],
   args: {
     variant: 'md/normal',
-  },
-}
-
-/**
- * Use case of the Text component with a long text
- */
-export const PreviewWithLongText: TextStory = {
-  args: {
-    variant: 'md/normal',
-    children: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-    quos, quibusdam officiis, atque velit, doloremque nobis tenetur
-    quae totam dolorem ipsam. Iure, quisquam. Ipsa, cumque
-    consequuntur. Consequatur, atque. Quasi, nam`,
-  },
-}
-
-/**
- * Use case of the Text component with a different variant. In this case, the variant is `2xl/normal`
- */
-export const PreviewWithDifferentVariant: TextStory = {
-  args: {
-    variant: '2xl/normal',
     children: 'Hello, World!',
   },
+  render: ({ children, variant, tag, className }) => (
+    <Text variant={variant} tag={tag} className={className}>
+      {children}
+    </Text>
+  ),
 }

@@ -1,6 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { InputImage } from '.'
-import { CodeDecorator, DefaultComponent } from './Decorators'
+import {
+  CodeDecoratorCustomImage,
+  CustomImageComponent,
+  CodeDecoratorDefault,
+  DefaultComponent,
+} from './Decorators'
+import { Text } from '../../Texts/Text'
 
 const InputImageMeta: Meta<typeof InputImage> = {
   title: 'Components/Inputs/InputImage',
@@ -36,8 +42,9 @@ const InputImageMeta: Meta<typeof InputImage> = {
       story: { inline: true },
       canvas: { sourceState: 'none' },
       description: {
-        component: `The InputImage component is used to upload images. It accepts an \`onUpload\` function to handle the uploaded files.
-        by default, the \`<img>\` tag is rendered, but you can create an \`<Image>\` custom component by associating it with the function children and receiving all the image parameters
+        component: `The \`InputImage\` component is used to upload images. It accepts an \`onUpload\` function to handle the uploaded files.
+        by default, the \`<img>\` tag is rendered, but you can create an \`<Image>\` custom component by associating it with the function children and receiving all the image parameters,
+        the component has a function called \`clearFiles()\` that can be extracted via \`useRef\`.
         `,
       },
     },
@@ -48,16 +55,18 @@ export default InputImageMeta
 
 type InputImageStory = StoryObj<typeof InputImage>
 
-/**
- * Default use case of the InputImage component. The default accept format is 'image/**' with the format types ['jpg', 'jpeg', 'png', 'gif', 'bmp', 'webp'].
- * The default text indicator is 'Drag n drop some files here, or click to select files'.
- */
-
 export const Default: InputImageStory = {
   decorators: [
     (Story) => (
-      <div className="flex- flex-cols gap-12 ">
-        <CodeDecorator />
+      <div className="flex flex-col gap-4 w-full">
+        <Text variant="xs/semibold">
+          copy the code below to use the component in your project. You can also
+        </Text>
+        <CodeDecoratorDefault />
+        <hr />
+        <Text variant="xl/bold" tag="h3">
+          Playground
+        </Text>
         <Story />
       </div>
     ),
@@ -72,6 +81,40 @@ export const Default: InputImageStory = {
   render: ({ accept, textIndicator, onUpload }) => {
     return (
       <DefaultComponent
+        accept={accept}
+        textIndicator={textIndicator}
+        onUpload={onUpload}
+      />
+    )
+  },
+}
+
+export const CustomImage: InputImageStory = {
+  decorators: [
+    (Story) => (
+      <div className="flex flex-col gap-4 w-full">
+        <Text variant="xs/semibold">
+          copy the code below to use the component in your project. You can also
+        </Text>
+        <CodeDecoratorCustomImage />
+        <hr />
+        <Text variant="xl/bold" tag="h3">
+          Playground
+        </Text>
+        <Story />
+      </div>
+    ),
+  ],
+  args: {
+    accept: {
+      'image/**': ['jpg', 'jpeg', 'png', 'gif', 'bmp', 'webp'],
+    },
+    textIndicator: 'Drag n drop some files here, or click to select files',
+    onUpload: (files) => console.log(files),
+  },
+  render: ({ accept, textIndicator, onUpload }) => {
+    return (
+      <CustomImageComponent
         accept={accept}
         textIndicator={textIndicator}
         onUpload={onUpload}

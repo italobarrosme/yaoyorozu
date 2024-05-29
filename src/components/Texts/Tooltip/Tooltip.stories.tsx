@@ -53,10 +53,6 @@ export default TooltipMeta
 
 type TooltipStory = StoryObj<typeof Tooltip>
 
-/**
- * Default use case of the Tooltip component. The default side is 'top'.
- */
-
 export const Default: TooltipStory = {
   decorators: [
     (Story) => (

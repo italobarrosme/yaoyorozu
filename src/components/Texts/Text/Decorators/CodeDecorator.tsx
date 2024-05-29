@@ -1,6 +1,6 @@
 import { useRef } from 'react'
-import { Tooltip, TooltipProps } from '..'
-import { Text } from '../../Text'
+import { Tooltip } from '../../Tooltip'
+import { Text, TextProps } from '..'
 
 export const CodeDecorator = () => {
   const codeRef = useRef<HTMLPreElement>(null)
@@ -25,19 +25,11 @@ export const CodeDecorator = () => {
       </button>
       <pre ref={codeRef} className="font-thin text-neutral-white text-xs py-16">
         {`
-          import { Tooltip, TooltipProps } from '@coqueirodigital/react-components'
+          import { Text, TextProps } from '@coqueirodigital/react-components'
 
-          export const DefaultComponent = ({ 
-            children, 
-            content, 
-            side = 'top', 
-            ...props }: TooltipProps) => {
-            return (
-              <Tooltip content={content} side={side} {...props}>
-                {children}
-              </Tooltip>
-            )
-          }
+          <Text variant="md/normal" className="text-secondary-regular">
+            Hello, world!
+          </Text>
         `}
       </pre>
     </div>
@@ -46,14 +38,12 @@ export const CodeDecorator = () => {
 
 export const DefaultComponent = ({
   children,
-  content,
-  side,
-  trigger,
-  ...props
-}: TooltipProps) => {
+  variant = 'md/normal',
+  className,
+}: TextProps) => {
   return (
-    <Tooltip content={content} side={side} trigger={trigger} {...props}>
+    <Text variant={variant} className={className}>
       {children}
-    </Tooltip>
+    </Text>
   )
 }

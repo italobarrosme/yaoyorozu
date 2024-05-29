@@ -3,7 +3,7 @@ import { InputImage, InputImageProps, InputImageRef } from '..'
 import { Tooltip } from '../../../Texts/Tooltip'
 import { Text } from '../../../Texts/Text'
 
-export const CodeDecorator = () => {
+export const CodeDecoratorCustomImage = () => {
   const codeRef = useRef<HTMLPreElement>(null)
 
   const handleCopy = () => {
@@ -17,7 +17,7 @@ export const CodeDecorator = () => {
 
   return (
     <div className="relative">
-      <button onClick={handleCopy} className="absolute top-2 right-10 ">
+      <button onClick={handleCopy} className="absolute top-4 right-10 ">
         <Tooltip trigger="click" content="Copy code" side="top">
           <Text variant="sm/semibold" className="text-primary-dark">
             Copy
@@ -26,14 +26,12 @@ export const CodeDecorator = () => {
       </button>
       <pre
         ref={codeRef}
-        className="bg-secondary-regular font-thin text-primary-dark text-xs p-4"
+        className="bg-secondary-regular font-thin text-neutral-white text-xs py-16"
       >
         {`
-          export const DefaultComponent = ({
-            accept,
-            textIndicator,
-            onUpload,
-          }: InputImageProps) => {
+          import { InputImage, InputImageProps, InputImageRef } from '@coqueirodigital/react-components'
+
+          
             const inputImageRef = useRef<InputImageRef>(null)
           
             const handleClearFiles = () => {
@@ -42,24 +40,20 @@ export const CodeDecorator = () => {
               }
             }
           
-            return (
-              <>
-                <div className="flex flex-col gap-4 items-center p-4">
-                  <InputImage
-                    ref={inputImageRef}
-                    accept={accept}
-                    textIndicator={textIndicator}
-                    onUpload={onUpload}
-                  />
-                  <button
-                    className="bg-primary-medium max-w-32 p-4 rounded-lg"
-                    onClick={handleClearFiles}
-                  >
-                    Clear files
-                  </button>
-                </div>
-              </>
-            )
+            <InputImage
+              ref={inputImageRef}
+              accept={accept}
+              textIndicator={textIndicator}
+              onUpload={onUpload}
+              children={({src, alt, height, width}) => (
+                <img src={src} alt={alt} height={height} width={width}  />
+              )}
+            />
+              <button
+                onClick={handleClearFiles}
+              >
+                Clear files
+              </button>
           }
         `}
       </pre>
@@ -67,7 +61,7 @@ export const CodeDecorator = () => {
   )
 }
 
-export const DefaultComponent = ({
+export const CustomImageComponent = ({
   accept,
   textIndicator,
   onUpload,
@@ -88,6 +82,9 @@ export const DefaultComponent = ({
           accept={accept}
           textIndicator={textIndicator}
           onUpload={onUpload}
+          children={({ src, alt, height, width }) => (
+            <img src={src} alt={alt} height={height} width={width} />
+          )}
         />
         <button
           className="bg-primary-medium max-w-32 p-4 rounded-lg"
