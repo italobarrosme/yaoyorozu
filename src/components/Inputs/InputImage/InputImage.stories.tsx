@@ -13,13 +13,17 @@ const InputImageMeta: Meta<typeof InputImage> = {
   component: InputImage,
   tags: ['autodocs'],
   argTypes: {
-    accept: {
-      control: 'object',
-      description:
-        'The accept format for the image. The key is the mime type and the value is the array of format types.',
-      defaultValue: {
-        'image/**': ['jpg', 'jpeg', 'png', 'gif', 'bmp', 'webp'],
-      },
+    acceptOptions: {
+      control: 'select',
+      options: [
+        'image/jpeg',
+        'image/png',
+        'image/gif',
+        'image/bmp',
+        'image/webp',
+      ],
+      description: 'The accepted file formats.',
+      defaultValue: 'image/png',
     },
     textIndicator: {
       control: 'text',
@@ -77,16 +81,20 @@ export const Default: InputImageStory = {
     ),
   ],
   args: {
-    accept: {
-      'image/**': ['jpg', 'jpeg', 'png', 'gif', 'bmp', 'webp'],
-    },
+    acceptOptions: [
+      'image/jpeg',
+      'image/png',
+      'image/gif',
+      'image/bmp',
+      'image/webp',
+    ],
     textIndicator: 'Drag n drop some files here, or click to select files',
     onUpload: (files) => console.log(files),
   },
-  render: ({ accept, textIndicator, onUpload, sizePreview }) => {
+  render: ({ acceptOptions, textIndicator, onUpload, sizePreview }) => {
     return (
       <DefaultComponent
-        accept={accept}
+        acceptOptions={acceptOptions}
         textIndicator={textIndicator}
         sizePreview={sizePreview}
         onUpload={onUpload}
@@ -112,16 +120,14 @@ export const CustomImage: InputImageStory = {
     ),
   ],
   args: {
-    accept: {
-      'image/**': ['jpg', 'jpeg', 'png', 'gif', 'bmp', 'webp'],
-    },
+    acceptOptions: ['image/jpeg'],
     textIndicator: 'Drag n drop some files here, or click to select files',
     onUpload: (files) => console.log(files),
   },
-  render: ({ accept, textIndicator, onUpload, sizePreview }) => {
+  render: ({ acceptOptions, textIndicator, onUpload, sizePreview }) => {
     return (
       <CustomImageComponent
-        accept={accept}
+        acceptOptions={acceptOptions}
         sizePreview={sizePreview}
         textIndicator={textIndicator}
         onUpload={onUpload}

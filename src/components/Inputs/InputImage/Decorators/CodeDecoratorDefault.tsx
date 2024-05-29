@@ -39,10 +39,14 @@ export const CodeDecoratorDefault = () => {
                 inputImageRef.current.clearFiles()
               }
             }
+
+            const onUpload: InputImageProps['onUpload'] = async (files) => {
+              console.log(files)
+            }
           
             <InputImage
                 ref={inputImageRef}
-                accept="image/*"
+                acceptOptions={['image/jpeg' , 'image/png' , 'image/gif' , 'image/bmp' , 'image/webp']}
                 textIndicator='Drag n drop some files here, or click to select files'
                 onUpload={onUpload}
               />
@@ -59,7 +63,7 @@ export const CodeDecoratorDefault = () => {
 }
 
 export const DefaultComponent = ({
-  accept,
+  acceptOptions,
   textIndicator,
   sizePreview,
   onUpload,
@@ -77,13 +81,13 @@ export const DefaultComponent = ({
       <div className="flex flex-col gap-4 items-center p-4">
         <InputImage
           ref={inputImageRef}
-          accept={accept}
+          acceptOptions={acceptOptions}
           sizePreview={sizePreview}
           textIndicator={textIndicator}
           onUpload={onUpload}
         />
         <button
-          className="bg-primary-medium max-w-32 p-4 rounded-lg"
+          className="bg-primary-medium max-w-32 p-2 rounded-lg"
           onClick={handleClearFiles}
         >
           Clear files

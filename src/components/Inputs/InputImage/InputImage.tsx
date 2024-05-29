@@ -29,11 +29,12 @@ const inputImageStyles = cva([], {
 
 type InputImageStylesProps = VariantProps<typeof inputImageStyles>
 
-type FormatTypes = ['jpg', 'jpeg', 'png', 'gif', 'bmp', 'webp']
-
-export type AcceptFormat = {
-  'image/**': FormatTypes
-}
+export type FormatTypes =
+  | 'image/jpeg'
+  | 'image/png'
+  | 'image/gif'
+  | 'image/bmp'
+  | 'image/webp'
 
 export type InputImageRef = {
   clearFiles: () => void
@@ -45,7 +46,7 @@ export type FileImageProps = File & {
 
 export type InputImageProps = {
   onUpload: (files: FileImageProps[]) => void
-  accept: AcceptFormat
+  acceptOptions?: FormatTypes[]
   textIndicator?: string
   sizePreview?: InputImageStylesProps['size']
   children?: (props: {
@@ -59,7 +60,7 @@ const InputImage = forwardRef<InputImageRef, InputImageProps>(
   (
     {
       onUpload,
-      accept,
+      acceptOptions,
       textIndicator = `Drag n drop some files here, or click to select files`,
       children,
       sizePreview = 'md',
@@ -67,8 +68,10 @@ const InputImage = forwardRef<InputImageRef, InputImageProps>(
     ref
   ) => {
     const [files, setFiles] = useState<FileImageProps[]>([])
-    const { getRootProps, getInputProps } = useDropzone({
-      accept: accept,
+    const { getRootProps, getInputProps, fileRejections } = useDropzone({
+      accept: {
+        acceptOptions,
+      },
       onDrop: (acceptedFiles: File[]) => {
         setFiles(
           acceptedFiles.map((file: File) =>
@@ -95,6 +98,23 @@ const InputImage = forwardRef<InputImageRef, InputImageProps>(
       clearFiles: clearFiles,
     }))
 
+    if (fileRejections.length) {
+      return (
+        <div
+          {...getRootProps({
+            className:
+              'border-2 border-dashed border-red-500 min-h-48 rounded-md w-full h-full p-4 flex items-center justify-center gap-2 cursor-pointer transition-colors delay-300 hover:border-brand-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary focus-visible:ring-offset-2',
+          })}
+        >
+          <Icon icon="tdesign:image-error" width={24} />
+          <Text variant="md/medium" color="red">
+            {fileRejections[0].errors[0].message}
+          </Text>
+          <input {...getInputProps()} />
+        </div>
+      )
+    }
+
     return (
       <>
         <div
@@ -104,7 +124,6 @@ const InputImage = forwardRef<InputImageRef, InputImageProps>(
           })}
         >
           <input {...getInputProps()} />
-          <Icon icon="photo" width={24} />
 
           {files.length ? (
             <div className="flex gap-2 flex-wrap">
@@ -136,7 +155,10 @@ const InputImage = forwardRef<InputImageRef, InputImageProps>(
               ))}
             </div>
           ) : (
-            <Text variant="md/medium">{textIndicator}</Text>
+            <>
+              <Icon icon="tdesign:image-add" width={24} />
+              <Text variant="md/medium">{textIndicator}</Text>
+            </>
           )}
         </div>
       </>
