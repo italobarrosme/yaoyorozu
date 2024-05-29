@@ -62,7 +62,7 @@ const InputImage = forwardRef<InputImageRef, InputImageProps>(
   (
     {
       onUpload,
-      acceptOptions,
+      acceptOptions = ['image/png'],
       textIndicator = `Drag n drop some files here, or click to select files`,
       children,
       sizePreview = 'md',
