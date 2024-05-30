@@ -1,8 +1,7 @@
 import { useRef } from 'react'
+import { Button, ButtonProps } from '..'
 import { Tooltip } from '../../../Texts/Tooltip'
 import { Text } from '../../../Texts/Text'
-import { Skeleton, SkeletonProps } from '../Skeleton'
-import { Button } from '../../../Buttons/Button'
 
 export const CodeDecoratorDefault = () => {
   const codeRef = useRef<HTMLPreElement>(null)
@@ -17,11 +16,11 @@ export const CodeDecoratorDefault = () => {
   }
 
   return (
-    <div className="relative bg-secondary-regular w-full">
+    <div className="relative">
       <Button
         variant="small/ghost"
         onClick={handleCopy}
-        className="absolute top-4 right-10 w- "
+        className="absolute top-4 right-10"
       >
         <Tooltip trigger="click" content="Copy code" side="top">
           <Text variant="sm/semibold" className="text-primary-dark">
@@ -29,11 +28,17 @@ export const CodeDecoratorDefault = () => {
           </Text>
         </Tooltip>
       </Button>
-      <pre ref={codeRef} className="font-thin text-neutral-white text-xs py-16">
+      <pre
+        ref={codeRef}
+        className="bg-secondary-regular font-thin text-neutral-white text-xs py-16"
+      >
         {`
-          import { Skeleton, SkeletonProps } from '@coqueirodigital/react-components'
+          import { Button } from '@coqueirodigital/react-components'
 
-          <Skeleton animationDuration="1.6" size="line" />
+          <Button variant='medium/regular' onClick={() => console.log('click')}>
+            Hellow World
+          </Button>
+        
         `}
       </pre>
     </div>
@@ -41,11 +46,14 @@ export const CodeDecoratorDefault = () => {
 }
 
 export const DefaultComponent = ({
-  animationDuration,
-  size,
+  children,
+  className,
+  variant,
   ...props
-}: SkeletonProps) => {
+}: ButtonProps) => {
   return (
-    <Skeleton animationDuration={animationDuration} size={size} {...props} />
+    <Button variant={variant} className={className} {...props}>
+      {children}
+    </Button>
   )
 }

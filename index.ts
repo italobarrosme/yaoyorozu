@@ -9,3 +9,4 @@ export {
 } from
 './src/components/Inputs/InputImage'
 export { Tooltip, type TooltipProps } from './src/components/Texts/Tooltip'
+export { Button, type ButtonProps } from './src/components/Buttons/Button'

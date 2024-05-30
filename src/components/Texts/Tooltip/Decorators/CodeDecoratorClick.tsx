@@ -1,6 +1,7 @@
 import { useRef } from 'react'
 import { Tooltip, TooltipProps } from '..'
 import { Text } from '../../Text'
+import { Button } from '../../../Buttons/Button'
 
 export const CodeDecoratorClick = () => {
   const codeRef = useRef<HTMLPreElement>(null)
@@ -16,13 +17,17 @@ export const CodeDecoratorClick = () => {
 
   return (
     <div className="relative bg-secondary-regular w-full">
-      <button onClick={handleCopy} className="absolute top-5 right-10 ">
+      <Button
+        variant="small/ghost"
+        onClick={handleCopy}
+        className="absolute top-4 right-10 w- "
+      >
         <Tooltip trigger="click" content="Copy code" side="top">
           <Text variant="sm/semibold" className="text-primary-dark">
             Copy
           </Text>
         </Tooltip>
-      </button>
+      </Button>
       <pre ref={codeRef} className="font-thin text-neutral-white text-xs py-16">
         {`
           import { Tooltip, TooltipProps } from '@coqueirodigital/react-components'
