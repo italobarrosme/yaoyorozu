@@ -4,7 +4,8 @@ export default {
   content: [
     './index.html',
     './src/**/*.{js,ts,jsx,tsx}',
-    "./src/**/*.stories.@(js|jsx|ts|tsx|mdx)'",
+    './src/**/*.stories.@(js|jsx|ts|tsx|mdx)',
+    './src/**/*.mdx',
   ],
   theme: {
     extend: {
@@ -29,7 +30,7 @@ export default {
         neutral: {
           black: '#000000',
           dark: '#121e1e', // black with 50% opacity
-          light: '#1d2b2b', // black with 10% opacity
+          light: '#c4c4c4', // black with 10% opacity
           lightest: '#0000000a', // black with 4% opacity
           ghost: '#ffffff4d', // white with 30% opacity
           white: '#f9f9f9',

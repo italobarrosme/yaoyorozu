@@ -7,10 +7,17 @@ const preview: Preview = {
     (Story) => (
       <div className="w-full">
         {/* 👇 Decorators in Storybook also accept a function. Replace <Story/> with Story() to enable it  */}
-        <Story />
+        {Story && <Story />}
       </div>
     )
   ],
+  parameters: {
+    options: {
+      storySort: {
+        order: ['Introduction', 'Components'],
+      },
+    },
+  },
 }
 
 export default preview

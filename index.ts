@@ -1,5 +1,9 @@
+// texts
 export { Text, type TextProps, type TextVariant } from './src/components/Texts/Text'
+export { Tooltip, type TooltipProps } from './src/components/Texts/Tooltip'
+// loaders
 export { Skeleton, type SkeletonProps } from './src/components/Loaders/Skeleton'
+// inputs
 export {
   InputImage,
   type InputImageProps,
@@ -8,5 +12,5 @@ export {
   type AcceptOptions,
 } from
 './src/components/Inputs/InputImage'
-export { Tooltip, type TooltipProps } from './src/components/Texts/Tooltip'
+// buttons
 export { Button, type ButtonProps } from './src/components/Buttons/Button'
