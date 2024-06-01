@@ -20,7 +20,12 @@ export const InputText = forwardRef<HTMLInputElement, InputTextProps>(
             ref={ref}
             {...props}
             type="text"
-            className="h-8 w-full text-inherit rounded-md border-2 border-primary-medium p-2 outline-none placeholder:text-neutral-light"
+            className={cn(
+              'h-8 w-full text-inherit rounded-md border-2 border-primary-medium p-2 outline-none placeholder:text-neutral-light',
+              {
+                'border-feedback-error': error,
+              }
+            )}
             aria-describedby={`${name}-error`}
           />
           <i className="absolute top-2 right-2">{icon}</i>

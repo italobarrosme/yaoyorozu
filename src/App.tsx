@@ -1,9 +1,7 @@
 function App() {
   return (
     <>
-      <div className="bg-primary-medium text-primary-light">
-        Storybook components react
-      </div>
+      <div className="bg-primary-medium text-neutral-800 justify-center flex flex-col items-center h-screen"></div>
     </>
   )
 }
