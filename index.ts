@@ -12,5 +12,6 @@ export {
   type AcceptOptions,
 } from
 './src/components/Inputs/InputImage'
+export { InputNumber, type InputNumberProps } from './src/components/Inputs/InputNumber'
 // buttons
 export { Button, type ButtonProps } from './src/components/Buttons/Button'
