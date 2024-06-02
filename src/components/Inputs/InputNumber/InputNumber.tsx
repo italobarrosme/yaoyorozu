@@ -1,3 +1,5 @@
+'use client'
+
 import { forwardRef, InputHTMLAttributes, ReactNode, useState } from 'react'
 import { cn } from '../../../utils/cn'
 import { formatCurrency } from '../../../utils/formaters'
