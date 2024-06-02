@@ -1,3 +1,5 @@
+'use client'
+
 import { forwardRef, InputHTMLAttributes, ReactNode } from 'react'
 import { cn } from '../../../utils/cn'
 
