@@ -79,6 +79,7 @@ export const Tooltip = ({
       <TooltipBase open={open} onOpenChange={handleOpenChange} {...props}>
         <TooltipTrigger asChild>
           <span
+            className="w-fit"
             onClick={handleClick}
             tabIndex={trigger === 'click' ? 0 : undefined}
           >

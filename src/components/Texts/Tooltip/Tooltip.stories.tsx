@@ -76,9 +76,7 @@ export const Default: TooltipStory = {
     ),
   ],
   args: {
-    children: (
-      <button className="bg-primary-medium p-2 rounded-lg">Hover me</button>
-    ),
+    children: <span className="p-2 rounded-lg w-full">Hover me</span>,
     content: 'Hover me',
     side: 'top',
     trigger: 'hover',
@@ -113,7 +111,9 @@ export const ClickTooltip: TooltipStory = {
   ],
   args: {
     children: (
-      <button className="bg-primary-medium p-2 rounded-lg">Click me</button>
+      <button className="bg-primary-medium p-2 rounded-lg w-full">
+        Click me
+      </button>
     ),
     content: 'Click me',
     side: 'top',
