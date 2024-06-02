@@ -91,12 +91,13 @@ export const DefaultComponent = ({
           textIndicator={textIndicator}
           onUpload={onUpload}
         />
-        <button
+        <Button
+          variant="small/regular"
           className="bg-primary-medium max-w-32 p-2 rounded-lg"
           onClick={handleClearFiles}
         >
           Clear files
-        </button>
+        </Button>
       </div>
     </>
   )
