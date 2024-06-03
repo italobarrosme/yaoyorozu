@@ -19,7 +19,6 @@ export const CodeDecoratorDefault = () => {
 
 export const DefaultComponent = ({
   label,
-  name,
   className,
   error,
   ...props
@@ -28,7 +27,7 @@ export const DefaultComponent = ({
     <>
       <div className="flex flex-col gap-4 items-center p-4">
         <InputCheckbox
-          name={name}
+          name={props.name}
           label={label}
           className={className}
           error={error}

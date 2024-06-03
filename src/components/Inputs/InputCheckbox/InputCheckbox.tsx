@@ -34,14 +34,12 @@ export { Checkbox }
 
 export type InputCheckboxProps = {
   label: string
-  name: string
   className?: string
   error?: string
 } & React.ComponentProps<typeof Checkbox>
 
 export const InputCheckbox = ({
   label,
-  name,
   className,
   error,
   ...props
@@ -49,8 +47,8 @@ export const InputCheckbox = ({
   return (
     <div className="flex flex-col w-full gap-2">
       <div className={cn('flex items-center gap-4', className)}>
-        <Checkbox id={name} {...props} />
-        <label id={name}>{label}</label>
+        <Checkbox id={props.name} {...props} />
+        <label id={props.name}>{label}</label>
       </div>
       {error && <span className="text-red-500 text-xs">{error}</span>}
     </div>

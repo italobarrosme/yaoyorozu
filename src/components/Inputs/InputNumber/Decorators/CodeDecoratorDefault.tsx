@@ -8,7 +8,6 @@ export const CodeDecoratorDefault = () => {
           import { InputNumber } from '@coqueirodigital/react-components'
 
           <InputNumber label="Enter a number" name="number-input" onChangeValue={handleValue} />
-        
         `}
     </Copy>
   )
@@ -16,23 +15,23 @@ export const CodeDecoratorDefault = () => {
 
 export const DefaultComponent = ({
   label,
-  name,
   icon,
   className,
   error,
   auxiliary,
   currency,
+  dark,
   ...props
 }: InputNumberProps) => {
   return (
     <InputNumber
       label={label}
-      name={name}
       icon={icon}
       className={className}
       error={error}
       auxiliary={auxiliary}
       currency={currency}
+      dark={dark}
       {...props}
     />
   )

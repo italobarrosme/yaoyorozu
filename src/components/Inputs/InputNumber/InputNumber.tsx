@@ -7,12 +7,12 @@ import { FormatCurrencyOptions } from '../../../utils/formaters/formatCurrency'
 
 export type InputNumberProps = {
   label: string
-  name: string
   className?: string
   icon?: ReactNode
   error?: string
   auxiliary?: string
   currency?: FormatCurrencyOptions
+  dark?: boolean
   onChangeValue?: (value: string | number) => void
 } & InputHTMLAttributes<HTMLInputElement>
 
@@ -25,6 +25,7 @@ export const InputNumber = forwardRef<HTMLInputElement, InputNumberProps>(
       className,
       error,
       currency,
+      dark = false,
       onChange,
       onChangeValue,
       ...props
@@ -54,7 +55,14 @@ export const InputNumber = forwardRef<HTMLInputElement, InputNumberProps>(
 
     return (
       <div className={cn('relative flex w-full flex-col gap-2', className)}>
-        <label className="font-semibold text-xs text-inherit">{label}</label>
+        <label
+          id={props.name}
+          className={cn('font-semibold text-xs text-inherit', {
+            'text-neutral-white': dark,
+          })}
+        >
+          {label}
+        </label>
         <div className="relative">
           <input
             ref={ref}
@@ -63,6 +71,9 @@ export const InputNumber = forwardRef<HTMLInputElement, InputNumberProps>(
               'h-8 w-full text-inherit rounded-md border-2 border-primary-medium p-2 outline-none placeholder:text-neutral-light',
               {
                 'border-feedback-error': error,
+              },
+              {
+                'bg-neutral-dark text-neutral-white': dark,
               }
             )}
             aria-describedby={`${props.name}-error`}
@@ -73,7 +84,13 @@ export const InputNumber = forwardRef<HTMLInputElement, InputNumberProps>(
           <i className="absolute top-2 right-2">{icon}</i>
         </div>
         {auxiliary && !error && (
-          <span className="text-xs text-inherit">{auxiliary}</span>
+          <span
+            className={cn('text-xs text-inherit', {
+              'text-neutral-white': dark,
+            })}
+          >
+            {auxiliary}
+          </span>
         )}
         {error && (
           <span

@@ -20,6 +20,7 @@ export const DefaultComponent = ({
   className,
   error,
   auxiliary,
+  dark,
   ...props
 }: InputTextProps) => {
   return (
@@ -30,6 +31,7 @@ export const DefaultComponent = ({
       className={className}
       error={error}
       auxiliary={auxiliary}
+      dark={dark}
       {...props}
     />
   )

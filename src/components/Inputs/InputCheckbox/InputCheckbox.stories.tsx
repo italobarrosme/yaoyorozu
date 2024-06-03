@@ -13,11 +13,6 @@ const InputCheckboxMeta: Meta<typeof InputCheckbox> = {
       description: 'The label of the checkbox',
       defaultValue: 'I agree to the terms and conditions',
     },
-    name: {
-      control: 'text',
-      description: 'The name of the checkbox',
-      defaultValue: 'checkbox',
-    },
     className: {
       control: 'text',
       description: 'The class name of the checkbox',
@@ -70,10 +65,10 @@ export const Default: InputCheckboxStory = {
     label: 'I agree to the terms and conditions',
     name: 'checkbox',
   },
-  render: ({ label, name, className, error, ...props }) => (
+  render: ({ label, className, error, ...props }) => (
     <DefaultComponent
       label={label}
-      name={name}
+      name={props.name}
       error={error}
       className={className}
       {...props}

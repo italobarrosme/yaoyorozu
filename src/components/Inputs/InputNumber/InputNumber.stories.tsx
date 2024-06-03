@@ -24,11 +24,6 @@ const InputNumberMeta: Meta<typeof InputNumber> = {
       description: 'The label of the input',
       defaultValue: 'Label',
     },
-    name: {
-      control: 'text',
-      description: 'The name of the input',
-      defaultValue: 'input',
-    },
     className: {
       control: 'text',
       description: 'The class name of the input',
@@ -57,6 +52,11 @@ const InputNumberMeta: Meta<typeof InputNumber> = {
       control: 'text',
       description:
         'The auxiliary message of the input, note if have error, this message will be hidden',
+    },
+    dark: {
+      control: 'boolean',
+      description: 'The dark mode of the input',
+      defaultValue: false,
     },
   },
   parameters: {
@@ -96,22 +96,22 @@ export const Default: InputNumberStory = {
   },
   render: ({
     label,
-    name,
     icon,
     className,
     error,
     auxiliary,
     currency,
+    dark,
     ...props
   }) => (
     <DefaultComponent
       label={label}
-      name={name}
       icon={icon}
       className={className}
       error={error}
       auxiliary={auxiliary}
       currency={currency}
+      dark={dark}
       {...props}
     />
   ),

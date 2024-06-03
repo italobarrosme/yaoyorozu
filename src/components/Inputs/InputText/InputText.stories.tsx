@@ -46,6 +46,10 @@ const InputTextMeta: Meta<typeof InputText> = {
       description:
         'The auxiliary message of the input, note if have error, this message will be hidden',
     },
+    dark: {
+      control: 'boolean',
+      description: 'The dark mode of the input',
+    },
   },
   parameters: {
     docs: {
@@ -82,7 +86,16 @@ export const Default: InputTextStory = {
     label: 'Label',
     name: 'input',
   },
-  render: ({ label, name, icon, className, error, auxiliary, ...props }) => (
+  render: ({
+    label,
+    name,
+    icon,
+    className,
+    error,
+    auxiliary,
+    dark,
+    ...props
+  }) => (
     <DefaultComponent
       label={label}
       name={name}
@@ -90,6 +103,7 @@ export const Default: InputTextStory = {
       className={className}
       error={error}
       auxiliary={auxiliary}
+      dark={dark}
       {...props}
     />
   ),
