@@ -41,7 +41,7 @@ export const InputText = forwardRef<HTMLInputElement, InputTextProps>(
                 'bg-neutral-dark text-neutral-white': dark,
               }
             )}
-            aria-describedby={`${name}-error`}
+            aria-describedby={`${props.name}-error`}
           />
           <i className="absolute top-2 right-2">{icon}</i>
         </div>
