@@ -1,3 +1,5 @@
+'use client'
+
 import { useRef } from 'react'
 import { Button } from '../../Buttons/Button'
 import { Tooltip } from '../Tooltip'

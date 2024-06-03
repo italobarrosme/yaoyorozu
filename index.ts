@@ -1,6 +1,7 @@
 // texts
 export { Text, type TextProps, type TextVariant } from './src/components/Texts/Text'
 export { Tooltip, type TooltipProps } from './src/components/Texts/Tooltip'
+export { Copy, type CopyProps } from './src/components/Texts/Copy'
 // loaders
 export { Skeleton, type SkeletonProps } from './src/components/Loaders/Skeleton'
 // inputs
