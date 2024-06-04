@@ -1,0 +1,114 @@
+import { Meta, Story, Canvas, Unstyled } from '@storybook/blocks';
+import { Copy } from '../components/Texts/Copy';
+
+<Meta title="Introduction/Style" />
+
+# Style
+
+## Color palette
+
+<Unstyled>
+  <div className="p-4 flex flex-col gap-4 font-semibold border shadow-xl rounded-lg mb-8">
+    <ul className="flex items-center w-full">
+      <li className="bg-primary-regular text-neutral-white p-2 rounded-l-lg">#fda000</li>
+      <li className="bg-primary-light text-neutral-white p-2">#f2a516</li>
+      <li className="bg-primary-dark text-neutral-white p-2 rounded-r-lg">#d95204</li>
+    </ul>
+
+    <ul className="flex items-center w-full">
+      <li className="bg-secondary-regular text-neutral-white p-2 rounded-l-lg">#121e1e</li>
+      <li className="bg-secondary-light text-neutral-white p-2">#1d2b2b</li>
+      <li className="bg-secondary-dark text-neutral-white p-2 rounded-r-lg">#0c1616</li>
+    </ul>
+
+    <ul className="flex items-center w-full">
+      <li className="bg-neutral-black text-neutral-white p-2 rounded-l-lg">#000000</li>
+      <li className="bg-neutral-white text-neutral-dark p-2">#f9f9f9</li>
+      <li className="bg-neutral-light text-neutral-dark p-2">#c4c4c4</li>
+      <li className="bg-neutral-lightest text-neutral-dark p-2">#0000000a</li>
+      <li className="bg-neutral-dark text-neutral-white p-2 rounded-r-lg">#121e1e</li>
+    </ul>
+  </div>
+</Unstyled>
+
+## Pattern installation styles
+
+Install `postcss-import` and `tailwindcss` in the project.
+
+<Unstyled>
+  <Copy>
+    {`
+      npm install postcss-import tailwindcss
+    `}
+  </Copy>
+</Unstyled>
+
+The colors are defined in the root of the project in the file `tailwind.config.js` in the `colors` property.
+
+<Unstyled>
+  <Copy>
+    {`
+      module.exports = {
+        colors: {
+          primary: {
+            regular: '#fda000',
+            light: '#f2a516',
+            dark: '#d95204',
+          },
+          secondary: {
+            regular: '#121e1e',
+            light: '#1d2b2b',
+            dark: '#0c1616',
+          },
+          neutral: {
+            black: '#000000',
+            white: '#f9f9f9',
+            light: '#c4c4c4',
+            lightest: '#0000000a',
+            dark: '#121e1e',
+          },
+        },
+      };
+    `}
+  </Copy>
+</Unstyled>
+
+Create global styles for the colors and config tailwind in the file `*/global.css`.
+
+<Unstyled>
+  <Copy>
+    {`
+      @import 'tailwindcss/base';
+      @import 'tailwindcss/components';
+      @import 'tailwindcss/utilities';
+
+      @import '@coqueirodigital/react-components/dist/styles.css';
+
+      @layer base {
+        :root {
+          --color-primary-regular: #fda000;
+          --color-primary-light: #F2A516;
+          --color-primary-dark: #D95204;
+
+          --color-secondary-regular: #121e1e;
+          --color-secondary-light: #1d2b2b;
+          --color-secondary-dark: #0c1616;
+
+          --color-neutral-black: #000000;
+          --color-neutral-white: #f9f9f9;
+          --color-neutral-light: #c4c4c4;
+          --color-neutral-lightest: #0000000a;
+          --color-neutral-dark: #121e1e;
+
+          --color-feedback-error: #f44336;
+          --color-feedback-warning: #ff9800;
+          --color-feedback-success: #4caf;
+          --color-feedback-info: #2196f3;
+
+          --color-complementary-highlight: #fd6600;
+
+        }
+      }
+    `}
+  </Copy>
+</Unstyled>

@@ -111,7 +111,7 @@ export const ClickTooltip: TooltipStory = {
   ],
   args: {
     children: (
-      <button className="bg-primary-medium p-2 rounded-lg w-full">
+      <button className="bg-primary-regular p-2 rounded-lg w-full">
         Click me
       </button>
     ),

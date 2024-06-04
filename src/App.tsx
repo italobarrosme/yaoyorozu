@@ -1,7 +1,7 @@
 function App() {
   return (
     <>
-      <div className="bg-primary-medium justify-center flex flex-col items-center h-screen"></div>
+      <div className="bg-primary-regular justify-center flex flex-col items-center h-screen"></div>
     </>
   )
 }

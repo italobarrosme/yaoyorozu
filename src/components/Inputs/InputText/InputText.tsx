@@ -33,7 +33,7 @@ export const InputText = forwardRef<HTMLInputElement, InputTextProps>(
             {...props}
             type="text"
             className={cn(
-              'h-8 w-full text-inherit rounded-md border-2 border-primary-medium p-2 outline-none placeholder:text-neutral-light',
+              'h-8 w-full text-inherit rounded-md border-2 border-primary-regular p-2 outline-none placeholder:text-neutral-light',
               {
                 'border-feedback-error': error,
               },

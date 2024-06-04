@@ -70,7 +70,7 @@ export const CustomImageComponent = ({
           )}
         />
         <button
-          className="bg-primary-medium max-w-32 p-2 rounded-lg"
+          className="bg-primary-regular max-w-32 p-2 rounded-lg"
           onClick={handleClearFiles}
         >
           Clear files
