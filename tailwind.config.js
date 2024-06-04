@@ -18,32 +18,30 @@ export default {
       },
       colors: {
         primary: {
-          regular: '#fda000',
-          light: '#FFD7A0',
-          medium: '#FFB000',
-          dark: '#FFA000',
+          regular: "var(--color-primary-regular)",
+          light: "var(--color-primary-light)",
+          dark: "var(--color-primary-dark)",
         },
         secondary: {
-          regular: '#121e1e',
-          light: '#1d2b2b',
+          regular: "var(--color-secondary-regular)",
+          light: "var(--color-secondary-light)",
+          dark: "var(--color-secondary-dark)",
         },
         neutral: {
-          black: '#000000',
-          dark: '#121e1e', // black with 50% opacity
-          light: '#c4c4c4', // black with 10% opacity
-          lightest: '#0000000a', // black with 4% opacity
-          ghost: '#ffffff4d', // white with 30% opacity
-          white: '#f9f9f9',
+          black: "var(--color-neutral-black)",
+          white: "var(--color-neutral-white)",
+          light: "var(--color-neutral-light)",
+          lightest: "var(--color-neutral-lightest)",
+          dark: "var(--color-neutral-dark)",
         },
         feedback: {
-          error: '#C22020',
-          'error-light': '#FBE9E9',
+          error: "var(--color-feedback-error)",
+          warning: "var(--color-feedback-warning)",
+          success: "var(--color-feedback-success)",
+          info: "var(--color-feedback-info)",
         },
         complementary: {
-          highlight: '#fd6600',
-        },
-        interactive: {
-          'gray-light': '#F2F2F2',
+          highlight: "var(--color-complementary-highlight)",
         },
       },
       keyframes: {
