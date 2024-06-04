@@ -43,29 +43,57 @@ Install `postcss-import` and `tailwindcss` in the project.
   </Copy>
 </Unstyled>
 
+Create the file `postcss.config.js` in the root of the project.
+
+<Unstyled>
+  <Copy>
+    {`
+      module.exports = {
+        plugins: {
+          'postcss-import': {},
+          tailwindcss: {},
+          autoprefixer: {},
+        },
+      }
+    `}
+  </Copy>
+</Unstyled>
+
 The colors are defined in the root of the project in the file `tailwind.config.js` in the `colors` property.
 
 <Unstyled>
   <Copy>
     {`
       module.exports = {
+        content: [
+          './node_modules/@coqueirodigital/react-components/dist/**/*.{js,ts,jsx,tsx}',
+        ],
         colors: {
           primary: {
-            regular: '#fda000',
-            light: '#f2a516',
-            dark: '#d95204',
+            regular: 'var(--color-primary-regular)',
+            light: 'var(--color-primary-light)',
+            dark: 'var(--color-primary-dark)',
           },
           secondary: {
-            regular: '#121e1e',
-            light: '#1d2b2b',
-            dark: '#0c1616',
+            regular: 'var(--color-secondary-regular)',
+            light: 'var(--color-secondary-light)',
+            dark: 'var(--color-secondary-dark)',
           },
           neutral: {
-            black: '#000000',
-            white: '#f9f9f9',
-            light: '#c4c4c4',
-            lightest: '#0000000a',
-            dark: '#121e1e',
+            black: 'var(--color-neutral-black)',
+            white: 'var(--color-neutral-white)',
+            light: 'var(--color-neutral-light)',
+            lightest: 'var(--color-neutral-lightest)',
+            dark: 'var(--color-neutral-dark)',
+          },
+          feedback: {
+            error: 'var(--color-feedback-error)',
+            warning: 'var(--color-feedback-warning)',
+            success: 'var(--color-feedback-success)',
+            info: 'var(--color-feedback-info)',
+          },
+          complementary: {
+            highlight: 'var(--color-complementary-highlight)',
           },
         },
       };
@@ -73,17 +101,16 @@ The colors are defined in the root of the project in the file `tailwind.config.j
   </Copy>
 </Unstyled>
 
-Create global styles for the colors and config tailwind in the file `*/global.css`.
+Create global styles for the colors and config tailwind in the file `**/global.css`.
 
 <Unstyled>
   <Copy>
     {`
+      @import '@coqueirodigital/react-components/dist/styles.css';
       @import 'tailwindcss/base';
       @import 'tailwindcss/components';
       @import 'tailwindcss/utilities';
-
-      @import '@coqueirodigital/react-components/dist/styles.css';
-
+      
       @layer base {
         :root {
           --color-primary-regular: #fda000;
