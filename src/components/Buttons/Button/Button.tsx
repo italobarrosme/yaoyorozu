@@ -53,11 +53,7 @@ export const Button: Component<ButtonProps> = ({
   ]
 
   return (
-    <button
-      className={cn(buttonStyles({ size, style }), className)}
-      {...props}
-      type="button"
-    >
+    <button className={cn(buttonStyles({ size, style }), className)} {...props}>
       {children}
     </button>
   )
