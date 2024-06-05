@@ -18,3 +18,4 @@ export { InputText, type InputTextProps } from './src/components/Inputs/InputTex
 export { InputCheckbox, type InputCheckboxProps } from './src/components/Inputs/InputCheckbox'
 // buttons
 export { Button, type ButtonProps } from './src/components/Buttons/Button'
+export { ButtonLink, type ButtonLinkProps } from './src/components/Buttons/ButtonLink'
