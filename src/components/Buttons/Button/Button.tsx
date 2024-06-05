@@ -4,6 +4,7 @@ import { cva, VariantProps } from 'class-variance-authority'
 import { Component } from '../../../types/component'
 import { cn } from '../../../utils/cn'
 import { ButtonHTMLAttributes, ReactNode } from 'react'
+import { motion, MotionProps } from 'framer-motion'
 
 const buttonStyles = cva(
   [
@@ -39,6 +40,7 @@ export type ButtonProps = {
   children: ReactNode
   className?: string
 } & ButtonVariant &
+  MotionProps &
   ButtonHTMLAttributes<HTMLButtonElement>
 
 export const Button: Component<ButtonProps> = ({
@@ -53,8 +55,13 @@ export const Button: Component<ButtonProps> = ({
   ]
 
   return (
-    <button className={cn(buttonStyles({ size, style }), className)} {...props}>
+    <motion.button
+      whileTap={{ scale: 0.95 }}
+      whileHover={{ scale: 0.95 }}
+      className={cn(buttonStyles({ size, style }), className)}
+      {...props}
+    >
       {children}
-    </button>
+    </motion.button>
   )
 }

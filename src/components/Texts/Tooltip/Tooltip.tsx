@@ -10,7 +10,7 @@ import {
   useState,
 } from 'react'
 import * as TooltipPrimitive from '@radix-ui/react-tooltip'
-
+import { motion } from 'framer-motion'
 import { cn } from '../../../utils/cn'
 import { Text } from '../Text'
 
@@ -24,18 +24,24 @@ const TooltipContent = forwardRef<
   ElementRef<typeof TooltipPrimitive.Content>,
   ComponentPropsWithoutRef<typeof TooltipPrimitive.Content>
 >(({ className, sideOffset = 4, ...props }, ref) => (
-  <TooltipPrimitive.Content
-    ref={ref}
-    sideOffset={sideOffset}
-    className={cn(
-      'z-50 overflow-hidden rounded-md bg-secondary-regular px-3 py-1.5 text-sm text-primary-regular shadow-md animate-in fade-in-0 zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2',
-      className
-    )}
-    {...props}
+  <motion.div
+    initial={{ opacity: 0, scale: 0.5 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ ease: 'easeOut', duration: 3 }}
   >
-    {props.children}
-    <TooltipPrimitive.Arrow />
-  </TooltipPrimitive.Content>
+    <TooltipPrimitive.Content
+      ref={ref}
+      sideOffset={sideOffset}
+      className={cn(
+        'z-50 overflow-hidden rounded-md bg-secondary-regular px-3 py-1.5 text-sm text-primary-regular shadow-md animate-in fade-in-0 zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2',
+        className
+      )}
+      {...props}
+    >
+      {props.children}
+      <TooltipPrimitive.Arrow className="border-secondary-regular" />
+    </TooltipPrimitive.Content>
+  </motion.div>
 ))
 TooltipContent.displayName = TooltipPrimitive.Content.displayName
 
@@ -81,13 +87,13 @@ export const Tooltip = ({
     <TooltipProvider>
       <TooltipBase open={open} onOpenChange={handleOpenChange} {...props}>
         <TooltipTrigger asChild>
-          <span
+          <button
             className="w-fit cursor-pointer"
             onClick={handleClick}
             tabIndex={trigger === 'click' ? 0 : undefined}
           >
             {children}
-          </span>
+          </button>
         </TooltipTrigger>
         <TooltipContent side={side}>
           <Text variant="sm/semibold" tag="p">

@@ -5,6 +5,7 @@ import { cn } from '../../../utils/cn'
 import * as React from 'react'
 import * as CheckboxPrimitive from '@radix-ui/react-checkbox'
 import { Icon } from '@iconify/react'
+import { motion } from 'framer-motion'
 
 const Checkbox = React.forwardRef<
   React.ElementRef<typeof CheckboxPrimitive.Root>,
@@ -21,10 +22,16 @@ const Checkbox = React.forwardRef<
     <CheckboxPrimitive.Indicator
       className={cn('flex items-center justify-center text-current')}
     >
-      <Icon
-        icon={'iconamoon:check-bold'}
-        className="h-4 w-4 text-secondary-light"
-      />
+      <motion.button
+        initial={{ scale: 0.5 }}
+        transition={{ type: 'spring', damping: 10, stiffness: 100 }}
+        animate={{ scale: 1 }}
+      >
+        <Icon
+          icon={'iconamoon:check-bold'}
+          className="h-4 w-4 text-secondary-light"
+        />
+      </motion.button>
     </CheckboxPrimitive.Indicator>
   </CheckboxPrimitive.Root>
 ))

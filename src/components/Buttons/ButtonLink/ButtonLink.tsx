@@ -1,5 +1,6 @@
 'use client'
 
+import { MotionProps, motion } from 'framer-motion'
 import { cn } from '../../../utils/cn'
 import { cva, VariantProps } from 'class-variance-authority'
 
@@ -41,6 +42,7 @@ export type ButtonLinkProps = {
   children: React.ReactNode
   className?: string
 } & ButtonLinkVariant &
+  MotionProps &
   React.AnchorHTMLAttributes<HTMLAnchorElement>
 
 export const ButtonLink = ({
@@ -55,12 +57,14 @@ export const ButtonLink = ({
   ]
 
   return (
-    <a
+    <motion.a
+      whileTap={{ scale: 0.95 }}
+      whileHover={{ scale: 0.95 }}
       className={cn(buttonLinkStyles({ size, style }), className)}
       {...props}
       href={props.href}
     >
       {children}
-    </a>
+    </motion.a>
   )
 }
