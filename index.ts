@@ -20,3 +20,5 @@ export { InputCheckbox, type InputCheckboxProps } from './src/components/Inputs/
 export { Button, type ButtonProps } from './src/components/Buttons/Button'
 export { ButtonLink, type ButtonLinkProps } from './src/components/Buttons/ButtonLink'
 export { Breadcrumb, type BreadcrumbProps } from './src/components/Buttons/Breadcrumb'
+// notifications
+export { Toaster, useToast, Toast, type ToasterProps, type ToastProps, type ToasterToast } from './src/components/Notifications/Toaster'
