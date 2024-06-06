@@ -36,7 +36,7 @@ import { Copy } from '../components/Texts/Copy';
 Install `postcss-import` and `tailwindcss` in the project.
 
 <Unstyled>
-  <Copy>
+  <Copy language='bash'>
     {`
       npm install postcss-import tailwindcss
     `}
@@ -46,7 +46,7 @@ Install `postcss-import` and `tailwindcss` in the project.
 Create the file `postcss.config.js` in the root of the project.
 
 <Unstyled>
-  <Copy>
+  <Copy language='yaml'>
     {`
       module.exports = {
         plugins: {
@@ -62,7 +62,7 @@ Create the file `postcss.config.js` in the root of the project.
 The colors are defined in the root of the project in the file `tailwind.config.js` in the `colors` property.
 
 <Unstyled>
-  <Copy>
+  <Copy language='yaml'>
     {`
       module.exports = {
         content: [
@@ -104,7 +104,7 @@ The colors are defined in the root of the project in the file `tailwind.config.j
 Create global styles for the colors and config tailwind in the file `**/global.css`.
 
 <Unstyled>
-  <Copy>
+  <Copy language='yaml'>
     {`
       @import '@coqueirodigital/react-components/dist/styles.css';
       @import 'tailwindcss/base';

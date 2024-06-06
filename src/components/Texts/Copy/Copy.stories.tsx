@@ -13,6 +13,10 @@ const CopyMeta: Meta<typeof Copy> = {
       description: 'The content to be copied',
       defaultValue: 'Copy me',
     },
+    language: {
+      control: 'text',
+      description: 'The language of the code',
+    },
   },
   args: {},
   parameters: {
