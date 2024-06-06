@@ -1,4 +1,4 @@
-export default {
+export const themeCode = {
   'code[class*="language-"]': {
     color: '#f8f8f2',
     background: 'none',

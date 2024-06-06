@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
 
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
@@ -5,15 +6,13 @@ import { useRef } from 'react'
 import { Button } from '../../Buttons/Button'
 import { Tooltip } from '../Tooltip'
 import { Text } from '../Text'
-import styleCode from './styleCode'
-
-// import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { themeCode } from './styleCode'
 
 const defaultLanguage = 'jsx'
-const defaultTheme = styleCode
+const defaultStyle = themeCode
 
 export type CopyProps = {
-  children: React.ReactNode
+  children: string | string[]
   language?: string
 }
 
@@ -44,7 +43,7 @@ export const Copy = ({ children, language = defaultLanguage }: CopyProps) => {
         ref={codeRef}
         className="font-thin p-2 text-wrap font-mono text-xs rounded-lg w-full col-start-1 col-span-4"
       >
-        <SyntaxHighlighter language={language} style={defaultTheme}>
+        <SyntaxHighlighter language={language} style={defaultStyle as any}>
           {children}
         </SyntaxHighlighter>
       </pre>
