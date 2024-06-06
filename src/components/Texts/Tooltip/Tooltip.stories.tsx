@@ -7,6 +7,7 @@ import {
   ClickComponent,
 } from './Decorators'
 import { Text } from '../Text'
+import { Button } from '../../Buttons/Button'
 
 const TooltipMeta: Meta<typeof Tooltip> = {
   title: 'Components/Texts/Tooltip',
@@ -110,11 +111,7 @@ export const ClickTooltip: TooltipStory = {
     ),
   ],
   args: {
-    children: (
-      <button className="bg-primary-regular p-2 rounded-lg w-full">
-        Click me
-      </button>
-    ),
+    children: <Button variant="fit/outline">Click me</Button>,
     content: 'Click me',
     side: 'top',
     trigger: 'click',

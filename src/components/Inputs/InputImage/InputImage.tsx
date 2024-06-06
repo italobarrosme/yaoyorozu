@@ -105,14 +105,17 @@ const InputImage = forwardRef<InputImageRef, InputImageProps>(
         <div
           {...getRootProps({
             className:
-              'border-2 border-dashed border-red-500 min-h-48 rounded-md w-full h-full p-4 flex items-center justify-center gap-2 cursor-pointer transition-colors delay-300 hover:border-brand-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary focus-visible:ring-offset-2',
+              'border-2 border-dashed border-feedback-error min-h-48 rounded-md w-full h-full p-4 flex items-center justify-center gap-2 cursor-pointer transition-colors delay-300 hover:border-complementary-highlight',
           })}
         >
           <Icon icon="tdesign:image-error" width={24} />
           <Text variant="md/medium" color="red">
             {fileRejections[0].errors[0].message}
           </Text>
-          <input {...getInputProps()} />
+          <input
+            {...getInputProps()}
+            className="focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-regular focus-visible:ring-offset-2"
+          />
         </div>
       )
     }
@@ -122,10 +125,13 @@ const InputImage = forwardRef<InputImageRef, InputImageProps>(
         <div
           {...getRootProps({
             className:
-              'border-2 border-dashed border-gray-200 min-h-48 rounded-md w-full h-full p-4 flex items-center justify-center gap-2 cursor-pointer transition-colors delay-300 hover:border-brand-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary focus-visible:ring-offset-2',
+              'border-2 border-dashed border-gray-200 min-h-48 rounded-md w-full h-full p-4 flex items-center justify-center gap-2 cursor-pointer transition-colors delay-300 hover:border-complementary-highlight focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-regular focus-visible:ring-offset-2',
           })}
         >
-          <input {...getInputProps()} />
+          <input
+            {...getInputProps()}
+            className="focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-regular focus-visible:ring-offset-2"
+          />
 
           {files.length ? (
             <div className="flex gap-2 flex-wrap">

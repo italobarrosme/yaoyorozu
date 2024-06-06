@@ -8,7 +8,11 @@ import { motion, MotionProps } from 'framer-motion'
 
 const buttonStyles = cva(
   [
-    'flex justify-center items-center gap-2 whitespace-nowrap rounded bg-primary-regular text-xs font-bold text-white transition-colors delay-300 hover:bg-secondary focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50',
+    `flex justify-center items-center gap-2 whitespace-nowrap rounded 
+    bg-primary-regular text-xs font-bold text-white transition-colors 
+    delay-300 hover:bg-secondary 
+    focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-regular focus-visible:ring-offset-2 
+    disabled:cursor-not-allowed disabled:opacity-50`,
   ],
   {
     variants: {
@@ -56,9 +60,9 @@ export const Button: Component<ButtonProps> = ({
 
   return (
     <motion.button
-      whileTap={{ scale: 0.95 }}
+      whileTap={{ scale: 1.05 }}
       whileHover={{ scale: 0.95 }}
-      className={cn(buttonStyles({ size, style }), className)}
+      className={cn(buttonStyles({ size, style }), '', className)}
       {...props}
     >
       {children}
