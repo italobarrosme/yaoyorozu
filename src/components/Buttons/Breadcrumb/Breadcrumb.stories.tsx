@@ -28,9 +28,9 @@ const BreadcrumbMeta: Meta<typeof Breadcrumb> = {
       control: 'object',
       description: 'The items to be rendered in the breadcrumb.',
       defaultValue: [
-        { name: 'Home', href: '/' },
-        { name: 'Products', href: '/products' },
-        { name: 'Product 1', href: '/products/1' },
+        { name: 'Home', href: '#' },
+        { name: 'Products', href: '#' },
+        { name: 'Product 1', href: '#' },
       ],
     },
     iconSeparator: {
@@ -77,9 +77,9 @@ export const Default: BreadCrumbStory = {
   ],
   args: {
     items: [
-      { name: 'Home', href: '/' },
-      { name: 'Product 1', href: '/products/1' },
-      { name: 'Product 2', href: '/products/2' },
+      { name: 'Home', href: '#' },
+      { name: 'Product 1', href: '#' },
+      { name: 'Product 2', href: '#' },
     ],
   },
   render: ({ items, className, customLink, iconSeparator }) => {
@@ -112,9 +112,9 @@ export const CustomLink: BreadCrumbStory = {
   ],
   args: {
     items: [
-      { name: 'Home custom link', href: '/' },
-      { name: 'Product 1 custom link', href: '/products/1' },
-      { name: 'Product 2 custom link', href: '/products/2' },
+      { name: 'Home custom link', href: '#' },
+      { name: 'Product 1 custom link', href: '#' },
+      { name: 'Product 2 custom link', href: '#' },
     ],
     customLink: ({ href, name }) => (
       <a className="bg-primary-regular" href={href}>
@@ -152,14 +152,14 @@ export const ManyLinks: BreadCrumbStory = {
   ],
   args: {
     items: [
-      { name: 'Home custom link', href: '/' },
-      { name: 'Product 1 custom link', href: '/products/1' },
-      { name: 'Product 2 custom link', href: '/products/2' },
-      { name: 'Product 3 custom link', href: '/products/3' },
-      { name: 'Product 4 custom link', href: '/products/4' },
-      { name: 'Product 5 custom link', href: '/products/5' },
-      { name: 'Product 6 custom link', href: '/products/6' },
-      { name: 'Product 7 custom link', href: '/products/7' },
+      { name: 'Home custom link', href: '#' },
+      { name: 'Product 1 custom link', href: '#' },
+      { name: 'Product 2 custom link', href: '#' },
+      { name: 'Product 3 custom link', href: '#' },
+      { name: 'Product 4 custom link', href: '#' },
+      { name: 'Product 5 custom link', href: '#' },
+      { name: 'Product 6 custom link', href: '#' },
+      { name: 'Product 7 custom link', href: '#' },
     ],
     customLink: ({ href, name }) => (
       <a className="underline hover:text-complementary-highlight" href={href}>
