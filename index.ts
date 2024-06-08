@@ -21,5 +21,6 @@ export { Button, type ButtonProps } from './src/components/Buttons/Button'
 export { ButtonLink, type ButtonLinkProps } from './src/components/Buttons/ButtonLink'
 export { Breadcrumb, type BreadcrumbProps } from './src/components/Buttons/Breadcrumb'
 export { Tabs, type TabsProps } from './src/components/Buttons/Tabs'
+export { Menubar, type MenubarProps } from './src/components/Buttons/Menubar'
 // notifications
 export { Toaster, useToast, Toast, type ToasterProps, type ToastProps, type ToasterToast } from './src/components/Notifications/Toaster'
