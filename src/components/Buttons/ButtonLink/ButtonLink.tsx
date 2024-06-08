@@ -12,19 +12,20 @@ const buttonLinkStyles = cva(
   {
     variants: {
       size: {
-        small: 'px-2 py-1 text-sm w-32 h-8',
-        medium: 'px-4 py-2 text-base w-40 h-10',
-        large: 'px-4 py-3 text-lg w-72 h-16',
-        full: 'w-full px-3 py-2 text-base h-10',
-        fit: 'px-3 py-2 text-base h-10 w-fit',
+        small: 'px-2 py-3 text-xs w-32 h-4',
+        medium: 'px-2 py-2 text-sm w-40 h-8',
+        large: 'px-2 py-3 text-lg w-72 h-10',
+        full: 'w-full px-3 py-2 text-sm h-8',
+        fit: 'p-2 text-sm h-8 w-fit',
         rounded: 'rounded-full w-16 h-16 justify-center items-center',
       },
       style: {
         regular:
-          'bg-transparent text-primary-regular hover:text-secondary-regular underline',
+          'bg-transparent text-neutral-dark hover:text-secondary-regular underline',
         outline:
-          'border border-primary-regular text-primary-regular bg-transparent hover:bg-primary-regular hover:text-white underline',
-        block: 'bg-primary-regular hover:bg-secondary underline',
+          'border border-primary-regular text-neutral-dark bg-transparent hover:bg-primary-regular hover:text-white underline',
+        block:
+          'text-neutral-dark bg-primary-regular hover:text-complementary-highlight underline',
       },
     },
   }

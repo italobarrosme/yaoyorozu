@@ -17,11 +17,11 @@ const buttonStyles = cva(
   {
     variants: {
       size: {
-        small: 'px-2 py-1 text-sm w-32 h-8',
-        medium: 'px-4 py-2 text-base w-60 h-10',
-        large: 'px-4 py-3 text-lg w-72 h-16',
-        full: 'w-full px-3 py-2 text-base h-10',
-        fit: 'px-3 py-2 text-base h-10 w-fit',
+        small: 'px-2 py-3 text-sm w-32 h-4',
+        medium: 'px-4 py-2 text-base w-60 h-8',
+        large: 'px-4 py-3 text-lg w-72 h-10',
+        full: 'w-full px-3 py-2 text-base h-8',
+        fit: 'px-3 py-2 text-base h-8 w-fit',
         rounded: 'rounded-full w-16 h-16 justify-center items-center',
       },
       style: {
