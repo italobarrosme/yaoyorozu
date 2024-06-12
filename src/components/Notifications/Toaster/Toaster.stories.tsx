@@ -1,4 +1,3 @@
-import React from 'react'
 import { Meta, StoryObj } from '@storybook/react'
 import { Toaster, Toast } from '.'
 import { Text } from '../../Texts/Text'

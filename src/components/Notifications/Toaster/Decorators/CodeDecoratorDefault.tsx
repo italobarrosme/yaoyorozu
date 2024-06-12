@@ -38,8 +38,8 @@ export const DefaultComponent = () => {
             action: (
               <>
                 <Button
-                  variant="small/regular"
-                  className="text-neutral-black"
+                  variant="fit/outline"
+                  className="border-neutral-dark text-neutral-regular"
                   onClick={() => console.log('Button clicked 1')}
                 >
                   Action 1
