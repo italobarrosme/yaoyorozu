@@ -55,8 +55,7 @@ const TextMeta: Meta<typeof Text> = {
     variant: {
       control: 'select',
       options: SizeWeightCombinations,
-      description:
-        'The variant of the Text component displayed size and weight. Values are written as `text-size/font-weight`.',
+      description: 'The font size and weight of the text.',
       defaultValue: 'md/normal',
     },
     tag: {

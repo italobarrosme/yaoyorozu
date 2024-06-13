@@ -32,7 +32,7 @@ const textStyles = cva([], {
 type TextStylesProps = VariantProps<typeof textStyles>
 
 export type TextVariant = Omit<TextStylesProps, 'size' | 'weight'> & {
-  variant: `${NonNullable<TextStylesProps['size']>}/${NonNullable<
+  variant?: `${NonNullable<TextStylesProps['size']>}/${NonNullable<
     TextStylesProps['weight']
   >}`
 }
