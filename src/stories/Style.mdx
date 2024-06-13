@@ -10,23 +10,25 @@ import { Copy } from '../components/Texts/Copy';
 <Unstyled>
   <div className="p-4 flex flex-col gap-4 font-semibold border shadow-xl rounded-lg mb-8">
     <ul className="flex items-center w-full">
-      <li className="bg-primary-regular text-neutral-white p-2 rounded-l-lg">#fda000</li>
-      <li className="bg-primary-light text-neutral-white p-2">#f2a516</li>
-      <li className="bg-primary-dark text-neutral-white p-2 rounded-r-lg">#d95204</li>
+      <li className="bg-primary-regular text-neutral-white p-2 rounded-l-lg">primary-regular</li>
+      <li className="bg-primary-light text-neutral-black p-2">primary-light</li>
+      <li className="bg-primary-40 text-neutral-black p-2">primary-40</li>
+      <li className="bg-primary-80 text-neutral-black p-2">primary-80</li>
+      <li className="bg-primary-dark text-neutral-white p-2 rounded-r-lg">primary-dark</li>
     </ul>
 
     <ul className="flex items-center w-full">
-      <li className="bg-secondary-regular text-neutral-white p-2 rounded-l-lg">#121e1e</li>
-      <li className="bg-secondary-light text-neutral-white p-2">#1d2b2b</li>
-      <li className="bg-secondary-dark text-neutral-white p-2 rounded-r-lg">#0c1616</li>
+      <li className="bg-secondary-regular text-neutral-white p-2 rounded-l-lg">secondary-regular</li>
+      <li className="bg-secondary-light text-neutral-black p-2">secondary-light</li>
+      <li className="bg-secondary-dark text-neutral-white p-2 rounded-r-lg">secondary-dark</li>
     </ul>
 
     <ul className="flex items-center w-full">
-      <li className="bg-neutral-black text-neutral-white p-2 rounded-l-lg">#000000</li>
-      <li className="bg-neutral-white text-neutral-dark p-2">#f9f9f9</li>
-      <li className="bg-neutral-light text-neutral-dark p-2">#c4c4c4</li>
-      <li className="bg-neutral-lightest text-neutral-dark p-2">#0000000a</li>
-      <li className="bg-neutral-dark text-neutral-white p-2 rounded-r-lg">#121e1e</li>
+      <li className="bg-neutral-black text-neutral-white p-2 rounded-l-lg">neutral-black</li>
+      <li className="bg-neutral-white text-neutral-dark p-2">neutral-white</li>
+      <li className="bg-neutral-light text-neutral-dark p-2">neutral-light</li>
+      <li className="bg-neutral-lightest text-neutral-dark p-2">neutral-lightest</li>
+      <li className="bg-neutral-dark text-neutral-white p-2 rounded-r-lg">neutral-dark</li>
     </ul>
   </div>
 </Unstyled>
@@ -64,10 +66,6 @@ The colors are defined in the root of the project in the file `tailwind.config.j
 <Unstyled>
   <Copy language='yaml'>
     {`
-      module.exports = {
-        content: [
-          './node_modules/@coqueirodigital/react-components/dist/**/*.{js,ts,jsx,tsx}',
-        ],
         colors: {
           primary: {
             regular: 'var(--color-primary-regular)',
@@ -96,7 +94,6 @@ The colors are defined in the root of the project in the file `tailwind.config.j
             highlight: 'var(--color-complementary-highlight)',
           },
         },
-      };
     `}
   </Copy>
 </Unstyled>
@@ -113,27 +110,28 @@ Create global styles for the colors and config tailwind in the file `**/global.c
       
       @layer base {
         :root {
-          --color-primary-regular: #fda000;
-          --color-primary-light: #F2A516;
-          --color-primary-dark: #D95204;
+        --color-primary-regular: #fda000;
+        --color-primary-light: #f2a516;
+        --color-primary-dark: #d95204;
+        --color-primary-40: #fda00066;
 
-          --color-secondary-regular: #121e1e;
-          --color-secondary-light: #1d2b2b;
-          --color-secondary-dark: #0c1616;
+        --color-secondary-regular: #121e1e;
+        --color-secondary-light: #1d2b2b;
+        --color-secondary-dark: #0c1616;
 
-          --color-neutral-black: #000000;
-          --color-neutral-white: #f9f9f9;
-          --color-neutral-light: #c4c4c4;
-          --color-neutral-lightest: #0000000a;
-          --color-neutral-dark: #121e1e;
+        --color-neutral-black: #000000;
+        --color-neutral-white: #f9f9f9;
+        --color-neutral-light: #c4c4c4;
+        --color-neutral-lightest: #0000000a;
+        --color-neutral-dark: #121e1e;
 
-          --color-feedback-error: #f44336;
-          --color-feedback-warning: #ff9800;
-          --color-feedback-success: #4caf;
-          --color-feedback-info: #2196f3;
+        --color-feedback-error: #f44336;
+        --color-feedback-warning: #ff9800;
+        --color-feedback-success: #4caf;
+        --color-feedback-info: #2196f3;
 
-          --color-complementary-highlight: #fd6600;
-
+        --color-complementary-highlight: #fd6600;
+  }
         }
       }
     `}

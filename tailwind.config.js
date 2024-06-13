@@ -21,6 +21,8 @@ export default {
           regular: "var(--color-primary-regular)",
           light: "var(--color-primary-light)",
           dark: "var(--color-primary-dark)",
+          '80': "var(--color-primary-80)",
+          '40': "var(--color-primary-40)",
         },
         secondary: {
           regular: "var(--color-secondary-regular)",
@@ -42,6 +44,7 @@ export default {
         },
         complementary: {
           highlight: "var(--color-complementary-highlight)",
+          'highlight-80': "var(--color-complementary-highlight-80)",
         },
       },
       keyframes: {

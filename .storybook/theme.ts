@@ -12,14 +12,14 @@ export default create({
   brandTarget: '_self',
 
   //
-  colorPrimary: '#fda000',
-  colorSecondary: '#FFA000',
+  colorPrimary: '#0d61ba',
+  colorSecondary: '#335250',
 
   // UI
   appBg: '#121e1e',
   appContentBg: '#121e1e',
   appPreviewBg: '#f9f9f9',
-  appBorderColor: '#FFD7A0',
+  appBorderColor: '#bad5d1',
   appBorderRadius: 4,
 
   // Text colors
@@ -28,13 +28,13 @@ export default create({
 
   // Toolbar default and active colors
   barTextColor: '#f9f9f9',
-  barSelectedColor: '#FFB000',
-  barHoverColor: '#FFD7A0',
+  barSelectedColor: '#0d61ba',
+  barHoverColor: '#bad5d1',
   barBg: '#121e1e',
 
   // Form colors
   inputBg: '#121e1e',
-  inputBorder: '#FFB000',
-  inputTextColor: '#FFB000',
+  inputBorder: '#0d61ba',
+  inputTextColor: '#0d61ba',
   inputBorderRadius: 2,
 })
