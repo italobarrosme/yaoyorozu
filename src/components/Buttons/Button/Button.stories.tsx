@@ -22,6 +22,7 @@ const SizeStyleCombinations = [
   'rounded/regular',
   'rounded/outline',
   'rounded/ghost',
+  'fit/calendar',
 ]
 
 const ButtonMeta: Meta<typeof Button> = {
