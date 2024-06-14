@@ -4,12 +4,12 @@ import { Copy } from '../../../Texts/Copy'
 export const CodeDecoratorDefault = () => {
   return (
     <Copy>
-      {`
-          <InputDatePicker 
-            name="date" 
-            label="Date" 
-            onChange={handleChange} 
-          />
+      {`  
+          const handleChange = (value) => {
+            console.log(date)
+          }
+            
+          <InputDatePicker label="calendar" emitValue={handleChange} />
         `}
     </Copy>
   )
@@ -22,23 +22,21 @@ export const DefaultComponent = ({
   error,
   auxiliary,
   dark,
-  rangeDate,
+  isRangeDate,
   ...props
 }: InputDatePickerProps) => {
   return (
     <>
-      <div className="relative">
-        <InputDatePicker
-          label={label}
-          icon={icon}
-          className={className}
-          error={error}
-          auxiliary={auxiliary}
-          dark={dark}
-          rangeDate={rangeDate}
-          {...props}
-        />
-      </div>
+      <InputDatePicker
+        label={label}
+        icon={icon}
+        className={className}
+        error={error}
+        auxiliary={auxiliary}
+        dark={dark}
+        isRangeDate={isRangeDate}
+        {...props}
+      />
     </>
   )
 }

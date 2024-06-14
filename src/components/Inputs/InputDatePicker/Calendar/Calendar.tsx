@@ -18,7 +18,7 @@ function Calendar({
   return (
     <DayPicker
       showOutsideDays={showOutsideDays}
-      className={cn('p-3', className)}
+      className={cn('p-4', className)}
       classNames={{
         months: 'flex flex-col sm:flex-row space-y-4 sm:space-x-4 sm:space-y-0',
         month: 'space-y-4',
@@ -36,7 +36,7 @@ function Calendar({
         nav_button_next: 'absolute right-1',
         table: 'w-full border-collapse space-y-1',
         head_row: 'flex',
-        head_cell: 'text-secondary-regular w-9 font-normal text-[0.8rem]',
+        head_cell: 'text-neutral-black w-9 font-normal text-[0.8rem]',
         row: 'flex w-full mt-2',
         cell: `h-9 w-9 text-center text-sm p-0 relative
         focus-within:relative focus-within:z-20`,
@@ -50,13 +50,13 @@ function Calendar({
         day_range_end: 'day-range-end rounded-r-md rounded-l-none',
         day_range_start: 'day-range-start rounded-l-md rounded-r-none',
         day_selected:
-          'day-selected bg-complementary-highlight rounded-md text-secondary-regular focus:!bg-complementary-highlight',
-        day_today: 'bg-primary-40 rounded-md',
+          'day-selected bg-complementary-highlight rounded-md text-neutral-dark focus:!bg-complementary-highlight',
+        day_today: 'bg-primary-40 rounded-md opacity-50',
         day_outside:
-          'day-outside bg-neutral-light text-neutral-black rounded-none opacity-30 aria-selected:text-secondary-regular aria-selected:opacity-40',
-        day_disabled: 'text-secondary-regular opacity-50',
+          'day-outside bg-neutral-light text-neutral-black rounded-none opacity-30 aria-selected:text-neutral-dark aria-selected:opacity-40',
+        day_disabled: '!text-neutral-light opacity-20',
         day_range_middle:
-          'aria-selected:bg-primary-40 aria-selected:text-complementary-highlight !text-secondary-regular aria-selected:rounded-none',
+          'aria-selected:bg-primary-40 aria-selected:text-complementary-highlight !text-neutral-dark aria-selected:rounded-none',
         day_hidden: 'invisible',
         ...classNames,
       }}

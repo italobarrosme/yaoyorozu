@@ -33,7 +33,10 @@ const CalendarMeta: Meta<typeof Calendar> = {
       story: { inline: true },
       canvas: { sourceState: 'none' },
       description: {
-        component: `The \`Calendar\` component is used to display a calendar with a date picker.`,
+        component: `The \`Calendar\` component is used to display a calendar with a date picker,
+        which has dependencies on the [\`react-day-picker\`](https://react-day-picker.js.org/) library and you also need to use [\`date-fns\`](https://date-fns.org/) to manipulate dates, 
+        To use it, you need to capture the value of the \`selected\` property using the \`onSelect\` property.
+        `,
       },
     },
   },

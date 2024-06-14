@@ -31,10 +31,20 @@ const InputDatePickerMeta: Meta<typeof InputDatePicker> = {
       description: 'The dark mode of the input',
       defaultValue: false,
     },
-    rangeDate: {
+    isRangeDate: {
       control: 'boolean',
       description: 'The range date of the input',
       defaultValue: false,
+    },
+    icon: {
+      control: 'text',
+      description: 'The icon of the input',
+    },
+    emitValue: {
+      action: 'emitValue',
+      table: {
+        disable: true,
+      },
     },
   },
   parameters: {
@@ -42,7 +52,11 @@ const InputDatePickerMeta: Meta<typeof InputDatePicker> = {
       story: { inline: true },
       canvas: { sourceState: 'none' },
       description: {
-        component: `The \`InputDatePicker\` component is used to get a date from the user. It can be used to get a date with or without range.`,
+        component: `The \`InputDatePicker\` component is used to get a date from the user.
+        It can be used to get a date with or without a range.It has a calendar that opens when the input is clicked. 
+        The \`Calendar\` component was used, which has dependencies on the \`react-day-picker\` library.
+        The calendarProps property can be used to implement modifications to the calendar.
+        `,
       },
     },
   },
@@ -79,7 +93,7 @@ export const Default: InputDatePickerStory = {
     error,
     auxiliary,
     dark,
-    rangeDate,
+    isRangeDate,
     ...props
   }) => (
     <DefaultComponent
@@ -89,7 +103,7 @@ export const Default: InputDatePickerStory = {
       error={error}
       auxiliary={auxiliary}
       dark={dark}
-      rangeDate={rangeDate}
+      isRangeDate={isRangeDate}
       {...props}
     />
   ),

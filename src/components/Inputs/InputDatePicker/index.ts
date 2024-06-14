@@ -1,2 +1,2 @@
 export { InputDatePicker, type InputDatePickerProps } from './InputDatePicker'
-export { Calendar } from './Calendar'
+export { Calendar, type CalendarProps } from './Calendar'
