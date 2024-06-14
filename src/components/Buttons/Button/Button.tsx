@@ -28,7 +28,7 @@ const buttonStyles = cva(
           'border border-primary-regular rounded-md text-primary-regular bg-transparent hover:bg-primary-regular hover:text-white',
         ghost:
           'bg-transparent text-primary-regular hover:opacity-80 hover:transparent',
-        calendar: 'text-secondary-regular',
+        calendar: 'text-neutral-dark',
       },
     },
   }

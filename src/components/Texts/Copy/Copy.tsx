@@ -33,9 +33,7 @@ export const Copy = ({ children, language = defaultLanguage }: CopyProps) => {
       <div className="col-start-5 col-span-5">
         <Button variant="fit/ghost" onClick={handleCopy}>
           <Tooltip trigger="click" content="Copy code" side="top">
-            <Text variant="sm/semibold" className="text-primary-dark">
-              Copy
-            </Text>
+            <Text variant="sm/semibold">Copy</Text>
           </Tooltip>
         </Button>
       </div>

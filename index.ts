@@ -16,6 +16,8 @@ export {
 export { InputNumber, type InputNumberProps } from './src/components/Inputs/InputNumber'
 export { InputText, type InputTextProps } from './src/components/Inputs/InputText'
 export { InputCheckbox, type InputCheckboxProps } from './src/components/Inputs/InputCheckbox'
+export { InputDatePicker, type InputDatePickerProps } from './src/components/Inputs/InputDatePicker'
+export { Calendar, type CalendarProps } from './src/components/Inputs/InputDatePicker/Calendar'
 // buttons
 export { Button, type ButtonProps } from './src/components/Buttons/Button'
 export { ButtonLink, type ButtonLinkProps } from './src/components/Buttons/ButtonLink'
@@ -24,3 +26,10 @@ export { Tabs, type TabsProps } from './src/components/Buttons/Tabs'
 export { Menubar, type MenubarProps } from './src/components/Buttons/Menubar'
 // notifications
 export { Toaster, useToast, Toast, type ToasterProps, type ToastProps, type ToasterToast } from './src/components/Notifications/Toaster'
+export {
+  Toastify,
+  type ToastifyProps,
+  type ToastifyProviderProps,
+  type ToastOptionsProps,
+  ToastifyProvider,
+} from './src/components/Notifications/Toastify'

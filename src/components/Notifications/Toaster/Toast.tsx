@@ -66,7 +66,7 @@ const ToastViewport = forwardRef<
 ToastViewport.displayName = ToastPrimitives.Viewport.displayName
 
 const toastVariants = cva(
-  'border border-secondary-regular p-4 w-full shadow-lg relative group pointer-events-auto relative w-full overflow-hidden rounded-md',
+  'border border-neutral-dark p-4 w-full shadow-lg relative group pointer-events-auto relative w-full overflow-hidden rounded-md',
   {
     variants: {
       variant: {
