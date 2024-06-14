@@ -63,6 +63,7 @@ export const InputDatePicker = forwardRef<
       } else {
         emitValue(format(date, 'dd/MM/yyyy', { locale: ptBR }))
       }
+      // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [date, dateRanged])
 
     return (
