@@ -21,7 +21,7 @@ export type InputDatePickerProps = {
   auxiliary?: string
   dark?: boolean
   isRangeDate?: boolean
-  emitValue: (value: string | string[]) => void
+  emitValue: (value: string | string[] | undefined) => void
   calendarProps?: CalendarProps
 } & InputHTMLAttributes<HTMLInputElement>
 
@@ -53,8 +53,6 @@ export const InputDatePicker = forwardRef<
     })
 
     useEffect(() => {
-      if (!date && !dateRanged) return
-
       if (isRangeDate && dateRanged) {
         emitValue([
           format(dateRanged.from, 'dd/MM/yyyy', { locale: ptBR }),
