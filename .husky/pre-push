@@ -1,6 +1,7 @@
 echo "🧪  Starting a test check" 
 
 npm run test:deploy --findRelatedTests --bail
+npm run lint
 if [ $? -ne 0 ]; then
   echo "🧪⚠️  The tests failed. Push is not possible."
   exit 1
