@@ -9,6 +9,7 @@ const ToastifyMeta: Meta<{
 }> = {
   title: 'Components/Notifications/Toastify',
   component: Toastify,
+  subcomponents: { ToastifyProvider },
   tags: ['autodocs'],
   argTypes: {
     description: {
@@ -51,6 +52,7 @@ const ToastifyMeta: Meta<{
         You can place it anywhere in your app, but it's recommended to place it at the root of your app.
         The Toastify receives a \`description\` prop that controls the message of the toast.
         The Toastify receives an \`option\` prop that controls the options of the toast.
+        The \`<ToastifyProvider />\` component is a container provider for the toast component. It is responsible for rendering the toasts and positioning them on the screen.
         `,
       },
     },
