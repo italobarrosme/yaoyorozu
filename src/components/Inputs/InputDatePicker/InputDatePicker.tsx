@@ -97,11 +97,11 @@ export const InputDatePicker = forwardRef<
             value={
               isRangeDate
                 ? `${
-                    dateRanged.from
+                    dateRanged?.from
                       ? format(dateRanged.from, 'dd/MM/yyyy', { locale: ptBR })
                       : ''
                   } - ${
-                    dateRanged.to
+                    dateRanged?.to
                       ? format(dateRanged.to, 'dd/MM/yyyy', { locale: ptBR })
                       : ''
                   }`
