@@ -55,11 +55,15 @@ export const InputDatePicker = forwardRef<
     useEffect(() => {
       if (isRangeDate && dateRanged) {
         emitValue([
-          format(dateRanged.from, 'dd/MM/yyyy', { locale: ptBR }),
-          format(dateRanged.to, 'dd/MM/yyyy', { locale: ptBR }),
+          dateRanged.from
+            ? format(dateRanged.from, 'dd/MM/yyyy', { locale: ptBR })
+            : '',
+          dateRanged.to
+            ? format(dateRanged.to, 'dd/MM/yyyy', { locale: ptBR })
+            : '',
         ])
       } else {
-        emitValue(format(date, 'dd/MM/yyyy', { locale: ptBR }))
+        emitValue(date ? format(date, 'dd/MM/yyyy', { locale: ptBR }) : '')
       }
       // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [date, dateRanged])
@@ -101,7 +105,9 @@ export const InputDatePicker = forwardRef<
                       ? format(dateRanged.to, 'dd/MM/yyyy', { locale: ptBR })
                       : ''
                   }`
-                : format(date, 'dd/MM/yyyy', { locale: ptBR })
+                : date
+                  ? format(date, 'dd/MM/yyyy', { locale: ptBR })
+                  : ''
             }
             onClick={() => setIsCalendarOpen(!isCalendarOpen)}
           />
