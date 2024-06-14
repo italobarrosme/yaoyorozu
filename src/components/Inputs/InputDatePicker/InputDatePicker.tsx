@@ -53,6 +53,8 @@ export const InputDatePicker = forwardRef<
     })
 
     useEffect(() => {
+      if (!date && !dateRanged) return
+
       if (isRangeDate && dateRanged) {
         emitValue([
           format(dateRanged.from, 'dd/MM/yyyy', { locale: ptBR }),
