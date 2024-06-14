@@ -1,10 +1,17 @@
-import { Meta, Story, Canvas } from '@storybook/blocks';
+import { Meta, Story, Canvas, Unstyled } from '@storybook/blocks';
+import packageJson from '../../package.json';
+import { Copy } from '../components/Texts/Copy';
 
 <Meta title="Introduction/Introduction" />
 
-<div class="flex w-full flex-col justify-center items-center bg-neutral-dark rounded-md mb-4">
-  <img src="/logo_coqueirodigital_brand.png" width="320px" />
-</div>
+<Unstyled>
+  <div class="flex w-full flex-col justify-center items-center bg-neutral-dark text-neutral-white rounded-md mb-4 p-4">
+    <img src="/logo_coqueirodigital_brand.png" width="320px" />
+    <p class='text-xl'>
+      v.{packageJson.version}
+    </p>
+  </div>
+</Unstyled>
 
 <div class="p-4">
   # Introduction to Coqueiro Digital's React Component Library
@@ -24,3 +31,26 @@ import { Meta, Story, Canvas } from '@storybook/blocks';
 
   Join us and be part of this revolution in creating web interfaces!
 </div>
+
+## Pattern installation
+
+Install the package via npm. Make sure you have Node.js installed.
+
+<Unstyled>
+  <Copy language='bash'>
+    {`
+      npm install @coqueirodigital/react-components
+    `}
+  </Copy>
+</Unstyled>
+
+## Use components
+
+It has a named import for each component, so you can import only the components you need.
+
+<a href="http://localhost:6006/?path=/docs/components-buttons-button--docs"> Page Components </a>
+
+## Styles
+To use the components, you need to install the styles by default
+
+<a href="https://ui.coqueirodigital.com/?path=/docs/introduction-style--docs"> Page styles </a>
