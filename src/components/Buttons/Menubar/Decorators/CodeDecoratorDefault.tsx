@@ -5,7 +5,7 @@ export const CodeDecoratorDefault = () => {
   return (
     <Copy>
       {`
-      import { Menubar } from '@coqueirodigital/react-components'
+      import { Menubar } from '@developerskyi/react-components'
       
       <Menubar
         menus={[

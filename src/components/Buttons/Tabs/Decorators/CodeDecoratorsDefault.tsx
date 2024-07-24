@@ -5,7 +5,7 @@ export const CodeDecoratorDefault = () => {
   return (
     <Copy>
       {`
-        import { Tabs } from '@coqueirodigital/react-components'
+        import { Tabs } from '@developerskyi/react-components'
 
         <Tabs
           defaultValue="tab1"

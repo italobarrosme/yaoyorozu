@@ -1,0 +1,21 @@
+# Ignorar arquivos de configuração do storybook
+storybook-static
+.storybook
+
+# Ignorar arquivos de configuração do Storybook
+.storybook/*
+
+# Ignorar arquivos de configuração do ESLint
+.eslintrc
+.eslintignore
+
+# Ignorar arquivos de configuração do Prettier
+.prettierrc
+.prettierignore
+
+# Ignorar arquivos de configuração do EditorConfig
+.editorconfig
+
+# Ignorar arquivos de configuração do npm
+.npmrc
+

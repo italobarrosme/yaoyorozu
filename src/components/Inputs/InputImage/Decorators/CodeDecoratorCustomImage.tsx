@@ -6,7 +6,7 @@ export const CodeDecoratorCustomImage = () => {
   return (
     <Copy>
       {`
-          import { InputImage, InputImageProps, InputImageRef } from '@coqueirodigital/react-components'
+          import { InputImage, InputImageProps, InputImageRef } from '@developerskyi/react-components'
 
           
             const inputImageRef = useRef<InputImageRef>(null)

@@ -5,7 +5,7 @@ export const CodeDecoratorsManyLinks = () => {
   return (
     <Copy>
       {`
-        import { Breadcrumb } from '@coqueirodigital/react-components'
+        import { Breadcrumb } from '@developerskyi/react-components'
 
         const CustomLink = ({ href, name }) => (
           <a className='underline hover:text-complementary-highlight' href={href}>{name}</a>,

@@ -5,7 +5,7 @@ export const CodeDecoratorDefault = () => {
   return (
     <Copy>
       {`
-        import { Tooltip, TooltipProps } from '@coqueirodigital/react-components'
+        import { Tooltip, TooltipProps } from '@developerskyi/react-components'
 
         <Tooltip content="Hover me" side="top" >
           Hello world

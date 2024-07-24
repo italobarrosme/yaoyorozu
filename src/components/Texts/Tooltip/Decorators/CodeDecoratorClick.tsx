@@ -5,7 +5,7 @@ export const CodeDecoratorClick = () => {
   return (
     <Copy>
       {`
-        import { Tooltip, TooltipProps } from '@coqueirodigital/react-components'
+        import { Tooltip, TooltipProps } from '@developerskyi/react-components'
 
         <Tooltip content="Click me" trigger="click" side="top" >
           Hello world

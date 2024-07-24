@@ -5,7 +5,7 @@ export const CodeDecoratorDefault = () => {
   return (
     <Copy>
       {`
-      import { ButtonLink } from '@coqueirodigital/react-components'
+      import { ButtonLink } from '@developerskyi/react-components'
 
       <ButtonLink variant="medium/regular" >
         Hello world Link

@@ -6,7 +6,7 @@ export const CodeDecoratorDefault = () => {
   return (
     <Copy>
       {`
-      import { useToast, Button } from '@coqueirodigital/react-components'
+      import { useToast, Button } from '@developerskyi/react-components'
 
       const { toast } = useToast()
 

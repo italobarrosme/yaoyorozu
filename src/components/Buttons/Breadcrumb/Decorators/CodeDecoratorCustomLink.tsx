@@ -5,7 +5,7 @@ export const CodeDecoratorCustomLink = () => {
   return (
     <Copy>
       {`
-        import { Breadcrumb } from '@coqueirodigital/react-components'
+        import { Breadcrumb } from '@developerskyi/react-components'
 
         const CustomLink = ({ href, name }) => (
           <a className='bg-primary-regular' href={href}>{name}</a>

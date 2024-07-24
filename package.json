@@ -1,7 +1,7 @@
 {
-  "name": "@coqueirodigital/react-components",
+  "name": "@developerskyi/react-components",
   "private": false,
-  "version": "1.0.19",
+  "version": "2.0.0",
   "type": "module",
   "types": "dist/index.d.ts",
   "exports": {
@@ -117,5 +117,23 @@
     "vite-plugin-dts": "^3.9.1",
     "vite-tsconfig-paths": "^4.3.2",
     "vitest": "^1.6.0"
-  }
+  },
+  "description": "A skyi está disponibilizando esta biblioteca de componentes frontend, que oferece uma base sólida e consistente para projetos futuros. Com componentes reutilizáveis e padronizados, garantimos a uniformidade visual e funcional em todos os projetos, promovendo eficiência e coesão na equipe de desenvolvimento. Além disso, realizamos manutenção mensal para garantir que a biblioteca esteja sempre atualizada e pronta para uso.",
+  "main": "index.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/italobarrosme/yaoyorozu.git"
+  },
+  "keywords": [
+    "components",
+    "react",
+    "ds",
+    "skyi"
+  ],
+  "author": "italobarros",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/italobarrosme/yaoyorozu/issues"
+  },
+  "homepage": "https://github.com/italobarrosme/yaoyorozu#readme"
 }

@@ -5,7 +5,7 @@ export const CodeDecoratorDefault = () => {
   return (
     <Copy>
       {`
-        import { Breadcrumb } from '@coqueirodigital/react-components'
+        import { Breadcrumb } from '@developerskyi/react-components'
 
         <Breadcrumb
           items={[

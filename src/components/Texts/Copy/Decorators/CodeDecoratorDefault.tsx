@@ -4,7 +4,7 @@ export const CodeDecoratorDefault = () => {
   return (
     <Copy>
       {`
-        import { Copy } from '@coqueirodigital/react-components'
+        import { Copy } from '@developerskyi/react-components'
         
         <Copy>
           Hellow World

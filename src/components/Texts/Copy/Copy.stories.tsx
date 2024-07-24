@@ -49,7 +49,7 @@ export const Default: StoryObj<typeof Copy> = {
     ),
   ],
   args: {
-    children: 'import { Copy } from "@coqueirodigital/react-components"',
+    children: 'import { Copy } from "@developerskyi/react-components"',
   },
   render: ({ children }) => <DefaultComponent>{children}</DefaultComponent>,
 }

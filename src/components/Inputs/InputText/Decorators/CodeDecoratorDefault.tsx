@@ -5,7 +5,7 @@ export const CodeDecoratorDefault = () => {
   return (
     <Copy>
       {`
-        import { InputText } from '@coqueirodigital/react-components'
+        import { InputText } from '@developerskyi/react-components'
 
         <InputText label="Hello World" name="input-name" />
       `}

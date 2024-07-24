@@ -5,7 +5,7 @@ export const CodeDecoratorDefault = () => {
   return (
     <Copy>
       {`
-      import { Button } from '@coqueirodigital/react-components'
+      import { Button } from '@developerskyi/react-components'
 
       <Button variant='medium/regular' onClick={() => console.log('click')}>
         Hellow World

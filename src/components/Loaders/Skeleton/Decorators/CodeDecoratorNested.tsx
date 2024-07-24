@@ -5,7 +5,7 @@ export const CodeDecoratorNested = () => {
   return (
     <Copy>
       {`
-        import { Skeleton, SkeletonProps } from '@coqueirodigital/react-components'
+        import { Skeleton, SkeletonProps } from '@developerskyi/react-components'
 
         <div className="flex flex-col gap-4 px-6 py-2">
           <div className="flex gap-4">

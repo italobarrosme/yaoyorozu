@@ -5,7 +5,7 @@ export const CodeDecoratorDefault = () => {
   return (
     <Copy>
       {`
-          import { InputNumber } from '@coqueirodigital/react-components'
+          import { InputNumber } from '@developerskyi/react-components'
 
           <InputNumber label="Enter a number" name="number-input" onChangeValue={handleValue} />
         `}

@@ -5,7 +5,7 @@ export const CodeDecoratorDefault = () => {
   return (
     <Copy>
       {`
-        import { Skeleton, SkeletonProps } from '@coqueirodigital/react-components'
+        import { Skeleton, SkeletonProps } from '@developerskyi/react-components'
 
         <Skeleton animationDuration="1.6" size="line" />
       `}

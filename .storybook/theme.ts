@@ -6,9 +6,9 @@ export default create({
   fontCode: 'monospace',
   // brand
   base: 'dark',
-  brandTitle: 'Coqueiro Digital',
+  brandTitle: 'Skyi',
   brandUrl: '',
-  brandImage: '/logo_coqueirodigital_brand_horizontal.png',
+  brandImage: '/skyi_logo_white.png',
   brandTarget: '_self',
 
   //

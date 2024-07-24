@@ -5,7 +5,7 @@ export const CodeDecoratorDefault = () => {
   return (
     <Copy>
       {`
-        import { Text, TextProps } from '@coqueirodigital/react-components'
+        import { Text, TextProps } from '@developerskyi/react-components'
 
         <Text variant="md/normal" className="text-secondary-regular">
           Hello, world!
