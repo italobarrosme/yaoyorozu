@@ -4,6 +4,17 @@ export { Tooltip, type TooltipProps } from './src/components/Texts/Tooltip'
 export { Copy, type CopyProps } from './src/components/Texts/Copy'
 // loaders
 export { Skeleton, type SkeletonProps } from './src/components/Loaders/Skeleton'
+// layouts
+export {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableFooter,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from './src/components/Layouts/Table'
 // inputs
 export { InputSelect, type InputSelectProps } from './src/components/Inputs/InputSelect'
 export {
