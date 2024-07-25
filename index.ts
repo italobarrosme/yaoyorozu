@@ -5,6 +5,7 @@ export { Copy, type CopyProps } from './src/components/Texts/Copy'
 // loaders
 export { Skeleton, type SkeletonProps } from './src/components/Loaders/Skeleton'
 // inputs
+export { InputSelect, type InputSelectProps } from './src/components/Inputs/InputSelect'
 export {
   InputImage,
   type InputImageProps,

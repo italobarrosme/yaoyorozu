@@ -10,7 +10,6 @@ import {
   useState,
 } from 'react'
 import * as TooltipPrimitive from '@radix-ui/react-tooltip'
-import { motion } from 'framer-motion'
 import { cn } from '../../../utils/cn'
 import { Text } from '../Text'
 
@@ -24,11 +23,7 @@ const TooltipContent = forwardRef<
   ElementRef<typeof TooltipPrimitive.Content>,
   ComponentPropsWithoutRef<typeof TooltipPrimitive.Content>
 >(({ className, sideOffset = 4, ...props }, ref) => (
-  <motion.div
-    initial={{ opacity: 0, scale: 0.5 }}
-    animate={{ opacity: 1, scale: 1 }}
-    transition={{ ease: 'easeOut', duration: 3 }}
-  >
+  <div>
     <TooltipPrimitive.Content
       ref={ref}
       sideOffset={sideOffset}
@@ -39,9 +34,9 @@ const TooltipContent = forwardRef<
       {...props}
     >
       {props.children}
-      <TooltipPrimitive.Arrow className="border-primary-regular" />
+      <TooltipPrimitive.Arrow width={11} height={5} />
     </TooltipPrimitive.Content>
-  </motion.div>
+  </div>
 ))
 TooltipContent.displayName = TooltipPrimitive.Content.displayName
 

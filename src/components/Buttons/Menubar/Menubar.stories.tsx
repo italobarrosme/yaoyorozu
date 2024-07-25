@@ -8,17 +8,53 @@ const MenuProp = [
   {
     trigger: 'File',
     listItems: [
-      { children: <ButtonLink variant="fit/block">Open</ButtonLink> },
-      { children: <ButtonLink variant="fit/block">Save</ButtonLink> },
-      { children: <ButtonLink variant="fit/block">Save As</ButtonLink> },
+      {
+        children: (
+          <ButtonLink className="text-neutral-white" variant="fit/block">
+            Open
+          </ButtonLink>
+        ),
+      },
+      {
+        children: (
+          <ButtonLink className="text-neutral-white" variant="fit/block">
+            Save
+          </ButtonLink>
+        ),
+      },
+      {
+        children: (
+          <ButtonLink className="text-neutral-white" variant="fit/block">
+            Save As
+          </ButtonLink>
+        ),
+      },
     ],
     subMenus: [
       {
         trigger: 'Recent Files',
         listItems: [
-          { children: <ButtonLink variant="fit/block">File 1</ButtonLink> },
-          { children: <ButtonLink variant="fit/block">File 2</ButtonLink> },
-          { children: <ButtonLink variant="fit/block">File 3</ButtonLink> },
+          {
+            children: (
+              <ButtonLink className="text-neutral-white" variant="fit/block">
+                File 1
+              </ButtonLink>
+            ),
+          },
+          {
+            children: (
+              <ButtonLink className="text-neutral-white" variant="fit/block">
+                File 2
+              </ButtonLink>
+            ),
+          },
+          {
+            children: (
+              <ButtonLink className="text-neutral-white" variant="fit/block">
+                File 3
+              </ButtonLink>
+            ),
+          },
         ],
       },
     ],

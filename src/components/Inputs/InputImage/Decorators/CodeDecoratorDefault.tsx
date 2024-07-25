@@ -64,7 +64,7 @@ export const DefaultComponent = ({
         />
         <Button
           variant="small/regular"
-          className="bg-primary-regular max-w-32 p-2 rounded-lg"
+          className="bg-primary-regular max-w-32 p-2 rounded-lg h-10"
           onClick={handleClearFiles}
         >
           Clear files

@@ -1,6 +1,7 @@
 import { useRef } from 'react'
 import { Copy } from '../../../Texts/Copy'
 import { InputImage, InputImageProps, InputImageRef } from '..'
+import { Button } from '../../../Buttons/Button'
 
 export const CodeDecoratorCustomImage = () => {
   return (
@@ -69,12 +70,13 @@ export const CustomImageComponent = ({
             <img src={src} alt={alt} className={className} />
           )}
         />
-        <button
-          className="bg-primary-regular max-w-32 p-2 rounded-lg"
+        <Button
+          variant="small/regular"
+          className="bg-primary-regular max-w-32 p-2 rounded-lg h-10"
           onClick={handleClearFiles}
         >
           Clear files
-        </button>
+        </Button>
       </div>
     </>
   )
