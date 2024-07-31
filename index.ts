@@ -51,6 +51,10 @@ export { InputText, type InputTextProps } from './src/components/Inputs/InputTex
 export { InputCheckbox, type InputCheckboxProps } from './src/components/Inputs/InputCheckbox'
 export { InputDatePicker, type InputDatePickerProps } from './src/components/Inputs/InputDatePicker'
 export { Calendar, type CalendarProps } from './src/components/Inputs/InputDatePicker/Calendar'
+export { 
+  InputOTP, 
+  type InputOTPProps,
+} from './src/components/Inputs/InputOTP'
 
 // buttons
 export { Button, type ButtonProps } from './src/components/Buttons/Button'

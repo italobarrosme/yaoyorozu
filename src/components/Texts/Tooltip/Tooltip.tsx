@@ -82,13 +82,13 @@ export const Tooltip = ({
     <TooltipProvider>
       <TooltipBase open={open} onOpenChange={handleOpenChange} {...props}>
         <TooltipTrigger asChild>
-          <button
+          <span
             className="w-fit cursor-pointer"
             onClick={handleClick}
             tabIndex={trigger === 'click' ? 0 : undefined}
           >
             {children}
-          </button>
+          </span>
         </TooltipTrigger>
         <TooltipContent side={side}>
           <Text variant="sm/semibold" tag="p">

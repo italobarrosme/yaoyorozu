@@ -1,7 +1,7 @@
 {
   "name": "@developerskyi/react-components",
   "private": false,
-  "version": "2.1.0",
+  "version": "2.2.0",
   "type": "module",
   "types": "dist/index.d.ts",
   "exports": {
@@ -66,6 +66,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "date-fns": "^3.6.0",
+    "input-otp": "^1.2.4",
     "install": "^0.13.0",
     "npm": "^10.8.2",
     "postcss-import": "^16.1.0",
