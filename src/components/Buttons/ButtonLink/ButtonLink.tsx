@@ -5,7 +5,7 @@ import { cva, VariantProps } from 'class-variance-authority'
 
 const buttonLinkStyles = cva(
   [
-    `flex justify-center items-center gap-2 cursor-pointer whitespace-nowrap rounded text-xs font-bold text-white transition-colors delay-300 hover:bg-secondary 
+    `flex justify-center items-center gap-2 cursor-pointer whitespace-nowrap rounded text-xs font-bold text-primary-foreground transition-colors delay-300 hover:bg-secondary 
     focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-regular focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50`,
   ],
   {
@@ -20,7 +20,7 @@ const buttonLinkStyles = cva(
       },
       style: {
         regular:
-          'bg-transparent text-neutral-dark underline hover:bg-transparent hover:text-primary-regular',
+          'bg-transparent text-neutral-dark underline hover:bg-transparent hover:text-complementary-highlight',
         outline:
           'border border-primary-regular text-neutral-dark bg-transparent hover:bg-primary-regular hover:text-white underline',
         block:

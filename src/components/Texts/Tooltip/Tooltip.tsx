@@ -34,7 +34,11 @@ const TooltipContent = forwardRef<
       {...props}
     >
       {props.children}
-      <TooltipPrimitive.Arrow width={11} height={5} />
+      <TooltipPrimitive.Arrow
+        width={12}
+        height={6}
+        className="fill-primary-regular"
+      />
     </TooltipPrimitive.Content>
   </div>
 ))
@@ -74,7 +78,7 @@ export const Tooltip = ({
     if (trigger === 'click') {
       setTimeout(() => {
         setOpen(false)
-      }, 9000)
+      }, 30000)
     }
   }, [open, trigger])
 

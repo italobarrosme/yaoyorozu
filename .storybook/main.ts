@@ -1,34 +1,29 @@
 const config = {
-  stories: ["../src/**/*.@(mdx|stories.@(js|jsx|ts|tsx))"],
+  stories: ['../src/**/*.@(mdx|stories.@(js|jsx|ts|tsx))'],
   docs: {
-    theme: "@storybook/addon-docs",
+    theme: '@storybook/addon-docs',
     source: {
-      type: "dynamic",
+      type: 'dynamic',
     },
   },
 
   addons: [
-    "@storybook/addon-links",
-    "@storybook/addon-essentials",
-    "@storybook/addon-interactions",
-    "@storybook/addon-styling",
-    "@storybook/manager-api",
+    '@storybook/addon-links',
+    '@storybook/addon-essentials',
+    '@storybook/addon-interactions',
+    '@storybook/manager-api',
   ],
 
+  core: {
+    builder: '@storybook/builder-vite', // 👈 The builder enabled here.
+  },
+
   framework: {
-    name: "@storybook/react-vite",
-    options: {
-      postCss: {
-        implementation: require("postcss"),
-      },
-      builder: {
-        viteConfigPath: "./vite.config.ts",
-      }
-    },
+    name: '@storybook/react-vite',
   },
 
   typescript: {
-    reactDocgen: "react-docgen-typescript"
-  }
-};
-export default config;
+    reactDocgen: 'react-docgen-typescript',
+  },
+}
+export default config

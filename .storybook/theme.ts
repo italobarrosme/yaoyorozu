@@ -32,6 +32,9 @@ export default create({
   barHoverColor: '#bad5d1',
   barBg: '#121e1e',
 
+  buttonBg: '#0d61ba',
+  buttonBorder: '#0d61ba',
+
   // Form colors
   inputBg: '#121e1e',
   inputBorder: '#0d61ba',

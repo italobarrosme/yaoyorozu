@@ -35,8 +35,13 @@ export {
   CardContent,
   CardFooter,
 } from './src/components/Layouts/Card'
-
-// inputs
+// Inputs
+export { 
+  InputOTP,
+  type InputOTPProps,
+  InputOTPprimitive, InputOTPGroup, InputOTPSlot, InputOTPSeparator
+} from './src/components/Inputs/InputOTP'
+export { patterns } from './src/components/Inputs/InputOTP/constants'
 export { InputSelect, type InputSelectProps } from './src/components/Inputs/InputSelect'
 export {
   InputImage,
@@ -51,16 +56,14 @@ export { InputText, type InputTextProps } from './src/components/Inputs/InputTex
 export { InputCheckbox, type InputCheckboxProps } from './src/components/Inputs/InputCheckbox'
 export { InputDatePicker, type InputDatePickerProps } from './src/components/Inputs/InputDatePicker'
 export { Calendar, type CalendarProps } from './src/components/Inputs/InputDatePicker/Calendar'
-export { 
-  InputOTP, 
-  type InputOTPProps,
-} from './src/components/Inputs/InputOTP'
+export { InputArea, type InputAreaProps } from './src/components/Inputs/InputArea'
 
 // buttons
 export { Button, type ButtonProps } from './src/components/Buttons/Button'
 export { ButtonLink, type ButtonLinkProps } from './src/components/Buttons/ButtonLink'
 export { Breadcrumb, type BreadcrumbProps } from './src/components/Buttons/Breadcrumb'
 export { Tabs, type TabsProps } from './src/components/Buttons/Tabs'
+export { Chip, type ChipProps } from './src/components/Buttons/Chip'
 export { Menubar, type MenubarProps } from './src/components/Buttons/Menubar'
 
 // notifications

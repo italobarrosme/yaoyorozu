@@ -50,13 +50,14 @@ function Calendar({
         day_range_end: 'day-range-end rounded-r-md rounded-l-none',
         day_range_start: 'day-range-start rounded-l-md rounded-r-none',
         day_selected:
-          'day-selected bg-complementary-highlight rounded-md text-neutral-dark focus:!bg-complementary-highlight',
-        day_today: 'bg-primary-40 rounded-md opacity-50',
+          'day-selected bg-complementary-highlight rounded-md text-neutral-white focus:!bg-complementary-highlight',
+        day_today:
+          'bg-primary-regular text-primary-foreground rounded-md opacity-50',
         day_outside:
           'day-outside bg-neutral-light text-neutral-black rounded-none opacity-30 aria-selected:text-neutral-dark aria-selected:opacity-40',
         day_disabled: '!text-neutral-light opacity-20',
         day_range_middle:
-          'aria-selected:bg-primary-40 aria-selected:text-complementary-highlight !text-neutral-dark aria-selected:rounded-none',
+          'aria-selected:bg-primary-regular aria-selected:text-complementary-highlight !text-neutral-white aria-selected:rounded-none',
         day_hidden: 'invisible',
         ...classNames,
       }}

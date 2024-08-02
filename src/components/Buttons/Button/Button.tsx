@@ -14,7 +14,7 @@ const buttonStyles = cva(
   {
     variants: {
       size: {
-        small: 'px-2 py-3 text-sm w-32 h-4',
+        small: 'px-2 py-3 text-sm w-32 h-8',
         medium: 'px-4 py-2 text-base w-60 h-10',
         large: 'px-4 py-3 text-lg w-72 h-10',
         full: 'w-full px-3 py-2 text-base h-10',
@@ -24,6 +24,8 @@ const buttonStyles = cva(
       style: {
         regular:
           'bg-primary-regular rounded-md hover:border hover:border-primary-regular hover:bg-transparent hover:text-primary-regular',
+        secondary:
+          'bg-secondary-regular rounded-md text-secondary-foreground hover:bg-transparent hover:border hover:border-secondary-regular hover:text-secondary-regular',
         outline:
           'border border-primary-regular rounded-md text-primary-regular bg-transparent hover:bg-primary-regular hover:text-white',
         ghost:

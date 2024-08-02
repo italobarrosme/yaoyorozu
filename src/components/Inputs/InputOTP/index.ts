@@ -1,3 +1,4 @@
+export { patterns } from './constants'
 export {
   InputOTP,
   InputOTPprimitive,
@@ -6,4 +7,3 @@ export {
   InputOTPSeparator,
   type InputOTPProps,
 } from './InputOTP'
-export { patterns } from './constants'

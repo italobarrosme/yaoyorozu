@@ -81,6 +81,8 @@ export const Default: BreadCrumbStory = {
       { name: 'Product 1', href: '#' },
       { name: 'Product 2', href: '#' },
     ],
+
+    iconSeparator: 'Check',
   },
   render: ({ items, className, customLink, iconSeparator }) => {
     return (
@@ -117,7 +119,7 @@ export const CustomLink: BreadCrumbStory = {
       { name: 'Product 2 custom link', href: '#' },
     ],
     customLink: ({ href, name }) => (
-      <a className="bg-primary-regular" href={href}>
+      <a className="bg-primary-regular text-neutral-white" href={href}>
         {name}
       </a>
     ),
