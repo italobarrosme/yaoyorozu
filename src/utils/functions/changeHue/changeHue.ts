@@ -13,10 +13,14 @@ export const changeHue = (
   )
   root.style.setProperty(
     '--color-complementary-highlight',
-    updateHue(complementaryColor, saturation, lightness)
+    updateHue(complementaryColor.toString(), saturation, lightness)
   )
 }
 
-const updateHue = (newColor, newSaturation, newLightness) => {
+const updateHue = (
+  newColor: string,
+  newSaturation: string,
+  newLightness: string
+) => {
   return `${newColor} ${newSaturation} ${newLightness}`
 }
