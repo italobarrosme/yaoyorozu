@@ -1,5 +1,6 @@
 import { Meta, Story, Canvas, Unstyled } from '@storybook/blocks';
 import { Copy } from '../components/Texts/Copy';
+import { Colors } from '../modules/Colors';
 
 <Meta title="Introduction/Style" />
 
@@ -7,32 +8,11 @@ import { Copy } from '../components/Texts/Copy';
 
 ## Color palette
 
+
+
 <Unstyled>
-  <div className="p-4 flex flex-col gap-4 font-semibold border shadow-xl rounded-lg mb-8">
-    <ul className="flex items-center w-full">
-      <li className="bg-primary-regular text-primary-foreground p-2 rounded-l-lg">primary-regular</li>
-      <li className="bg-secondary-regular text-secondary-foreground p-2 rounded-r-lg">bg-secondary-regular</li>
-    </ul>
+  <Colors /> 
 
-    <ul className="flex items-center w-full">
-      <li className="bg-neutral-black text-neutral-white p-2 rounded-l-lg">neutral-black</li>
-      <li className="bg-neutral-white text-neutral-dark p-2">neutral-white</li>
-      <li className="bg-neutral-light text-neutral-dark p-2">neutral-light</li>
-      <li className="bg-neutral-lightest text-neutral-white p-2">neutral-lightest</li>
-      <li className="bg-neutral-dark text-neutral-white p-2 rounded-r-lg">neutral-dark</li>
-    </ul>
-
-    <ul className="flex items-center w-full">
-      <li className="bg-feedback-error text-neutral-white p-2 rounded-l-lg">feedback-error</li>
-      <li className="bg-feedback-warning text-neutral-white p-2">feedback-warning</li>
-      <li className="bg-feedback-success text-neutral-white p-2">feedback-success</li>
-      <li className="bg-feedback-info text-neutral-white p-2 rounded-r-lg">feedback-info</li>
-    </ul>
-
-    <ul className="flex items-center w-full">
-      <li className="bg-complementary-highlight text-neutral-white p-2 rounded-lg">complementary-highlight</li>
-    </ul>
-  </div>
 </Unstyled>
 
 ## Pattern installation styles

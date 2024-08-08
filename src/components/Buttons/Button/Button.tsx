@@ -23,9 +23,9 @@ const buttonStyles = cva(
       },
       style: {
         regular:
-          'bg-primary-regular rounded-md hover:border hover:border-primary-regular hover:bg-transparent hover:text-primary-regular',
+          'bg-primary-regular rounded-md hover:border hover:bg-primary-regular/80 hover:text-primary-foreground',
         secondary:
-          'bg-secondary-regular rounded-md text-secondary-foreground hover:bg-transparent hover:border hover:border-secondary-regular hover:text-secondary-regular',
+          'bg-secondary-regular rounded-md text-secondary-foreground hover:bg-secondary-regular/80 hover:text-secondary-foreground',
         outline:
           'border border-primary-regular rounded-md text-primary-regular bg-transparent hover:bg-primary-regular hover:text-white',
         ghost:

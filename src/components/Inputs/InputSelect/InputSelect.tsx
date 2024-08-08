@@ -43,7 +43,7 @@ const OptionList = ({ options, isCheck }: OptionListProps) => {
       {options.map(({ label, value }) => (
         <SelectItem
           isCheck={isCheck}
-          className="hover:bg-primary-40 font-bold cursor-pointer rounded-md transition-colors duration-300"
+          className="hover:bg-primary-regular/10 font-bold cursor-pointer rounded-md transition-colors duration-300"
           value={value}
           key={value}
         >

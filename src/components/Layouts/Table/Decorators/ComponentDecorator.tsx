@@ -59,7 +59,7 @@ export const DefaultComponent = () => {
     <Table>
       <TableCaption>A list of your recent invoices.</TableCaption>
       <TableHeader>
-        <TableRow className="hover:bg-neutral-white bg-neutral-lightest text-primary-regular">
+        <TableRow className="bg-neutral-white text-primary-regular">
           <TableHead className="w-[100px]">Invoice</TableHead>
           <TableHead>Status</TableHead>
           <TableHead>Method</TableHead>
