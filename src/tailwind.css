@@ -11,11 +11,11 @@
     --color-secondary-regular: 220 70% 20%;
     --color-secondary-foreground: 220 100% 98%;
 
-    --color-neutral-black: 0 0% 7.5%;
+    --color-neutral-black: 180 25% 4.5%;
     --color-neutral-white: 0 0% 97.6%;
     --color-neutral-light: 0 0% 76.9%;
-    --color-neutral-lightest: 0 1% 73%;
-    --color-neutral-dark: 180 23.5% 9%;
+    --color-neutral-lightest: 0 1% 93%;
+    --color-neutral-dark: 180 25% 8%;
 
     --color-feedback-error: 4 89% 58%;
     --color-feedback-warning: 36 100% 50%;

@@ -35,7 +35,7 @@ Checkbox.displayName = CheckboxPrimitive.Root.displayName
 export { Checkbox }
 
 export type InputCheckboxProps = {
-  label: string
+  label?: string
   className?: string
   error?: string
 } & React.ComponentProps<typeof Checkbox>
