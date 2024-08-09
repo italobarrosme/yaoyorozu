@@ -26,7 +26,7 @@ export const NotRemovableCode = () => {
           Chip
         } from '@developerskyi/react-components'
 
-        <Chip value="Chip" removable={false} />
+        <Chip value="Chip" />
       `}
     </Copy>
   )

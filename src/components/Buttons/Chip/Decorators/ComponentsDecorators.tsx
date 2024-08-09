@@ -4,18 +4,9 @@ export const DefaultComponent = ({
   value,
   onRemove,
   variant = 'medium/regular',
-  removable = true,
   ...props
 }: ChipProps) => {
-  return (
-    <Chip
-      value={value}
-      onRemove={onRemove}
-      variant={variant}
-      removable={removable}
-      {...props}
-    />
-  )
+  return <Chip value={value} onRemove={onRemove} variant={variant} {...props} />
 }
 
 export const NotRemovableComponent = ({
@@ -23,5 +14,5 @@ export const NotRemovableComponent = ({
   variant = 'medium/regular',
   ...props
 }: ChipProps) => {
-  return <Chip value={value} variant={variant} removable={false} {...props} />
+  return <Chip value={value} variant={variant} {...props} />
 }
