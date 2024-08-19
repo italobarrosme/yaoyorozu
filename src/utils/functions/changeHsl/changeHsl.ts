@@ -1,4 +1,4 @@
-export const changeHue = (
+export const changeHsl = (
   color: string,
   saturation: string,
   lightness: string
@@ -9,15 +9,15 @@ export const changeHue = (
 
   root.style.setProperty(
     '--color-primary-regular',
-    updateHue(color, saturation, lightness)
+    updateHsl(color, saturation, lightness)
   )
   root.style.setProperty(
     '--color-complementary-highlight',
-    updateHue(complementaryColor.toString(), saturation, lightness)
+    updateHsl(complementaryColor.toString(), saturation, lightness)
   )
 }
 
-const updateHue = (
+const updateHsl = (
   newColor: string,
   newSaturation: string,
   newLightness: string

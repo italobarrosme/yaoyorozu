@@ -29,7 +29,7 @@ export const Copy = ({ children, language = defaultLanguage }: CopyProps) => {
   }
 
   return (
-    <div className="bg-neutral-dark p-2 rounded-lg grid grid-cols-4">
+    <div className="bg-neutral-dark w-full rounded-lg grid grid-cols-4 p-2">
       <div className="col-start-5 col-span-5">
         <Button variant="fit/ghost" onClick={handleCopy}>
           <Tooltip trigger="click" content="Copy code" side="top">
@@ -39,7 +39,7 @@ export const Copy = ({ children, language = defaultLanguage }: CopyProps) => {
       </div>
       <pre
         ref={codeRef}
-        className="font-thin p-2 text-wrap font-mono text-xs rounded-lg w-full col-start-1 col-span-4"
+        className="font-thin text-wrap font-mono text-xs rounded-lg w-full col-start-1 col-span-12"
       >
         <SyntaxHighlighter language={language} style={defaultStyle as any}>
           {children}

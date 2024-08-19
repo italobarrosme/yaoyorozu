@@ -2,6 +2,7 @@
 export { Text, type TextProps, type TextVariant } from './src/components/Texts/Text'
 export { Tooltip, type TooltipProps } from './src/components/Texts/Tooltip'
 export { Copy, type CopyProps } from './src/components/Texts/Copy'
+export { Accordion, type AccordionProps } from './src/components/Texts/Accordion'
 
 // loaders
 export { Skeleton, type SkeletonProps } from './src/components/Loaders/Skeleton'
@@ -35,6 +36,8 @@ export {
   CardContent,
   CardFooter,
 } from './src/components/Layouts/Card'
+export { Divider } from './src/components/Layouts/Divider'
+
 // Inputs
 export { 
   InputOTP,
@@ -57,6 +60,7 @@ export { InputCheckbox, type InputCheckboxProps } from './src/components/Inputs/
 export { InputDatePicker, type InputDatePickerProps } from './src/components/Inputs/InputDatePicker'
 export { Calendar, type CalendarProps } from './src/components/Inputs/InputDatePicker/Calendar'
 export { InputArea, type InputAreaProps } from './src/components/Inputs/InputArea'
+export { InputSwitch, type InputSwitchProps } from './src/components/Inputs/InputSwitch'
 
 // buttons
 export { Button, type ButtonProps } from './src/components/Buttons/Button'

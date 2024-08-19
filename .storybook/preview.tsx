@@ -5,7 +5,7 @@ import { Preview } from '@storybook/react'
 const preview: Preview = {
   decorators: [
     (Story) => (
-      <div className="w-full">
+      <div className="w-screen">
         {/* 👇 Decorators in Storybook also accept a function. Replace <Story/> with Story() to enable it  */}
         {Story && <Story />}
       </div>

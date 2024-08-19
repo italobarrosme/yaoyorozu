@@ -6,7 +6,7 @@
 @layer base {
   :root {
     --color-primary-regular: 210 91% 45%;
-    --color-primary-foreground: 0, 10%, 93%;
+    --color-primary-foreground: 0 0% 99%;
 
     --color-secondary-regular: 220 70% 20%;
     --color-secondary-foreground: 220 100% 98%;
@@ -22,12 +22,25 @@
     --color-feedback-success: 122 39% 54%;
     --color-feedback-info: 207 90% 57%;
 
-    --color-complementary-highlight: 39 100% 50%;
+    --color-complementary-highlight: 30 91% 55%;
   }
 
   input[type='number']::-webkit-inner-spin-button,
   input[type='number']::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
+  }
+
+  summary {
+    list-style-type: none;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  p::selection {
+    color: hsl(var(--color-primary-regular));
+    background-color: hsl(var(--color-neutral-dark));
   }
 }
