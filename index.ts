@@ -37,6 +37,10 @@ export {
   CardFooter,
 } from './src/components/Layouts/Card'
 export { Divider } from './src/components/Layouts/Divider'
+export {
+  Pagination,
+  PaginationProps,
+} from './src/components/Layouts/Pagination'
 
 // Inputs
 export { 
