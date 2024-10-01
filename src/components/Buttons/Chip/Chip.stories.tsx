@@ -122,6 +122,9 @@ export const NotRemovable: ChipStory = {
       </div>
     ),
   ],
+  args: {
+    onRemove: undefined,
+  },
   render({ value = 'Chip', variant = 'medium/regular', ...props }) {
     return <NotRemovableComponent value={value} variant={variant} {...props} />
   },
