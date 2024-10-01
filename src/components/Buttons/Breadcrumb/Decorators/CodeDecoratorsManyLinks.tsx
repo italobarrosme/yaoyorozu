@@ -22,7 +22,6 @@ export const CodeDecoratorsManyLinks = () => {
             { name: 'Product 6 custom link', href: '/products/6' },
             { name: 'Product 7 custom link', href: '/products/7' },
           ]}
-          iconSeparator=">"
           customLink={CustomLink}
         />
       `}

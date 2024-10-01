@@ -6,6 +6,7 @@ export const CodeDecoratorDefault = () => {
     <Copy>
       {`
         import { Breadcrumb } from '@developerskyi/react-components'
+        import { Icon } from '@iconify/react'
 
         <Breadcrumb
           items={[
@@ -13,7 +14,7 @@ export const CodeDecoratorDefault = () => {
             { label: 'Product 1', href: '/products/1' },
             { label: 'Product 2', href: '/products/2' },
           ]}
-          iconSeparator=">"
+          iconSeparator={<Icon icon="akar-icons:arrow-right" />}
         />
       `}
     </Copy>

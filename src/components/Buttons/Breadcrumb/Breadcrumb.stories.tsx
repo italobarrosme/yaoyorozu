@@ -12,10 +12,8 @@ import { Text } from '../../Texts/Text'
 import { Icon } from '@iconify/react'
 
 const listIcons = {
-  Search: <Icon icon="akar-icons:search" />,
-  Check: <Icon icon="akar-icons:check" />,
-  Fox: <Icon icon="twemoji:fox" />,
-  hedgehog: <Icon icon="twemoji:hedgehog" />,
+  Arrow: <Icon icon="akar-icons:arrow-right" />,
+  Chevron: <Icon icon="akar-icons:chevron-right" />,
   penguin: <Icon icon="twemoji:penguin" />,
 }
 
@@ -82,7 +80,7 @@ export const Default: BreadCrumbStory = {
       { name: 'Product 2', href: '#' },
     ],
 
-    iconSeparator: 'Check',
+    iconSeparator: 'Arrow',
   },
   render: ({ items, className, customLink, iconSeparator }) => {
     return (
