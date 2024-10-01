@@ -10,6 +10,7 @@ import { DateRange } from 'react-day-picker'
 import { Calendar } from '../../components/Inputs/InputDatePicker'
 import { InputCheckbox } from '../../components/Inputs/InputCheckbox'
 import { Card } from '../../components/Layouts/Card'
+import { ProgressBar } from '../../components/Layouts/ProgressBar'
 
 export const Colors = () => {
   const [date, setDate] = useState<DateRange | undefined>({
@@ -125,6 +126,9 @@ export const Colors = () => {
           >
             Chip
           </Chip>
+        </Card>
+        <Card className="flex w-1/2 h-32 gap-2">
+          <ProgressBar progress={77} displayPercentage variant="primary" />
         </Card>
         <Card className="flex bg-neutral-white/20">
           <Calendar

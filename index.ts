@@ -41,6 +41,7 @@ export {
   Pagination,
   PaginationProps,
 } from './src/components/Layouts/Pagination'
+export { ProgressBar, type ProgressBarProps } from './src/components/Layouts/ProgressBar'
 
 // Inputs
 export { 
