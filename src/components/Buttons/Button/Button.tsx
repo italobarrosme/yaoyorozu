@@ -19,7 +19,7 @@ const buttonStyles = cva(
         large: 'px-4 py-3 text-lg w-72 h-10',
         full: 'w-full px-3 py-2 text-base h-10',
         fit: 'px-3 py-2 text-base h-10 w-fit',
-        rounded: 'rounded-full w-16 h-16 justify-center items-center',
+        rounded: '!rounded-full w-16 h-16 justify-center items-center',
       },
       style: {
         regular:
@@ -45,7 +45,7 @@ export type ButtonVariant = Omit<ButtonStylesProps, 'size' | 'style'> & {
 }
 
 export type ButtonProps = {
-  children: ReactNode
+  children?: ReactNode
   className?: string
 } & ButtonVariant &
   ButtonHTMLAttributes<HTMLButtonElement>

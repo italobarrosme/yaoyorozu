@@ -74,6 +74,7 @@ export { Breadcrumb, type BreadcrumbProps } from './src/components/Buttons/Bread
 export { Tabs, type TabsProps } from './src/components/Buttons/Tabs'
 export { Chip, type ChipProps } from './src/components/Buttons/Chip'
 export { Menubar, type MenubarProps } from './src/components/Buttons/Menubar'
+export { Steps, type StepsProps } from './src/components/Buttons/Steps'
 
 // notifications
 export { Toaster, useToast, Toast, type ToasterProps, type ToastProps, type ToasterToast } from './src/components/Notifications/Toaster'
