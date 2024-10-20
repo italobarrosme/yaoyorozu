@@ -56,7 +56,7 @@ export const Steps = ({
             key={step.id}
             onClick={() => onStepClick(index)}
             onMouseEnter={() => onStepHover && onStepHover(index)}
-            onMouseLeave={() => onStepLeave && onStepLeave(index)}
+            onMouseLeave={() => onStepLeave && onStepLeave()}
             className={cn(
               'relative group',
               `${size === 'sm' ? 'w-8 h-8' : 'w-16 h-16'}`,
