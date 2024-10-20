@@ -30,6 +30,8 @@ export const Pagination: Component<PaginationProps> = ({
 
   // if there are less than 2 times in pagination range we shall not render the component
 
+  if (!paginationRange) return null
+
   if (paginationRange.length < 2) {
     return null
   }

@@ -55,8 +55,8 @@ export const Steps = ({
             variant="rounded/regular"
             key={step.id}
             onClick={() => onStepClick(index)}
-            onMouseEnter={() => onStepHover(index)}
-            onMouseLeave={onStepLeave}
+            onMouseEnter={() => onStepHover && onStepHover(index)}
+            onMouseLeave={() => onStepLeave && onStepLeave(index)}
             className={cn(
               'relative group',
               `${size === 'sm' ? 'w-8 h-8' : 'w-16 h-16'}`,

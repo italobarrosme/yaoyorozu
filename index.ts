@@ -39,7 +39,7 @@ export {
 export { Divider } from './src/components/Layouts/Divider'
 export {
   Pagination,
-  PaginationProps,
+  type PaginationProps,
 } from './src/components/Layouts/Pagination'
 export { ProgressBar, type ProgressBarProps } from './src/components/Layouts/ProgressBar'
 
