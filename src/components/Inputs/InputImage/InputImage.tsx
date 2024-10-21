@@ -13,6 +13,7 @@ import { useDropzone } from 'react-dropzone'
 import { Text } from '../../Texts/Text'
 import { cva, VariantProps } from 'class-variance-authority'
 import { cn } from '../../../utils/cn'
+import { errorInputFileMessages, ErrorInputFileTypes } from '../types/constants'
 
 const inputImageStyles = cva([], {
   variants: {
@@ -56,13 +57,6 @@ export type InputImageProps = {
     alt: string
     className: string
   }) => ReactNode
-}
-
-const errorMessages = {
-  'file-invalid-type': 'Invalid file type',
-  'file-too-large': 'File is too large',
-  'file-too-small': 'File is too small',
-  'too-many-files': 'Too many files',
 }
 
 const InputImage = forwardRef<InputImageRef, InputImageProps>(
@@ -117,8 +111,9 @@ const InputImage = forwardRef<InputImageRef, InputImageProps>(
         >
           <Icon icon="tdesign:image-error" width={24} />
           <Text variant="xs/normal" className="text-feedback-error">
-            {errorMessages[fileRejections[0].errors[0].code] ||
-              fileRejections[0].errors[0].message}
+            {(errorInputFileMessages[
+              fileRejections[0].errors[0].code as ErrorInputFileTypes
+            ] as string) || (fileRejections[0].errors[0].message as string)}
           </Text>
           <input
             {...getInputProps()}

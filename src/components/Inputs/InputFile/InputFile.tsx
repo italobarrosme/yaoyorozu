@@ -11,6 +11,7 @@ import {
 import { useDropzone } from 'react-dropzone'
 import { Text } from '../../Texts/Text'
 import { cva, VariantProps } from 'class-variance-authority'
+import { errorInputFileMessages, ErrorInputFileTypes } from '../types/constants'
 
 const inputFileStyles = cva([], {
   variants: {
@@ -53,13 +54,6 @@ export type InputFileProps = {
   textIndicator?: string
   sizePreview?: InputFileStylesProps['size']
   multiple?: boolean
-}
-
-const errorMessages = {
-  'file-invalid-type': 'Invalid file type',
-  'file-too-large': 'File is too large',
-  'file-too-small': 'File is too small',
-  'too-many-files': 'Too many files',
 }
 
 const InputFile = forwardRef<InputFileRef, InputFileProps>(
@@ -127,9 +121,11 @@ const InputFile = forwardRef<InputFileRef, InputFileProps>(
             className="text-feedback-error"
           />
           <Text variant="xs/normal" className="text-feedback-error">
-            {errorMessages[fileRejections[0].errors[0].code] ||
-              fileRejections[0].errors[0].message}
+            {(errorInputFileMessages[
+              fileRejections[0].errors[0].code as ErrorInputFileTypes
+            ] as string) || (fileRejections[0].errors[0].message as string)}
           </Text>
+
           <input
             {...getInputProps()}
             className="focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-regular focus-visible:ring-offset-2"
