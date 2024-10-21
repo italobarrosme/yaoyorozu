@@ -59,6 +59,13 @@ export {
   type AcceptOptions,
 } from
 './src/components/Inputs/InputImage'
+export {
+  InputFile,
+  type InputFileProps,
+  type InputFileRef,
+  type FileProps,
+  type AcceptOptionsFile,
+} from './src/components/Inputs/InputFile'
 export { InputNumber, type InputNumberProps } from './src/components/Inputs/InputNumber'
 export { InputText, type InputTextProps } from './src/components/Inputs/InputText'
 export { InputCheckbox, type InputCheckboxProps } from './src/components/Inputs/InputCheckbox'
