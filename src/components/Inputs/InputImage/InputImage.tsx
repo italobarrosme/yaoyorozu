@@ -58,6 +58,13 @@ export type InputImageProps = {
   }) => ReactNode
 }
 
+const errorMessages = {
+  'file-invalid-type': 'Invalid file type',
+  'file-too-large': 'File is too large',
+  'file-too-small': 'File is too small',
+  'too-many-files': 'Too many files',
+}
+
 const InputImage = forwardRef<InputImageRef, InputImageProps>(
   (
     {
@@ -109,8 +116,9 @@ const InputImage = forwardRef<InputImageRef, InputImageProps>(
           })}
         >
           <Icon icon="tdesign:image-error" width={24} />
-          <Text variant="md/medium" color="red">
-            {fileRejections[0].errors[0].message}
+          <Text variant="xs/normal" className="text-feedback-error">
+            {errorMessages[fileRejections[0].errors[0].code] ||
+              fileRejections[0].errors[0].message}
           </Text>
           <input
             {...getInputProps()}
