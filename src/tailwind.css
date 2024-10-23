@@ -5,7 +5,7 @@
 
 @layer base {
   :root {
-    --color-primary-regular: 210 91% 45%;
+    --color-primary-regular: 210 100% 50%;
     --color-primary-foreground: 0 0% 99%;
 
     --color-secondary-regular: 220 70% 20%;

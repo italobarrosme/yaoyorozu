@@ -32,7 +32,7 @@ const SizeStyleCombinations = [
 const ButtonMeta: Meta<typeof Button> = {
   title: 'Components/Buttons/Button',
   component: Button,
-  tags: ['autodocs'],
+  tags: ['autodocs', 'buttons'],
   argTypes: {
     variant: {
       control: 'select',
