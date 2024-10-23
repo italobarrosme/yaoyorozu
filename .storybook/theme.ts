@@ -2,42 +2,37 @@ import { create } from '@storybook/theming/create';
 
 export default create({
   // Typography
-  fontBase: '"Open Sans", sans-serif',
+  fontBase: '"Nunito", sans-serif',
   fontCode: 'monospace',
   // brand
-  base: 'dark',
+  base: 'light',
   brandTitle: 'Skyi',
   brandUrl: '',
-  brandImage: '/skyi_logo_white.png',
+  brandImage: '/skyi_logo.png',
   brandTarget: '_self',
 
-  //
-  colorPrimary: '#0d61ba',
-  colorSecondary: '#335250',
+  // Cores principais
+  colorPrimary: '#f9f9f9',
+  colorSecondary: '#0080ff',
 
   // UI
-  appBg: '#121e1e',
-  appContentBg: '#121e1e',
-  appPreviewBg: '#f9f9f9',
-  appBorderColor: '#bad5d1',
-  appBorderRadius: 4,
+  appBg: '#f9f9f9',
+  appContentBg: '#f9f9f9', 
+  appBorderColor: '#f9f9f9',
+  appBorderRadius: 8,
 
-  // Text colors
-  textColor: '#f9f9f9',
-  textInverseColor: '#f9f9f9',
+  // Texto
+  textColor: '#0f1a1a',
+  textInverseColor: '#f9f9f9', 
 
-  // Toolbar default and active colors
+  // Toolbar default e active colors
   barTextColor: '#f9f9f9',
-  barSelectedColor: '#0d61ba',
-  barHoverColor: '#bad5d1',
-  barBg: '#121e1e',
-
-  buttonBg: '#0d61ba',
-  buttonBorder: '#0d61ba',
+  barSelectedColor: '#f58c24',
+  barBg: '#0080ff',
 
   // Form colors
-  inputBg: '#121e1e',
-  inputBorder: '#0d61ba',
-  inputTextColor: '#0d61ba',
-  inputBorderRadius: 2,
+  inputBg: '#f9f9f9',
+  inputBorder: '#0f1a1a',
+  inputTextColor: '#0f1a1a',
+  inputBorderRadius: 8,
 })

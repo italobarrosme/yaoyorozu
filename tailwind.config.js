@@ -185,6 +185,10 @@ export default {
             transform: 'translateX(100%)',
           },
         },
+        'hue-rotate': {
+          '0%': { filter: 'hue-rotate(0deg)' },
+          '100%': { filter: 'hue-rotate(360deg)' },
+        },
         }
       },
       animation: {
@@ -203,6 +207,7 @@ export default {
         'slide-out-to-right': 'slide-out-to-right 0.4s ease-out',
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'hue-rotate': 'hue-rotate 5s infinite linear',
       },
     },
   plugins: [tailwindAnimete],

@@ -1,19 +1,9 @@
 import { Meta, Story, Canvas, Unstyled } from '@storybook/blocks';
 import { Copy } from '../components/Texts/Copy';
-import { Colors } from '../modules/Colors';
 
 <Meta title="Introduction/Style" />
 
 # Style
-
-## Color palette
-
-
-
-<Unstyled>
-  <Colors /> 
-
-</Unstyled>
 
 ## Pattern installation styles
 
@@ -225,6 +215,10 @@ Add the tailwind configuration file `tailwind.config.js` extending the default c
             transform: 'translateX(100%)',
           },
         },
+        'hue-rotate': {
+          '0%': { filter: 'hue-rotate(0deg)' },
+          '100%': { filter: 'hue-rotate(360deg)' },
+        },
         }
       },
       animation: {
@@ -243,6 +237,7 @@ Add the tailwind configuration file `tailwind.config.js` extending the default c
         'slide-out-to-right': 'slide-out-to-right 0.4s ease-out',
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'hue-rotate': 'hue-rotate 5s infinite linear',
       },
     `}
   </Copy>
@@ -260,7 +255,7 @@ Create global styles for the colors and config tailwind in the file `**/global.c
       
       @layer base {
         :root {
-          --color-primary-regular: 210 91% 45%;
+          --color-primary-regular: 210 100% 50%;
           --color-primary-foreground: 0, 10%, 93%;
 
           --color-secondary-regular: 220 70% 20%;

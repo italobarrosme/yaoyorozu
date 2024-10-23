@@ -21,7 +21,7 @@ const InputArea = forwardRef<HTMLTextAreaElement, InputAreaProps>(
       <div className="relative flex w-80 flex-col gap-2 lg:min-w-full">
         <label
           htmlFor={props.name}
-          className="relative text-xs font-semibold text-inherit"
+          className="relative font-semibold text-inherit"
         >
           {label}
         </label>

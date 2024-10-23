@@ -84,7 +84,7 @@ export const InputSelect = ({
           {label && (
             <label
               htmlFor={id}
-              className={cn('self-center sm:self-start text-sm mb-1')}
+              className={cn('self-center sm:self-start text-inherit mb-1')}
             >
               {label}
             </label>
