@@ -1,4 +1,5 @@
 import { Copy } from '../../../Texts/Copy'
+import { Chip, type ChipProps } from '../Chip'
 
 export const DefaultCode = () => {
   return (
@@ -18,16 +19,11 @@ export const DefaultCode = () => {
   )
 }
 
-export const NotRemovableCode = () => {
-  return (
-    <Copy>
-      {`
-        import { 
-          Chip
-        } from '@developerskyi/react-components'
-
-        <Chip value="Chip" />
-      `}
-    </Copy>
-  )
+export const DefaultComponent = ({
+  value,
+  onRemove,
+  variant = 'medium/regular',
+  ...props
+}: ChipProps) => {
+  return <Chip value={value} onRemove={onRemove} variant={variant} {...props} />
 }
