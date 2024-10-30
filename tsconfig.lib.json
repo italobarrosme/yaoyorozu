@@ -1,7 +1,15 @@
 {
   "compilerOptions": {
-    "outDir": "./dist",
+    "outDir": "./dist"
   },
   "include": ["src", "index.ts"],
+  "exclude": [
+    "**/*.png",
+    "**/Decorators/**",
+    "**/*.test.tsx",
+    "**/*.test.ts",
+    "**/*.spec.tsx",
+    "**/*.spec.ts"
+  ],
   "extends": "./tsconfig.json"
 }

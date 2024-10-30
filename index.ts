@@ -1,8 +1,15 @@
 // texts
-export { Text, type TextProps, type TextVariant } from './src/components/Texts/Text'
+export {
+  Text,
+  type TextProps,
+  type TextVariant,
+} from './src/components/Texts/Text'
 export { Tooltip, type TooltipProps } from './src/components/Texts/Tooltip'
 export { Copy, type CopyProps } from './src/components/Texts/Copy'
-export { Accordion, type AccordionProps } from './src/components/Texts/Accordion'
+export {
+  Accordion,
+  type AccordionProps,
+} from './src/components/Texts/Accordion'
 
 // loaders
 export { Skeleton, type SkeletonProps } from './src/components/Loaders/Skeleton'
@@ -41,24 +48,32 @@ export {
   Pagination,
   type PaginationProps,
 } from './src/components/Layouts/Pagination'
-export { ProgressBar, type ProgressBarProps } from './src/components/Layouts/ProgressBar'
+export {
+  ProgressBar,
+  type ProgressBarProps,
+} from './src/components/Layouts/ProgressBar'
 
 // Inputs
-export { 
+export {
   InputOTP,
   type InputOTPProps,
-  InputOTPprimitive, InputOTPGroup, InputOTPSlot, InputOTPSeparator
+  InputOTPprimitive,
+  InputOTPGroup,
+  InputOTPSlot,
+  InputOTPSeparator,
 } from './src/components/Inputs/InputOTP'
 export { patterns } from './src/components/Inputs/InputOTP/constants'
-export { InputSelect, type InputSelectProps } from './src/components/Inputs/InputSelect'
+export {
+  InputSelect,
+  type InputSelectProps,
+} from './src/components/Inputs/InputSelect'
 export {
   InputImage,
   type InputImageProps,
   type InputImageRef,
   type FileImageProps,
   type AcceptOptions,
-} from
-'./src/components/Inputs/InputImage'
+} from './src/components/Inputs/InputImage'
 export {
   InputFile,
   type InputFileProps,
@@ -66,25 +81,59 @@ export {
   type FileProps,
   type AcceptOptionsFile,
 } from './src/components/Inputs/InputFile'
-export { InputNumber, type InputNumberProps } from './src/components/Inputs/InputNumber'
-export { InputText, type InputTextProps } from './src/components/Inputs/InputText'
-export { InputCheckbox, type InputCheckboxProps } from './src/components/Inputs/InputCheckbox'
-export { InputDatePicker, type InputDatePickerProps } from './src/components/Inputs/InputDatePicker'
-export { Calendar, type CalendarProps } from './src/components/Inputs/InputDatePicker/Calendar'
-export { InputArea, type InputAreaProps } from './src/components/Inputs/InputArea'
-export { InputSwitch, type InputSwitchProps } from './src/components/Inputs/InputSwitch'
+export {
+  InputNumber,
+  type InputNumberProps,
+} from './src/components/Inputs/InputNumber'
+export {
+  InputText,
+  type InputTextProps,
+} from './src/components/Inputs/InputText'
+export {
+  InputCheckbox,
+  type InputCheckboxProps,
+} from './src/components/Inputs/InputCheckbox'
+export {
+  InputDatePicker,
+  type InputDatePickerProps,
+} from './src/components/Inputs/InputDatePicker'
+export {
+  Calendar,
+  type CalendarProps,
+} from './src/components/Inputs/InputDatePicker/Calendar'
+export {
+  InputArea,
+  type InputAreaProps,
+} from './src/components/Inputs/InputArea'
+export {
+  InputSwitch,
+  type InputSwitchProps,
+} from './src/components/Inputs/InputSwitch'
 
 // buttons
 export { Button, type ButtonProps } from './src/components/Buttons/Button'
-export { ButtonLink, type ButtonLinkProps } from './src/components/Buttons/ButtonLink'
-export { Breadcrumb, type BreadcrumbProps } from './src/components/Buttons/Breadcrumb'
+export {
+  ButtonLink,
+  type ButtonLinkProps,
+} from './src/components/Buttons/ButtonLink'
+export {
+  Breadcrumb,
+  type BreadcrumbProps,
+} from './src/components/Buttons/Breadcrumb'
 export { Tabs, type TabsProps } from './src/components/Buttons/Tabs'
 export { Chip, type ChipProps } from './src/components/Buttons/Chip'
 export { Menubar, type MenubarProps } from './src/components/Buttons/Menubar'
 export { Steps, type StepsProps } from './src/components/Buttons/Steps'
 
 // notifications
-export { Toaster, useToast, Toast, type ToasterProps, type ToastProps, type ToasterToast } from './src/components/Notifications/Toaster'
+export {
+  Toaster,
+  useToast,
+  Toast,
+  type ToasterProps,
+  type ToastProps,
+  type ToasterToast,
+} from './src/components/Notifications/Toaster'
 export {
   Toastify,
   type ToastifyProps,

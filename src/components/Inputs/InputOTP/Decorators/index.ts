@@ -1,2 +1,2 @@
-export { DefaultCode, BoxInputOTPCode } from './CodeDecorator'
-export { DefaultComponent, BoxInputOTPComponent } from './ComponentDecorator'
+export { DefaultCode, DefaultComponent } from './DecoratorDefault'
+export { BoxInputComponent, BoxInputCode } from './DecoratorBoxInput'
