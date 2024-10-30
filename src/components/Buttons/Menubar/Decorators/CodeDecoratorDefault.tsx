@@ -5,31 +5,95 @@ export const CodeDecoratorDefault = () => {
   return (
     <Copy>
       {`
-      import { Menubar } from '@developerskyi/react-components'
+
+        import { Menubar } from '@developerskyi/react-components'
+
+        const MenuList = [
+            {
+              trigger: 'Computer store',
+              listItems: [
+                {
+                  children: (
+                    <ButtonLink className="text-neutral-white" variant="small/block">
+                      Nootbooks
+                    </ButtonLink>
+                  ),
+                },
+                {
+                  children: (
+                    <ButtonLink className="text-neutral-white" variant="small/block">
+                      Memory
+                    </ButtonLink>
+                  ),
+                },
+                {
+                  children: (
+                    <ButtonLink className="text-neutral-white" variant="small/block">
+                      PCs
+                    </ButtonLink>
+                  ),
+                },
+              ],
+              subMenus: [
+                {
+                  trigger: 'Games',
+                  listItems: [
+                    {
+                      children: (
+                        <ButtonLink className="text-neutral-white" variant="small/block">
+                          Xboxs
+                        </ButtonLink>
+                      ),
+                    },
+                    {
+                      children: (
+                        <ButtonLink className="text-neutral-white" variant="small/block">
+                          PC
+                        </ButtonLink>
+                      ),
+                    },
+                    {
+                      children: (
+                        <ButtonLink className="text-neutral-white" variant="small/block">
+                          Playstation
+                        </ButtonLink>
+                      ),
+                    },
+                  ],
+                  subMenus: [
+                    {
+                      trigger: 'Accessories',
+                      listItems: [
+                        {
+                          children: (
+                            <ButtonLink className="text-neutral-white" variant="small/block">
+                              Controllers
+                            </ButtonLink>
+                          ),
+                        },
+                        {
+                          children: (
+                            <ButtonLink className="text-neutral-white" variant="small/block">
+                              Headsets
+                            </ButtonLink>
+                          ),
+                        },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+            // rest of the menu items
+            ...
+            }
+        ]
       
-      <Menubar
-        menus={[
-          {
-            trigger: 'File',
-            listItems: [
-              { children: <Text variant='sm/normal'>Open</Text> },
-              { children: <Text variant='sm/normal'>Save</Text> },
-              { children: <Text variant='sm/normal'>Save As</Text> },
-            ],
-            subMenus: [
-              {
-                trigger: 'Recent Files',
-                listItems: [
-                  { children: <Text variant='sm/normal'>File 1</Text> },
-                  { children: <Text variant='sm/normal'>File 2</Text> },
-                  { children: <Text variant='sm/normal'>File 3</Text> },
-                ],
-              },
-            ],
-          },
-        ]}
-        className='text-neutral-black'
-      />
+        <Menubar
+          menus={MenuList}
+          className='text-neutral-black'
+        />
       `}
     </Copy>
   )

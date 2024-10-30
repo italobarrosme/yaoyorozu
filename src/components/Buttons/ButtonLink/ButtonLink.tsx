@@ -5,13 +5,13 @@ import { cva, VariantProps } from 'class-variance-authority'
 
 const buttonLinkStyles = cva(
   [
-    `flex justify-center items-center gap-2 cursor-pointer whitespace-nowrap rounded text-xs font-bold text-primary-foreground transition-colors delay-300 hover:bg-secondary 
+    `flex justify-start items-center gap-2 cursor-pointer whitespace-nowrap rounded text-xs font-bold text-primary-foreground transition-colors delay-300 hover:bg-secondary 
     focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-regular focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50`,
   ],
   {
     variants: {
       size: {
-        small: 'px-2 py-3 text-xs w-32 h-4',
+        small: 'px-2 py-3 text-xs w-32 h-4 flex',
         medium: 'px-2 py-2 text-sm w-40 h-10',
         large: 'px-2 py-3 text-lg w-72 h-10',
         full: 'w-full px-3 py-2 text-sm h-10',
