@@ -270,7 +270,7 @@ export const Menubar = ({ menus, className, ...props }: MenubarProps) => {
   )
 }
 
-const renderMenuItems = (menu) => {
+const renderMenuItems = (menu: MenuProp) => {
   return (
     <>
       {menu.listItems.map((item, index) => (
