@@ -12,6 +12,7 @@ import { InputCheckbox } from '../../components/Inputs/InputCheckbox'
 import { Card } from '../../components/Layouts/Card'
 import { ProgressBar } from '../../components/Layouts/ProgressBar'
 import { Icon } from '@iconify/react'
+import { Menubar } from '../../components/Buttons/Menubar'
 
 export const Playground = () => {
   const [date, setDate] = useState<DateRange | undefined>({
@@ -113,7 +114,10 @@ export const Playground = () => {
               Violet
             </Button>
           </div>
-          <Text variant="sm/bold" className="flex gap-2 justify-between ">
+          <Text
+            variant="sm/bold"
+            className="flex gap-2 justify-between group-hover:hidden"
+          >
             <Icon
               icon="mingcute:paint-brush-line"
               width={48}
@@ -129,6 +133,60 @@ export const Playground = () => {
       </Text>
       <div className="flex flex-wrap gap-4">
         <Card className="flex gap-2">
+          <Menubar
+            menus={[
+              {
+                trigger: 'Home',
+                listItems: [
+                  {
+                    children: (
+                      <div className="flex gap-2 items-center hover:text-complementary-highlight">
+                        <Icon icon="bx:bx-home" width={24} />
+                        Home
+                      </div>
+                    ),
+                  },
+                  {
+                    children: (
+                      <div className="flex gap-2 items-center hover:text-complementary-highlight">
+                        <Icon icon="bx:bx-user" width={24} />
+                        Profile
+                      </div>
+                    ),
+                  },
+                  {
+                    children: (
+                      <div className="flex gap-2 items-center hover:text-complementary-highlight">
+                        <Icon icon="bx:bx-cog" width={24} />
+                        Settings
+                      </div>
+                    ),
+                  },
+                ],
+              },
+              {
+                trigger: 'About',
+                listItems: [
+                  {
+                    children: (
+                      <div className="flex gap-2 items-center hover:text-complementary-highlight">
+                        <Icon icon="bx:bx-info-circle" width={24} />
+                        About
+                      </div>
+                    ),
+                  },
+                  {
+                    children: (
+                      <div className="flex gap-2 items-center hover:text-complementary-highlight">
+                        <Icon icon="bx:bx-help-circle" width={24} />
+                        Help
+                      </div>
+                    ),
+                  },
+                ],
+              },
+            ]}
+          />
           <InputCheckbox />
           <Button variant="fit/regular">Confirm</Button>
           <Button
