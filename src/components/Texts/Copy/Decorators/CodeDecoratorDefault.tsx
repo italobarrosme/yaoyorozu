@@ -1,4 +1,4 @@
-import { Copy } from '..'
+import { Copy, CopyProps } from '..'
 
 export const CodeDecoratorDefault = () => {
   return (
@@ -14,6 +14,6 @@ export const CodeDecoratorDefault = () => {
   )
 }
 
-export const DefaultComponent = ({ children }) => {
+export const DefaultComponent = ({ children }: CopyProps) => {
   return <Copy>{children}</Copy>
 }

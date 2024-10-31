@@ -1,3 +1,5 @@
+'use client'
+
 import { ReactNode } from 'react'
 import { Icon } from '@iconify/react'
 import { Text } from '../Text'

@@ -9,7 +9,10 @@ const ToastifyMeta: Meta<{
 }> = {
   title: 'Components/Notifications/Toastify',
   component: Toastify,
-  subcomponents: { ToastifyProvider },
+  subcomponents: {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    ToastifyProvider: ToastifyProvider as any,
+  },
   tags: ['autodocs'],
   argTypes: {
     description: {

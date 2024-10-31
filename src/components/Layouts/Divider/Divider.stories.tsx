@@ -1,11 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { Divider } from '.'
-import {
-  DefaultComponent,
-  CodeDecoratorDefault,
-  CodeDecoratorVertical,
-  ComponentDividerVertical,
-} from './Decorators'
+import { DefaultComponent, DefaultCode } from './Decorators'
 
 const DividerMeta: Meta<typeof Divider> = {
   component: Divider,
@@ -47,7 +42,7 @@ export const Default: DividerStory = {
   decorators: [
     (Story) => (
       <div className="flex flex-col gap-4 w-full items-center justify-center h-[200px] text-neutral-black">
-        <CodeDecoratorDefault />
+        <DefaultCode />
         <Story />
       </div>
     ),
@@ -56,19 +51,4 @@ export const Default: DividerStory = {
     orientation: 'horizontal',
   },
   render: ({ orientation }) => <DefaultComponent orientation={orientation} />,
-}
-
-export const Vertical: DividerStory = {
-  decorators: [
-    (Story) => (
-      <div className="flex flex-col gap-4 w-full items-center justify-center h-[300px] text-neutral-black">
-        <CodeDecoratorVertical />
-        <Story />
-      </div>
-    ),
-  ],
-  args: {
-    orientation: 'vertical',
-  },
-  render: (props) => <ComponentDividerVertical {...props} />,
 }

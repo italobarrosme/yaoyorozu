@@ -99,7 +99,7 @@ export const Default: InputSelectStory = {
     errorMessage: '',
     accessoryText: '',
     isCheck: false,
-    link: null,
+    link: undefined,
     onValueChange: (value) => console.log(value),
   },
   render: ({
