@@ -23,12 +23,14 @@ export type ProgressBarVariant = {
 export type ProgressBarProps = {
   progress: number
   displayPercentage: boolean
+  className?: string
 } & ProgressBarVariant
 
 export const ProgressBar = ({
   progress,
   displayPercentage,
   variant,
+  className,
 }: ProgressBarProps) => {
   return (
     <div className="flex w-full items-center gap-4">
@@ -36,7 +38,8 @@ export const ProgressBar = ({
         <div
           className={cn(
             progressBarStyles({ color: variant }),
-            'rounded-md absolute left-0 overflow-hidden'
+            'rounded-md absolute left-0 overflow-hidden',
+            className
           )}
           style={{ width: `calc(${progress}%)` }}
         ></div>
