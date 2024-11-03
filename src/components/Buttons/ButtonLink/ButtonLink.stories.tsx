@@ -27,6 +27,23 @@ const SizeStyleCombinations = [
   'rounded/block',
 ]
 
+const NextLink = ({ children, ...props }) => (
+  <span {...props} className="text-primary-regular">
+    {children}
+  </span>
+)
+
+const listChildren = {
+  'Terms and conditions': 'Terms and conditions',
+  'Privacy policy': (
+    <span>
+      Privacy policy <br />{' '}
+      <span className="text-xs">Last updated: 2021-10-10</span>
+    </span>
+  ),
+  'Cookie policy': <NextLink href="#">Cookie policy</NextLink>,
+}
+
 const ButtonLinkMeta: Meta<typeof ButtonLink> = {
   title: 'Components/Buttons/ButtonLink',
   component: ButtonLink,
@@ -39,9 +56,10 @@ const ButtonLinkMeta: Meta<typeof ButtonLink> = {
       defaultValue: 'medium',
     },
     children: {
-      control: 'text',
+      control: 'select',
+      options: Object.keys(listChildren),
       description: 'The content of the button',
-      defaultValue: 'Click me',
+      mapping: listChildren,
     },
     className: {
       control: 'text',
@@ -93,7 +111,7 @@ export const Default: ButtonLinkStory = {
   ],
   args: {
     variant: 'medium/regular',
-    children: 'Click me',
+    children: 'Terms and conditions',
   },
   render: ({ children, variant, className, ...props }) => (
     <DefaultComponent variant={variant} className={className} {...props}>

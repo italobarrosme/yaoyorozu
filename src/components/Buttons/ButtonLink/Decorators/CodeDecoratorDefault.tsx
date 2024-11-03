@@ -8,7 +8,7 @@ export const CodeDecoratorDefault = () => {
       import { ButtonLink } from '@developerskyi/react-components'
 
       <ButtonLink variant="medium/regular" >
-        Hello world Link
+        Terms and conditions
       </ButtonLink>
     `}
     </Copy>
