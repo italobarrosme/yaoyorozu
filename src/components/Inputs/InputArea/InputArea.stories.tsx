@@ -83,7 +83,7 @@ export const Default: InputAreaStory = {
     ),
   ],
   render: ({
-    label = 'Label',
+    label = 'Comments',
     dark,
     error,
     auxiliary,
