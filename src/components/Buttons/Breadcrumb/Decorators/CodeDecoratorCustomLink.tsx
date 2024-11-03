@@ -12,11 +12,13 @@ export const CodeDecoratorCustomLink = () => {
         )
 
         <Breadcrumb
-          items={[
-            { name: 'Home custom link', href: '/' },
-            { name: 'Products 1', href: '/products/1' },
-            { name: 'Product 2', href: '/products/2' },
-          ]}
+          items: {
+            [
+              { name: 'Store', href: '#' },
+              { name: 'Checkout', href: '#' },
+              { name: 'Address', href: '#' },
+            ],
+          }
           customLink={CustomLink}
         />
         

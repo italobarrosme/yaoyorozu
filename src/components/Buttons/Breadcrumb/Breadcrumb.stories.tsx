@@ -25,11 +25,7 @@ const BreadcrumbMeta: Meta<typeof Breadcrumb> = {
     items: {
       control: 'object',
       description: 'The items to be rendered in the breadcrumb.',
-      defaultValue: [
-        { name: 'Home', href: '#' },
-        { name: 'Products', href: '#' },
-        { name: 'Product 1', href: '#' },
-      ],
+      defaultValue: [],
     },
     iconSeparator: {
       control: 'select',
@@ -76,17 +72,15 @@ export const Default: BreadCrumbStory = {
   args: {
     items: [
       { name: 'Home', href: '#' },
-      { name: 'Product 1', href: '#' },
-      { name: 'Product 2', href: '#' },
+      { name: 'Pc Gamer', href: '#' },
+      { name: 'Monitors', href: '#' },
     ],
-
-    iconSeparator: 'Arrow',
+    iconSeparator: 'Chevron',
   },
-  render: ({ items, className, customLink, iconSeparator }) => {
+  render: ({ items, className, iconSeparator }) => {
     return (
       <DefaultComponent
         className={className}
-        customLink={customLink}
         iconSeparator={iconSeparator}
         items={items}
       />
@@ -112,12 +106,15 @@ export const CustomLink: BreadCrumbStory = {
   ],
   args: {
     items: [
-      { name: 'Home custom link', href: '#' },
-      { name: 'Product 1 custom link', href: '#' },
-      { name: 'Product 2 custom link', href: '#' },
+      { name: 'Store', href: '#' },
+      { name: 'Checkout', href: '#' },
+      { name: 'Address', href: '#' },
     ],
     customLink: ({ href, name }) => (
-      <a className="bg-primary-regular text-neutral-white" href={href}>
+      <a
+        className="bg-neutral-lightest text-neutral-dark border-2 border-complementary-highlight px-1 rounded-3xl"
+        href={href}
+      >
         {name}
       </a>
     ),
@@ -152,26 +149,19 @@ export const ManyLinks: BreadCrumbStory = {
   ],
   args: {
     items: [
-      { name: 'Home custom link', href: '#' },
-      { name: 'Product 1 custom link', href: '#' },
-      { name: 'Product 2 custom link', href: '#' },
-      { name: 'Product 3 custom link', href: '#' },
-      { name: 'Product 4 custom link', href: '#' },
-      { name: 'Product 5 custom link', href: '#' },
-      { name: 'Product 6 custom link', href: '#' },
-      { name: 'Product 7 custom link', href: '#' },
+      { name: 'North American', href: '#' },
+      { name: 'EUA', href: '#' },
+      { name: 'New York', href: '#' },
+      { name: 'Brooklyn', href: '#' },
+      { name: 'Canarsie', href: '#' },
+      { name: 'Avenue J', href: '#' },
+      { name: '9613', href: '#' },
     ],
-    customLink: ({ href, name }) => (
-      <a className="underline hover:text-complementary-highlight" href={href}>
-        {name}
-      </a>
-    ),
   },
-  render: ({ items, className, customLink, iconSeparator }) => {
+  render: ({ items, className, iconSeparator }) => {
     return (
       <ManyLinksComponent
         className={className}
-        customLink={customLink}
         iconSeparator={iconSeparator}
         items={items}
       />

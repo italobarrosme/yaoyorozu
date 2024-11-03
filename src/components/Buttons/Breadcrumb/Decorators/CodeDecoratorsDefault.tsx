@@ -10,9 +10,9 @@ export const CodeDecoratorDefault = () => {
 
         <Breadcrumb
           items={[
-            { label: 'Home', href: '/' },
-            { label: 'Product 1', href: '/products/1' },
-            { label: 'Product 2', href: '/products/2' },
+            { name: 'Home', href: '#' },
+            { name: 'Pc Gamer', href: '#' },
+            { name: 'Monitors', href: '#' },
           ]}
           iconSeparator={<Icon icon="akar-icons:arrow-right" />}
         />
@@ -21,16 +21,6 @@ export const CodeDecoratorDefault = () => {
   )
 }
 
-export const DefaultComponent = ({
-  items,
-  iconSeparator,
-  customLink,
-}: BreadcrumbProps) => {
-  return (
-    <Breadcrumb
-      items={items}
-      iconSeparator={iconSeparator}
-      customLink={customLink}
-    />
-  )
+export const DefaultComponent = ({ items, iconSeparator }: BreadcrumbProps) => {
+  return <Breadcrumb items={items} iconSeparator={iconSeparator} />
 }
