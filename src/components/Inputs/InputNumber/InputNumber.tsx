@@ -16,6 +16,14 @@ export type InputNumberProps = {
   onChangeValue?: (value: string | number) => void
 } & InputHTMLAttributes<HTMLInputElement>
 
+const verifyInputNumber = (value: string) => {
+  const sanitizedValue = value.replace(/[^0-9.]/g, '')
+
+  if (sanitizedValue === '') return ''
+
+  return Number(sanitizedValue)
+}
+
 export const InputNumber = forwardRef<HTMLInputElement, InputNumberProps>(
   (
     {
@@ -45,7 +53,8 @@ export const InputNumber = forwardRef<HTMLInputElement, InputNumberProps>(
         if (onChange) onChange(e)
         if (onChangeValue) onChangeValue(numericValue)
       } else {
-        const inputNumber = Number(e.target.value)
+        const inputNumber = verifyInputNumber(e.target.value)
+
         setValue(inputNumber.toString())
 
         if (onChange) onChange(e)

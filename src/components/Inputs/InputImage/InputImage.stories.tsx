@@ -28,11 +28,11 @@ const InputImageMeta: Meta<typeof InputImage> = {
     textIndicator: {
       control: 'text',
       description: 'The text indicator for the input.',
-      defaultValue: 'Drag n drop some files here, or click to select files',
+      defaultValue: 'Drag n drop some images here, or click to select images',
     },
     onUpload: {
       action: 'onUpload',
-      description: 'The function to be called when the files are uploaded.',
+      description: 'The function to be called when the images are uploaded.',
     },
     sizePreview: {
       control: 'select',
@@ -88,7 +88,7 @@ export const Default: InputImageStory = {
       'image/bmp',
       'image/webp',
     ],
-    textIndicator: 'Drag n drop some files here, or click to select files',
+    textIndicator: 'Drag n drop some images here, or click to select images',
     onUpload: (files) => console.log(files),
   },
   render: ({ acceptOptions, textIndicator, onUpload, sizePreview }) => {
