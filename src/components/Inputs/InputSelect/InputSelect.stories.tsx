@@ -89,10 +89,14 @@ export const Default: InputSelectStory = {
     ),
   ],
   args: {
-    label: 'Label',
+    label: 'Choose a country',
     options: [
-      { label: 'Option 1', value: 'option1' },
-      { label: 'Option 2', value: 'option2' },
+      { label: 'Brazil', value: 'br' },
+      { label: 'United States of American', value: 'eua' },
+      {
+        label: 'United Kingdom of Great Britain and Northern Ireland',
+        value: 'uk',
+      },
     ],
     disabled: false,
     hasError: false,

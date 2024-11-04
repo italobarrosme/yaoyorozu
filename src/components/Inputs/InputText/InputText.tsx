@@ -21,7 +21,7 @@ export const InputText = forwardRef<HTMLInputElement, InputTextProps>(
       <div className={cn('relative flex w-full flex-col gap-2', className)}>
         <label
           htmlFor={props.name}
-          className={cn('font-semibold text-xs text-inherit', {
+          className={cn('font-semibold text-inherit', {
             'text-neutral-white': dark,
           })}
         >

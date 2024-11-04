@@ -66,7 +66,7 @@ export const InputNumber = forwardRef<HTMLInputElement, InputNumberProps>(
       <div className={cn('relative flex w-full flex-col gap-2', className)}>
         <label
           id={props.name}
-          className={cn('font-semibold text-xs text-inherit', {
+          className={cn('font-semibold text-inherit', {
             'text-neutral-white': dark,
           })}
         >
