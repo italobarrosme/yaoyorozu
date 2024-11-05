@@ -33,7 +33,7 @@ export const ProgressBar = ({
   className,
 }: ProgressBarProps) => {
   return (
-    <div className="flex w-full items-center gap-4">
+    <div className="flex w-full items-center gap-2">
       <div className={'w-full bg-neutral-lightest h-2 relative rounded-md'}>
         <div
           className={cn(

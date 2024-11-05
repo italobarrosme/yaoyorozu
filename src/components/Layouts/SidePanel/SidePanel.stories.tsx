@@ -37,7 +37,9 @@ const SidePanelMeta: Meta<typeof SidePanel> = {
   },
   args: {
     children: 'Side panel content',
-    trigger: <Button variant="fit/regular">Open Side Panel</Button>,
+    trigger: (
+      <Button variant="fit/regular">Article Frontend Development 2024</Button>
+    ),
     orientation: 'right',
   },
   parameters: {

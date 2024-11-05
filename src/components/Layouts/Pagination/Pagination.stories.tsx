@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { Pagination } from '.'
-import { DefaultComponent, CodeDecoratorDefault } from './Decorators'
+import { DefaultComponent, DefaultCode } from './Decorators'
 import { useArgs } from '@storybook/preview-api'
 
 import { Text } from '../../Texts/Text'
@@ -76,7 +76,7 @@ export const Default: PaginationStory = {
             copy the code below to use the component in your project. You can
             also
           </Text>
-          <CodeDecoratorDefault />
+          <DefaultCode />
           <hr />
           <Text variant="xl/bold" tag="h3">
             Playground

@@ -1,4 +1,4 @@
-import { SidePanel, SidePanelProps } from '../'
+import { SidePanel, SidePanelButtonClose, SidePanelProps } from '../'
 import { Button } from '../../../Buttons/Button'
 import { Copy } from '../../../Texts/Copy'
 import { Text } from '../../../Texts/Text'
@@ -12,8 +12,34 @@ export const DefaultCode = () => {
         } from '@developerskyi/react-components'
         import { Button } from '@developerskyi/react-components'
 
-        <SidePanel orientation={'right'} trigger={<Button variant="fit/regular">Open Side Panel</Button>}>
-          Side panel content
+        const content = (
+          <div className="flex flex-col justify-between h-screen">
+            <div className="flex flex-col gap-4">
+              <Text variant="2xl/semibold" tag="h1">
+                Article Frontend Development 2024
+              </Text>
+              <Text variant="sm/medium">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                convallis libero in dui lacinia, nec ultricies metus ultricies. Nulla
+                facilisi. Sed eget odio nec libero volutpat ultricies. Nulla facilisi.
+                Sed eget odio nec libero volutpat ultricies. Nulla facilisi. Sed eget
+              </Text>
+              
+            </div>
+
+            <div className="w-full flex justify-end gap-4">
+              <SidePanelButtonClose>
+                <Button variant="fit/outline">Close</Button>
+              </SidePanelButtonClose>
+              <Button variant="fit/regular">Learn More</Button>
+            </div>
+          </div>
+        )
+
+        <SidePanel orientation={'right'} trigger={<Button variant="fit/regular">
+          Article Frontend Development 2024
+        </Button>}>
+          {content}	
         </SidePanel>
 
       `}
@@ -31,20 +57,21 @@ export const DefaultComponent = ({
     <div className="flex flex-col justify-between h-screen">
       <div className="flex flex-col gap-4">
         <Text variant="2xl/semibold" tag="h1">
-          Details of the product
+          Article Frontend Development 2024
         </Text>
         <Text variant="sm/medium">
-          The product is a very good product and it is very useful for the
-          customers who are looking for a product like this. The product is a
-          very good product and it is very useful for the customers who are
-          looking for a product like this. The product is a very good product
-          and it is very useful for the customers who are looking for a product
-          like this.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+          convallis libero in dui lacinia, nec ultricies metus ultricies. Nulla
+          facilisi. Sed eget odio nec libero volutpat ultricies. Nulla facilisi.
+          Sed eget odio nec libero volutpat ultricies. Nulla facilisi. Sed eget
         </Text>
       </div>
 
-      <div className="w-full flex justify-end">
-        <Button variant="fit/regular">Click me</Button>
+      <div className="w-full flex justify-end gap-4">
+        <SidePanelButtonClose>
+          <Button variant="fit/outline">Close</Button>
+        </SidePanelButtonClose>
+        <Button variant="fit/regular">Learn More</Button>
       </div>
     </div>
   )
