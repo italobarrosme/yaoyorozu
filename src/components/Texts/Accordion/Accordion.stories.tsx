@@ -15,9 +15,10 @@ const AccordionMeta: Meta<typeof Accordion> = {
       defaultValue: 'Title',
     },
     children: {
-      control: 'text',
       description: 'The content of the accordion',
-      defaultValue: 'Content',
+      control: {
+        disable: true,
+      },
     },
   },
   parameters: {
@@ -25,7 +26,8 @@ const AccordionMeta: Meta<typeof Accordion> = {
       story: { inline: true },
       canvas: { sourceState: 'none' },
       description: {
-        component: `The \`Accordion\` component is used to create an accordion component.`,
+        component: `The \`Accordion\` component is used to create an accordion component. 
+        Based on the title and children props, the component will render the accordion with the title and content.`,
       },
     },
   },
@@ -52,8 +54,16 @@ export const Default: AccordionStory = {
     ),
   ],
   args: {
-    title: 'Title',
-    children: 'Content',
+    title: 'Question about the product and services',
+    children: (
+      <>
+        <Text variant="md/light">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+          consectetur, justo eget aliquam ultricies, purus lorem tincidunt
+          libero, auctor ultricies odio mauris nec nunc.
+        </Text>
+      </>
+    ),
   },
   render: (props) => <DefaultComponent {...props} />,
 }

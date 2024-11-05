@@ -13,6 +13,15 @@ import { Card } from '../../components/Layouts/Card'
 import { ProgressBar } from '../../components/Layouts/ProgressBar'
 import { Icon } from '@iconify/react'
 import { Menubar } from '../../components/Buttons/Menubar'
+import {
+  DrawerClose,
+  DrawerContent,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerRoot,
+  DrawerTrigger,
+} from '../../components/Layouts/Drawer'
+import { Accordion } from '../../components/Texts/Accordion'
 
 export const Playground = () => {
   const [date, setDate] = useState<DateRange | undefined>({
@@ -133,6 +142,40 @@ export const Playground = () => {
       </Text>
       <div className="flex flex-wrap gap-4">
         <Card className="flex gap-2">
+          <DrawerRoot>
+            <DrawerTrigger asChild>
+              <Button variant="fit/regular">Open Wallet</Button>
+            </DrawerTrigger>
+            <DrawerContent className="flex justify-center items-center">
+              <DrawerHeader>
+                <Text variant="3xl/medium">You have - 0.1000 Btc</Text>
+              </DrawerHeader>
+
+              <div className="px-4">
+                <Text variant="lg/medium">Last Transactions:</Text>
+
+                <Text variant="md/light">
+                  Address: bc1qar0srrr7xfkvy5l643lyd...
+                </Text>
+                <div className="flex justify-between items-center mt-2 w-80">
+                  <Text variant="md/medium">05/11/24 - 0.001 Btc</Text>
+                  <Text variant="md/medium">+0.001 Btc</Text>
+                </div>
+                <div className="flex justify-between items-center mt-2 w-80">
+                  <Text variant="md/medium">01/11/24 - 0.001 Btc</Text>
+                  <Text variant="md/medium">+0.001 Btc</Text>
+                </div>
+              </div>
+
+              <DrawerFooter className="flex justify-center items-center">
+                <DrawerClose>
+                  <Button variant="full/outline" className="w-80">
+                    Close Wallet
+                  </Button>
+                </DrawerClose>
+              </DrawerFooter>
+            </DrawerContent>
+          </DrawerRoot>
           <Menubar
             menus={[
               {
@@ -234,6 +277,15 @@ export const Playground = () => {
             onValueChange={() => console.log()}
           />
           <InputArea label="Comments" placeholder="" />
+          <div className="max-w-80">
+            <Accordion title={'Some question'}>
+              <Text variant="md/light">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                consectetur, justo eget aliquam ultricies, purus lorem tincidunt
+                libero, auctor ultricies odio mauris nec nunc.
+              </Text>
+            </Accordion>
+          </div>
         </Card>
       </div>
     </div>

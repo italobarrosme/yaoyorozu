@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { Copy } from '.'
-import { CodeDecoratorDefault, DefaultComponent } from './Decorators'
+import { DefaultComponent, DefaultCode } from './Decorators'
 import { Text } from '../../Texts/Text'
 
 const CopyMeta: Meta<typeof Copy> = {
@@ -24,7 +24,8 @@ const CopyMeta: Meta<typeof Copy> = {
       story: { inline: true },
       canvas: { sourceState: 'none' },
       description: {
-        component: `The \`Copy\` component is used to copy text to the clipboard.`,
+        component: `The \`Copy\` component is used to copy, structure and show code snippets. 
+        It is used in the documentation to show code snippets.`,
       },
     },
   },
@@ -39,7 +40,7 @@ export const Default: StoryObj<typeof Copy> = {
         <Text variant="xs/semibold">
           copy the code below to use the component in your project. You can also
         </Text>
-        <CodeDecoratorDefault />
+        <DefaultCode />
         <hr />
         <Text variant="xl/bold" tag="h3">
           Playground
