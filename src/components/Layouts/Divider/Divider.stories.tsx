@@ -41,9 +41,11 @@ type DividerStory = StoryObj<typeof Divider>
 export const Default: DividerStory = {
   decorators: [
     (Story) => (
-      <div className="flex flex-col gap-4 w-full items-center justify-center h-[200px] text-neutral-black">
+      <div className="flex flex-col gap-4 w-full items-center justify-center text-neutral-black">
         <DefaultCode />
-        <Story />
+        <div className="w-80 h-80">
+          <Story />
+        </div>
       </div>
     ),
   ],
