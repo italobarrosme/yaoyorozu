@@ -16,7 +16,19 @@
     "noEmit": true,
     "types": ["node", "jest", "@testing-library/jest-dom"],
   },
-  "exclude": ["src/test/", "vite.config.mts", "vitest.config.ts", "node_modules", "**/Decorators/**","addUseClientDirective.ts",
-    "**/*.test.ts", "**/*.spec.ts", "**/*.test.tsx", "**/*.spec.tsx", "**/*.stories.ts", "**/*.stories.tsx", "**/*.stories.d.ts", "public"],
+  "include": ["src", "src/index.ts"],
+  "exclude": [
+    "vite.config.mts",
+    "vitest.config.ts",
+    "node_modules",
+    "**/*.test.ts",
+    "**/*.spec.ts",
+    "**/*.test.tsx",
+    "**/*.spec.tsx",
+    "**/*.stories.ts",
+    "**/*.stories.tsx",
+    "**/*.stories.d.ts",
+    "public"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

@@ -6,7 +6,9 @@ export const CodeDecoratorDefault = () => {
   return (
     <Copy>
       {`
-      import { useToast, Button } from '@developerskyi/react-components'
+      import { useToast, Button, Toaster } from '@developerskyi/react-components'
+
+      // in your provider add Toaster component
 
       const { toast } = useToast()
 

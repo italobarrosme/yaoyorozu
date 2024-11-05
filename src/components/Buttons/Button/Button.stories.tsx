@@ -90,7 +90,7 @@ export const Default: ButtonStory = {
   ],
   args: {
     variant: 'medium/regular',
-    children: 'Click me',
+    children: 'Hello World',
   },
   render: ({ children, variant, className, ...props }) => (
     <DefaultComponent variant={variant} className={className} {...props}>

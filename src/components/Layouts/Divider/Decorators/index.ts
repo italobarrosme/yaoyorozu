@@ -1,5 +1,1 @@
-export {
-  DefaultComponent,
-  ComponentDividerVertical,
-} from './ComponentDecorator'
-export { CodeDecoratorDefault, CodeDecoratorVertical } from './CodeDecorator'
+export { DefaultComponent, DefaultCode } from './DecoratorDefault'

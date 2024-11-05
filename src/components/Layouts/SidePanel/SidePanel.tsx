@@ -4,7 +4,7 @@ import * as React from 'react'
 import * as DialogPrimitive from '@radix-ui/react-dialog'
 
 import { cn } from '../../../utils/cn'
-import { Dialog, DialogPortal, DialogTrigger } from '../Dialog'
+import { Dialog, DialogPortal, DialogTrigger, DialogClose } from '../Dialog'
 import { Icon } from '@iconify/react'
 
 const DialogOverlaySidePanel = React.forwardRef<
@@ -77,5 +77,12 @@ export const SidePanel = ({
     </Dialog>
   )
 }
+
+export const SidePanelButtonClose = ({
+  children,
+  ...props
+}: React.HTMLAttributes<HTMLButtonElement>) => (
+  <DialogClose {...props}>{children}</DialogClose>
+)
 
 export { DialogOverlaySidePanel, DialogContentSidePanel }

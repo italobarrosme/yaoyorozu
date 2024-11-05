@@ -1,2 +1,6 @@
-export { CodeDecoratorDefault, DefaultComponent } from './CodeDecoratorDefault'
-export { ClickComponent, CodeDecoratorClick } from './CodeDecoratorClick'
+export {
+  DefaultCode,
+  DefaultComponent,
+  ClickCode,
+  ClickComponent,
+} from './CodeDecoratorDefault'

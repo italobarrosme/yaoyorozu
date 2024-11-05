@@ -5,6 +5,7 @@ import {
   InputHTMLAttributes,
   ReactNode,
   useEffect,
+  useRef,
   useState,
 } from 'react'
 import { cn } from '../../../utils/cn'
@@ -12,6 +13,7 @@ import { addDays, format } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
 import { Calendar, CalendarProps } from './Calendar'
 import { DateRange } from 'react-day-picker'
+import { useOnClickOutside } from 'usehooks-ts'
 
 export type InputDatePickerProps = {
   label: string
@@ -46,6 +48,13 @@ export const InputDatePicker = forwardRef<
   ) => {
     const [isCalendarOpen, setIsCalendarOpen] = useState(false)
     const [date, setDate] = useState<Date | undefined>(new Date())
+    const refCalendar = useRef<HTMLDivElement>(null)
+
+    const handleClickOutside = () => {
+      setIsCalendarOpen(false)
+    }
+
+    useOnClickOutside(refCalendar, handleClickOutside)
 
     const [dateRanged, setDateRanged] = useState<DateRange | undefined>({
       from: new Date(2024, 5, 13),
@@ -72,7 +81,7 @@ export const InputDatePicker = forwardRef<
       <div className={cn('relative flex w-full flex-col gap-2', className)}>
         <label
           id={props.name}
-          className={cn('font-semibold text-xs text-inherit', {
+          className={cn('font-semibold text-inherit', {
             'text-neutral-white': dark,
           })}
         >
@@ -149,6 +158,7 @@ export const InputDatePicker = forwardRef<
                 to: date ? date.to : addDays(new Date(), 1),
               })
             }}
+            ref={refCalendar}
             selected={dateRanged}
           />
         ) : isCalendarOpen ? (
@@ -156,6 +166,7 @@ export const InputDatePicker = forwardRef<
             {...calendarProps}
             mode="single"
             numberOfMonths={1}
+            ref={refCalendar}
             className={cn(
               'absolute z-10 top-20 left-0 shadow-lg  bg-neutral-white',
               {

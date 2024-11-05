@@ -2,8 +2,8 @@ import type { Meta, StoryObj } from '@storybook/react'
 import {
   DefaultCode,
   DefaultComponent,
-  BoxInputOTPCode,
-  BoxInputOTPComponent,
+  BoxInputComponent,
+  BoxInputCode,
 } from './Decorators'
 
 import { Text } from '../../Texts/Text'
@@ -128,7 +128,7 @@ export const BoxInputOTP: InputOTPStory = {
         <Text variant="xs/semibold">
           copy the code below to use the component in your project. You can also
         </Text>
-        <BoxInputOTPCode />
+        <BoxInputCode />
         <hr />
         <Text variant="xl/bold" tag="h3">
           Playground
@@ -144,6 +144,6 @@ export const BoxInputOTP: InputOTPStory = {
     },
   },
   render: ({ maxLength, onChange }) => {
-    return <BoxInputOTPComponent maxLength={maxLength} onChange={onChange} />
+    return <BoxInputComponent maxLength={maxLength} onChange={onChange} />
   },
 }

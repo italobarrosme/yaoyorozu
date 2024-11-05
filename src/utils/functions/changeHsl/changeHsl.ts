@@ -13,7 +13,11 @@ export const changeHsl = (
   )
   root.style.setProperty(
     '--color-complementary-highlight',
-    updateHsl(complementaryColor.toString(), saturation, lightness)
+    updateHsl(
+      complementaryColor.toString(),
+      complementaryColor.toString(),
+      lightness
+    )
   )
 }
 

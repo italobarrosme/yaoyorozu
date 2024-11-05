@@ -69,7 +69,7 @@ type InputDatePickerStory = StoryObj<typeof InputDatePicker>
 export const Default: InputDatePickerStory = {
   decorators: [
     (Story) => (
-      <div className="flex flex-col gap-4 w-full">
+      <div className="flex flex-col gap-4 w-full min-h-[700px]">
         <Text variant="xs/semibold">
           copy the code below to use the component in your project. You can also
         </Text>
@@ -83,7 +83,7 @@ export const Default: InputDatePickerStory = {
     ),
   ],
   args: {
-    label: 'Label',
+    label: 'Select your date born',
     name: 'input',
   },
   render: ({

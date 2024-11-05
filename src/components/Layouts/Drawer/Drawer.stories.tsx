@@ -2,8 +2,8 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { Drawer } from '.'
 import {
   DefaultComponent,
-  CodeDecoratorDefault,
-  CodeDecoratorCustom,
+  DefaultCode,
+  CustomCode,
   CustomDrawerComponent,
 } from './Decorators'
 
@@ -35,8 +35,14 @@ const DrawerMeta: Meta<typeof Drawer> = {
     },
   },
   args: {
-    children: 'Drawer content',
-    trigger: <Button variant="fit/regular">Open Drawer</Button>,
+    children: (
+      <>
+        <div className="p-4 flex justify-center items-center">
+          <Text variant="lg/medium">500,000+ views</Text>
+        </div>
+      </>
+    ),
+    trigger: <Button variant="fit/regular">Open Metrics</Button>,
     direction: 'bottom',
   },
   parameters: {
@@ -68,7 +74,7 @@ export const Default: DrawerStory = {
         <Text variant="xs/semibold">
           copy the code below to use the component in your project. You can also
         </Text>
-        <CodeDecoratorDefault />
+        <DefaultCode />
         <hr />
         <Text variant="xl/bold" tag="h3">
           Playground
@@ -91,7 +97,7 @@ export const Custom: DrawerStory = {
         <Text variant="xs/semibold">
           copy the code below to use the component in your project. You can also
         </Text>
-        <CodeDecoratorCustom />
+        <CustomCode />
         <hr />
         <Text variant="xl/bold" tag="h3">
           Playground

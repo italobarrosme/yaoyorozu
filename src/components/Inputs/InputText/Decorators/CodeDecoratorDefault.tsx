@@ -7,7 +7,7 @@ export const CodeDecoratorDefault = () => {
       {`
         import { InputText } from '@developerskyi/react-components'
 
-        <InputText label="Hello World" name="input-name" />
+        <InputText label="Your Name" name="input-name" />
       `}
     </Copy>
   )

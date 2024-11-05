@@ -91,8 +91,11 @@ export const Default: InputNumberStory = {
     ),
   ],
   args: {
-    label: 'Label',
-    name: 'input',
+    label: 'Enter a number',
+    name: 'number-input',
+    onChangeValue: (value: number) => {
+      console.log(value, 'value number')
+    },
   },
   render: ({
     label,

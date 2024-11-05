@@ -20,7 +20,7 @@ const InputTextMeta: Meta<typeof InputText> = {
     label: {
       control: 'text',
       description: 'The label of the input',
-      defaultValue: 'Label',
+      defaultValue: 'Your Name',
     },
     name: {
       control: 'text',
@@ -83,8 +83,8 @@ export const Default: InputTextStory = {
     ),
   ],
   args: {
-    label: 'Label',
-    name: 'input',
+    label: 'Your Name',
+    name: 'input-text',
   },
   render: ({
     label,

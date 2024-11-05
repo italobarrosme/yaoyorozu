@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { Tooltip } from '.'
 import {
-  CodeDecoratorDefault,
+  DefaultCode,
   DefaultComponent,
-  CodeDecoratorClick,
+  ClickCode,
   ClickComponent,
 } from './Decorators'
 import { Text } from '../Text'
@@ -67,7 +67,7 @@ export const Default: TooltipStory = {
         <Text variant="xs/semibold">
           copy the code below to use the component in your project. You can also
         </Text>
-        <CodeDecoratorDefault />
+        <DefaultCode />
         <hr />
         <Text variant="xl/bold" tag="h3">
           Playground
@@ -101,7 +101,7 @@ export const ClickTooltip: TooltipStory = {
         <Text variant="xs/semibold">
           copy the code below to use the component in your project. You can also
         </Text>
-        <CodeDecoratorClick />
+        <ClickCode />
         <hr />
         <Text variant="xl/bold" tag="h3">
           Playground
@@ -111,8 +111,8 @@ export const ClickTooltip: TooltipStory = {
     ),
   ],
   args: {
-    children: <Button variant="fit/outline">Click me</Button>,
-    content: 'Click me',
+    children: <Button variant="fit/outline">Show me</Button>,
+    content: 'Hello world',
     side: 'top',
     trigger: 'click',
   },

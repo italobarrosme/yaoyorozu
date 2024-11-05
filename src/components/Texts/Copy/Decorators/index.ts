@@ -1,1 +1,1 @@
-export { CodeDecoratorDefault, DefaultComponent } from './CodeDecoratorDefault'
+export { DefaultComponent, DefaultCode } from './CodeDecoratorDefault'

@@ -12,8 +12,34 @@ export const DefaultCode = () => {
           console.log(value)
         }
         
-        <InputArea label="Input Area" onChange={handleChange} />
+        <InputArea label="Comments" onChange={handleChange} />
       `}
     </Copy>
+  )
+}
+
+import { InputArea, InputAreaProps } from '..'
+
+export const DefaultComponent = ({
+  label,
+  dark,
+  error,
+  auxiliary,
+  icon,
+  className,
+  name,
+  ...props
+}: InputAreaProps) => {
+  return (
+    <InputArea
+      dark={dark}
+      error={error}
+      auxiliary={auxiliary}
+      label={label}
+      icon={icon}
+      className={className}
+      name={name}
+      {...props}
+    />
   )
 }

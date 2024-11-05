@@ -6,56 +6,203 @@ import { ButtonLink } from '../ButtonLink'
 
 const MenuProp = [
   {
-    trigger: 'File',
+    trigger: 'Computer store',
     listItems: [
       {
         children: (
-          <ButtonLink className="text-neutral-white" variant="fit/block">
-            Open
+          <ButtonLink
+            className="text-neutral-white rounded-3xl"
+            variant="medium/block"
+          >
+            Nootbooks
           </ButtonLink>
         ),
       },
       {
         children: (
-          <ButtonLink className="text-neutral-white" variant="fit/block">
-            Save
+          <ButtonLink
+            className="text-neutral-white rounded-3xl"
+            variant="medium/block"
+          >
+            Memory
           </ButtonLink>
         ),
       },
       {
         children: (
-          <ButtonLink className="text-neutral-white" variant="fit/block">
-            Save As
+          <ButtonLink
+            className="text-neutral-white rounded-3xl"
+            variant="medium/block"
+          >
+            PCs
           </ButtonLink>
         ),
       },
     ],
     subMenus: [
       {
-        trigger: 'Recent Files',
+        trigger: 'Games',
         listItems: [
           {
             children: (
-              <ButtonLink className="text-neutral-white" variant="fit/block">
-                File 1
+              <ButtonLink
+                className="text-neutral-white rounded-3xl"
+                variant="medium/block"
+              >
+                Xboxs
               </ButtonLink>
             ),
           },
           {
             children: (
-              <ButtonLink className="text-neutral-white" variant="fit/block">
-                File 2
+              <ButtonLink
+                className="text-neutral-white rounded-3xl"
+                variant="medium/block"
+              >
+                PC
               </ButtonLink>
             ),
           },
           {
             children: (
-              <ButtonLink className="text-neutral-white" variant="fit/block">
-                File 3
+              <ButtonLink
+                className="text-neutral-white rounded-3xl"
+                variant="medium/block"
+              >
+                Playstation
               </ButtonLink>
             ),
           },
         ],
+        subMenus: [
+          {
+            trigger: 'Accessories',
+            listItems: [
+              {
+                children: (
+                  <ButtonLink
+                    className="text-neutral-white rounded-3xl"
+                    variant="medium/block"
+                  >
+                    Controllers
+                  </ButtonLink>
+                ),
+              },
+              {
+                children: (
+                  <ButtonLink
+                    className="text-neutral-white rounded-3xl"
+                    variant="medium/block"
+                  >
+                    Headsets
+                  </ButtonLink>
+                ),
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    trigger: 'Smartphones',
+    listItems: [
+      {
+        children: (
+          <ButtonLink
+            className="text-neutral-white rounded-3xl"
+            variant="medium/block"
+          >
+            Android
+          </ButtonLink>
+        ),
+      },
+      {
+        children: (
+          <ButtonLink
+            className="text-neutral-white rounded-3xl"
+            variant="medium/block"
+          >
+            iOS
+          </ButtonLink>
+        ),
+      },
+    ],
+    subMenus: [
+      {
+        trigger: 'Accessories',
+        listItems: [
+          {
+            children: (
+              <ButtonLink
+                className="text-neutral-white rounded-3xl"
+                variant="medium/block"
+              >
+                Cases
+              </ButtonLink>
+            ),
+          },
+          {
+            children: (
+              <ButtonLink
+                className="text-neutral-white rounded-3xl"
+                variant="medium/block"
+              >
+                Chargers
+              </ButtonLink>
+            ),
+          },
+        ],
+      },
+      {
+        trigger: 'Smartwatches',
+        listItems: [
+          {
+            children: (
+              <ButtonLink
+                className="text-neutral-white rounded-3xl"
+                variant="medium/block"
+              >
+                Android
+              </ButtonLink>
+            ),
+          },
+          {
+            children: (
+              <ButtonLink
+                className="text-neutral-white rounded-3xl"
+                variant="medium/block"
+              >
+                iOS
+              </ButtonLink>
+            ),
+          },
+        ],
+      },
+    ],
+  },
+  {
+    trigger: 'Cameras',
+    listItems: [
+      {
+        children: (
+          <ButtonLink
+            className="text-neutral-white rounded-3xl"
+            variant="medium/block"
+          >
+            DSLRs
+          </ButtonLink>
+        ),
+      },
+      {
+        children: (
+          <ButtonLink
+            className="text-neutral-white rounded-3xl"
+            variant="medium/block"
+          >
+            Mirrorless
+          </ButtonLink>
+        ),
       },
     ],
   },
@@ -68,7 +215,8 @@ const MenubarMeta: Meta<typeof Menubar> = {
   argTypes: {
     menus: {
       control: 'object',
-      description: 'The menus for the menubar',
+      description: `The menus prop is an array of objects that contains the trigger, listItems, and subMenus properties.
+      The trigger property is the name of the menu item.`,
       defaultValue: [MenuProp],
     },
     className: {
@@ -84,7 +232,9 @@ const MenubarMeta: Meta<typeof Menubar> = {
       story: { inline: true },
       canvas: { sourceState: 'none' },
       description: {
-        component: `The \`Menubar\` component is used to create a menubar with dropdown menus. It has the behavior of a \`div\` tag with some styling features`,
+        component: `The \`Menubar\` component is used to create a menubar with dropdown menus. .
+        For use \`Menubar\` component, you need to pass the prop \`menus\` which is an array of objects.
+        `,
       },
     },
   },

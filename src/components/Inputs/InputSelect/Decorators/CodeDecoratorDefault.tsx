@@ -9,7 +9,7 @@ export const CodeDecoratorDefault = () => {
             console.log(date)
           }
             
-          <InputSelect label="calendar" onValueChange={handleChange} />
+          <InputSelect label="Choose a country" onValueChange={handleChange} />
         `}
     </Copy>
   )

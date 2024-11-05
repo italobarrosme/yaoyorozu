@@ -1,13 +1,18 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import type { Meta, StoryObj } from '@storybook/react'
-import { SidePanel } from '.'
-import { DefaultComponent, CodeDecoratorDefault } from './Decorators'
+import { SidePanel, SidePanelButtonClose } from '.'
+import { DefaultComponent, DefaultCode } from './Decorators'
 
 import { Text } from '../../Texts/Text'
 import { Button } from '../../Buttons/Button'
+import {} from './SidePanel'
 
 const SidePanelMeta: Meta<typeof SidePanel> = {
   title: 'Components/Layout/SidePanel',
   component: SidePanel,
+  subcomponents: {
+    SidePanelButtonClose: SidePanelButtonClose as any,
+  },
   tags: ['autodocs'],
   argTypes: {
     children: {
@@ -32,7 +37,9 @@ const SidePanelMeta: Meta<typeof SidePanel> = {
   },
   args: {
     children: 'Side panel content',
-    trigger: <Button variant="fit/regular">Open Side Panel</Button>,
+    trigger: (
+      <Button variant="fit/regular">Article Frontend Development 2024</Button>
+    ),
     orientation: 'right',
   },
   parameters: {
@@ -64,7 +71,7 @@ export const Default: SidePanelStory = {
         <Text variant="xs/semibold">
           copy the code below to use the component in your project. You can also
         </Text>
-        <CodeDecoratorDefault />
+        <DefaultCode />
         <hr />
         <Text variant="xl/bold" tag="h3">
           Playground

@@ -7,6 +7,11 @@ export const CodeDecoratorDefault = () => {
       {`
           import { InputNumber } from '@developerskyi/react-components'
 
+          const handleValue = (value: number) => {
+            console.log(value)
+          }
+
+
           <InputNumber label="Enter a number" name="number-input" onChangeValue={handleValue} />
         `}
     </Copy>
@@ -23,6 +28,10 @@ export const DefaultComponent = ({
   dark,
   ...props
 }: InputNumberProps) => {
+  const handleValue = (value: number) => {
+    console.log(value, 'value number')
+  }
+
   return (
     <InputNumber
       label={label}
@@ -32,6 +41,7 @@ export const DefaultComponent = ({
       auxiliary={auxiliary}
       currency={currency}
       dark={dark}
+      onChangeValue={handleValue}
       {...props}
     />
   )

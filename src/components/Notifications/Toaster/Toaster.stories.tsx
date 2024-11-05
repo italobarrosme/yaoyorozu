@@ -16,7 +16,8 @@ const ToasterMeta: Meta<typeof Toaster> = {
   title: 'Components/Notifications/Toaster',
   component: Toaster,
   subcomponents: {
-    Toast,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    Toast: Toast as any,
   },
   tags: ['autodocs'],
   decorators: [
