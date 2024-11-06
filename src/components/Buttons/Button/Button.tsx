@@ -1,7 +1,6 @@
 'use client'
 
 import { cva, VariantProps } from 'class-variance-authority'
-import { Component } from '../../../types/component'
 import { cn } from '../../../utils/cn'
 import { ButtonHTMLAttributes, ReactNode } from 'react'
 const buttonStyles = cva(
@@ -23,7 +22,7 @@ const buttonStyles = cva(
       },
       style: {
         regular:
-          'bg-primary-regular rounded-md hover:border hover:bg-primary-regular/80 hover:text-primary-foreground',
+          'bg-primary-regular rounded-md hover:bg-primary-regular/80 hover:text-primary-foreground',
         secondary:
           'bg-secondary-regular rounded-md text-secondary-foreground hover:bg-secondary-regular/80 hover:text-secondary-foreground',
         outline:
@@ -50,12 +49,12 @@ export type ButtonProps = {
 } & ButtonVariant &
   ButtonHTMLAttributes<HTMLButtonElement>
 
-export const Button: Component<ButtonProps> = ({
+export const Button = ({
   children,
   className,
   variant,
   ...props
-}) => {
+}: ButtonProps) => {
   const [size, style] = variant.split('/') as [
     ButtonStylesProps['size'],
     ButtonStylesProps['style'],

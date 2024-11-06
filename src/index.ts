@@ -1,5 +1,5 @@
 // texts
-export { Text, type TextProps, type TextVariant } from './components/Texts/Text'
+export { Text, type TextProps } from './components/Texts/Text'
 export { Tooltip, type TooltipProps } from './components/Texts/Tooltip'
 export { Copy, type CopyProps } from './components/Texts/Copy'
 export { Accordion, type AccordionProps } from './components/Texts/Accordion'

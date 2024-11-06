@@ -3,7 +3,6 @@
 import { Icon } from '@iconify/react'
 import { cn } from '../../../utils/cn'
 import { usePagination, DOTS } from './hook'
-import { Component } from '../../../types/component'
 
 export type PaginationProps = {
   totalCount: number
@@ -11,16 +10,17 @@ export type PaginationProps = {
   pageSize: number
   onPageChange: (page: number) => void
   siblingCount?: number
+  className?: string
 }
 
-export const Pagination: Component<PaginationProps> = ({
+export const Pagination = ({
   totalCount,
   currentPage,
   pageSize,
   onPageChange,
   siblingCount = 1,
   className,
-}) => {
+}: PaginationProps) => {
   const paginationRange = usePagination({
     totalCount,
     pageSize,

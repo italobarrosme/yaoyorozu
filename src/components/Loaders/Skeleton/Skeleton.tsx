@@ -1,5 +1,4 @@
 import { cva, VariantProps } from 'class-variance-authority'
-import { Component } from '../../../types/component'
 import { cn } from '../../../utils/cn'
 
 const skeletonStyles = cva([], {
@@ -19,14 +18,16 @@ type SkeletonStylesProps = VariantProps<typeof skeletonStyles>
 
 export type SkeletonProps = {
   animationDuration?: number
+  children?: React.ReactNode
+  className?: string
 } & SkeletonStylesProps
 
-export const Skeleton: Component<SkeletonProps> = ({
+export const Skeleton = ({
   animationDuration = 1.6,
   size,
   className,
   children,
-}) => {
+}: SkeletonProps) => {
   return (
     <div
       data-testid="skeleton"

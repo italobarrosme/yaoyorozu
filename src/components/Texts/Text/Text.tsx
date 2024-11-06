@@ -1,4 +1,3 @@
-import { Component } from '../../../types/component'
 import { cva, VariantProps } from 'class-variance-authority'
 import { cn } from '../../../utils/cn'
 import { ElementType, HTMLProps } from 'react'
@@ -59,13 +58,13 @@ export type TextProps = {
 } & TextVariant &
   HTMLProps<HTMLElement>
 
-export const Text: Component<TextProps> = ({
+export const Text = ({
   variant = 'md/medium',
   children,
   className,
   tag = 'p',
   ...props
-}) => {
+}: TextProps) => {
   const [size, weight] = variant.split('/') as [
     TextStylesProps['size'],
     TextStylesProps['weight'],
