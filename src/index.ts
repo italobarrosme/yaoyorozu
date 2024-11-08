@@ -45,6 +45,11 @@ export {
   ProgressBar,
   type ProgressBarProps,
 } from './components/Layouts/ProgressBar'
+export {
+  SidePanel,
+  type SidePanelProps,
+  SidePanelButtonClose,
+} from './components/Layouts/SidePanel'
 
 // Inputs
 export {

@@ -5,7 +5,6 @@ import { DefaultComponent, DefaultCode } from './Decorators'
 
 import { Text } from '../../Texts/Text'
 import { Button } from '../../Buttons/Button'
-import {} from './SidePanel'
 
 const SidePanelMeta: Meta<typeof SidePanel> = {
   title: 'Components/Layout/SidePanel',
