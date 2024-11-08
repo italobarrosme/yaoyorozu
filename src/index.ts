@@ -101,6 +101,10 @@ export {
   InputSwitch,
   type InputSwitchProps,
 } from './components/Inputs/InputSwitch'
+export {
+  InputSlider,
+  type InputSliderProps,
+} from './components/Inputs/InputSlider'
 
 // buttons
 export { Button, type ButtonProps } from './components/Buttons/Button'
