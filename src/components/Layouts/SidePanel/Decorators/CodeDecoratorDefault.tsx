@@ -1,4 +1,4 @@
-import { SidePanel, SidePanelButtonClose, SidePanelProps } from '../'
+import { SidePanel, SidePanelButtonClose, SidePanelProps } from '..'
 import { Button } from '../../../Buttons/Button'
 import { Copy } from '../../../Texts/Copy'
 import { Text } from '../../../Texts/Text'
@@ -13,7 +13,7 @@ export const DefaultCode = () => {
         import { Button } from '@developerskyi/react-components'
 
         const content = (
-          <div className="flex flex-col justify-between h-screen">
+          <div className="flex flex-col justify-between h-screen bg-white p-6">
             <div className="flex flex-col gap-4">
               <Text variant="2xl/semibold" tag="h1">
                 Article Frontend Development 2024
@@ -54,7 +54,7 @@ export const DefaultComponent = ({
   ...props
 }: SidePanelProps) => {
   const mockContent = (
-    <div className="flex flex-col justify-between h-screen">
+    <div className="flex flex-col justify-between h-screen bg-white p-6">
       <div className="flex flex-col gap-4">
         <Text variant="2xl/semibold" tag="h1">
           Article Frontend Development 2024

@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { Divider } from '.'
 import { DefaultComponent, DefaultCode } from './Decorators'
+import { Text } from '../../Texts/Text'
 
 const DividerMeta: Meta<typeof Divider> = {
   component: Divider,
@@ -41,11 +42,16 @@ type DividerStory = StoryObj<typeof Divider>
 export const Default: DividerStory = {
   decorators: [
     (Story) => (
-      <div className="flex flex-col gap-4 w-full items-center justify-center text-neutral-black">
-        <DefaultCode />
-        <div className="w-80 h-80">
-          <Story />
+      <div className="flex flex-col gap-4 w-full">
+        <Text variant="xl/bold" tag="h3">
+          Playground
+        </Text>
+        <div className="flex flex-col gap-4 w-full items-center justify-center text-neutral-black">
+          <div className="w-80 h-80">
+            <Story />
+          </div>
         </div>
+        <DefaultCode />
       </div>
     ),
   ],

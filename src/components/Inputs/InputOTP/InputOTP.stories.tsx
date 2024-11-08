@@ -98,15 +98,15 @@ export const Default: InputOTPStory = {
   decorators: [
     (Story) => (
       <div className="flex flex-col gap-4 w-full">
-        <Text variant="xs/semibold">
-          copy the code below to use the component in your project. You can also
-        </Text>
-        <DefaultCode />
-        <hr />
         <Text variant="xl/bold" tag="h3">
           Playground
         </Text>
         <Story />
+        <hr />
+        <Text variant="xs/semibold">
+          copy the code below to use the component in your project. You can also
+        </Text>
+        <DefaultCode />
       </div>
     ),
   ],
@@ -125,15 +125,15 @@ export const BoxInputOTP: InputOTPStory = {
   decorators: [
     (Story) => (
       <div className="flex flex-col gap-4 w-full">
-        <Text variant="xs/semibold">
-          copy the code below to use the component in your project. You can also
-        </Text>
-        <BoxInputCode />
-        <hr />
         <Text variant="xl/bold" tag="h3">
           Playground
         </Text>
         <Story />
+        <hr />
+        <Text variant="xs/semibold">
+          copy the code below to use the component in your project. You can also
+        </Text>
+        <BoxInputCode />
       </div>
     ),
   ],

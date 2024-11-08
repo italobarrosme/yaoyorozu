@@ -4,7 +4,7 @@ import { Text } from '../../Texts/Text'
 import {
   CodeDecoratorDefault,
   DefaultComponent,
-  CodeDecoratorNested,
+  NestedCode,
   NestedComponent,
 } from './Decorators'
 
@@ -65,15 +65,15 @@ export const Default: SkeletonStory = {
   decorators: [
     (Story) => (
       <div className="flex flex-col gap-4 w-full">
-        <Text variant="xs/semibold">
-          copy the code below to use the component in your project. You can also
-        </Text>
-        <CodeDecoratorDefault />
-        <hr />
         <Text variant="xl/bold" tag="h3">
           Playground
         </Text>
         <Story />
+        <hr />
+        <Text variant="xs/semibold">
+          copy the code below to use the component in your project. You can also
+        </Text>
+        <CodeDecoratorDefault />
       </div>
     ),
   ],
@@ -96,15 +96,15 @@ export const Nested: SkeletonStory = {
   decorators: [
     (Story) => (
       <div className="flex flex-col gap-4 w-full">
-        <Text variant="xs/semibold">
-          copy the code below to use the component in your project. You can also
-        </Text>
-        <CodeDecoratorNested />
-        <hr />
         <Text variant="xl/bold" tag="h3">
           Playground
         </Text>
         <Story />
+        <hr />
+        <Text variant="xs/semibold">
+          copy the code below to use the component in your project. You can also
+        </Text>
+        <NestedCode />
       </div>
     ),
   ],

@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { ProgressBar } from '.'
 import { DefaultComponent, DefaultCode } from './Decorators'
+import { Text } from '../../Texts/Text'
 
 const ProgressBarMeta: Meta<typeof ProgressBar> = {
   component: ProgressBar,
@@ -53,9 +54,16 @@ type ProgressBarStory = StoryObj<typeof ProgressBar>
 export const Default: ProgressBarStory = {
   decorators: [
     (Story) => (
-      <div className="flex flex-col gap-4 w-full items-center justify-center h-[200px] text-neutral-black">
-        <DefaultCode />
+      <div className="flex flex-col gap-4 w-full">
+        <Text variant="xl/bold" tag="h3">
+          Playground
+        </Text>
         <Story />
+        <hr />
+        <Text variant="xs/semibold">
+          copy the code below to use the component in your project. You can also
+        </Text>
+        <DefaultCode />
       </div>
     ),
   ],

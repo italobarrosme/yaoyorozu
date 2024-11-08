@@ -80,12 +80,11 @@ export const Default: ButtonStory = {
           Playground
         </Text>
         <Story />
-
+        <hr />
         <Text variant="xs/semibold">
           copy the code below to use the component in your project. You can also
         </Text>
         <CodeDecoratorDefault />
-        <hr />
       </div>
     ),
   ],

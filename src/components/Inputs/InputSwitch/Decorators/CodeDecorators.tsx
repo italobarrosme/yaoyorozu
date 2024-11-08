@@ -1,3 +1,4 @@
+import { InputSwitchProps, InputSwitch } from '..'
 import { Copy } from '../../../Texts/Copy'
 
 export const DefaultCode = () => {
@@ -15,5 +16,21 @@ export const DefaultCode = () => {
         <InputSwitch id="switch" label="Input Switch" onCheckedChange={handleChange} />
       `}
     </Copy>
+  )
+}
+
+export const DefaultComponent = ({
+  label,
+  id,
+  onCheckedChange,
+  ...props
+}: InputSwitchProps) => {
+  return (
+    <InputSwitch
+      label={label}
+      id={id}
+      onCheckedChange={onCheckedChange}
+      {...props}
+    />
   )
 }

@@ -57,15 +57,15 @@ export const Default: BreadCrumbStory = {
   decorators: [
     (Story) => (
       <div className="flex flex-col gap-4 w-full">
+        <Text variant="xl/bold" tag="h3">
+          Playground
+        </Text>
+        <hr />
+        <Story />
         <Text variant="xs/semibold">
           copy the code below to use the component in your project. You can also
         </Text>
         <CodeDecoratorDefault />
-        <hr />
-        <Text variant="xl/bold" tag="h3">
-          Playground
-        </Text>
-        <Story />
       </div>
     ),
   ],
@@ -92,15 +92,15 @@ export const CustomLink: BreadCrumbStory = {
   decorators: [
     (Story) => (
       <div className="flex flex-col gap-4 w-full">
-        <Text variant="xs/semibold">
-          copy the code below to use the component in your project. You can also
-        </Text>
-        <CodeDecoratorCustomLink />
-        <hr />
         <Text variant="xl/bold" tag="h3">
           Playground
         </Text>
         <Story />
+        <hr />
+        <Text variant="xs/semibold">
+          copy the code below to use the component in your project. You can also
+        </Text>
+        <CodeDecoratorCustomLink />
       </div>
     ),
   ],
@@ -135,15 +135,15 @@ export const ManyLinks: BreadCrumbStory = {
   decorators: [
     (Story) => (
       <div className="flex flex-col gap-4 w-full">
-        <Text variant="xs/semibold">
-          copy the code below to use the component in your project. You can also
-        </Text>
-        <CodeDecoratorsManyLinks />
-        <hr />
         <Text variant="xl/bold" tag="h3">
           Playground
         </Text>
         <Story />
+        <hr />
+        <Text variant="xs/semibold">
+          copy the code below to use the component in your project. You can also
+        </Text>
+        <CodeDecoratorsManyLinks />
       </div>
     ),
   ],

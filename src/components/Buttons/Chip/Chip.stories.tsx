@@ -79,15 +79,15 @@ export const Default: ChipStory = {
   decorators: [
     (Story) => (
       <div className="flex flex-col gap-4 w-full text-neutral-black">
-        <Text variant="xs/semibold">
-          copy the code below to use the component in your project. You can also
-        </Text>
-        <DefaultCode />
-        <hr />
         <Text variant="xl/bold" tag="h3">
           Playground
         </Text>
         <Story />
+        <hr />
+        <Text variant="xs/semibold">
+          copy the code below to use the component in your project. You can also
+        </Text>
+        <DefaultCode />
       </div>
     ),
   ],
@@ -110,15 +110,15 @@ export const NotRemovable: ChipStory = {
   decorators: [
     (Story) => (
       <div className="flex flex-col gap-4 w-full text-neutral-black">
-        <Text variant="xs/semibold">
-          copy the code below to use the component in your project. You can also
-        </Text>
-        <NotRemovableCode />
-        <hr />
         <Text variant="xl/bold" tag="h3">
           Playground
         </Text>
         <Story />
+        <hr />
+        <Text variant="xs/semibold">
+          copy the code below to use the component in your project. You can also
+        </Text>
+        <NotRemovableCode />
       </div>
     ),
   ],

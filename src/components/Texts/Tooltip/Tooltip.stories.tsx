@@ -64,15 +64,15 @@ export const Default: TooltipStory = {
   decorators: [
     (Story) => (
       <div className="flex flex-col gap-4 w-full">
-        <Text variant="xs/semibold">
-          copy the code below to use the component in your project. You can also
-        </Text>
-        <DefaultCode />
-        <hr />
         <Text variant="xl/bold" tag="h3">
           Playground
         </Text>
         <Story />
+        <hr />
+        <Text variant="xs/semibold">
+          copy the code below to use the component in your project. You can also
+        </Text>
+        <DefaultCode />
       </div>
     ),
   ],
@@ -98,15 +98,15 @@ export const ClickTooltip: TooltipStory = {
   decorators: [
     (Story) => (
       <div className="flex flex-col gap-4 w-full">
-        <Text variant="xs/semibold">
-          copy the code below to use the component in your project. You can also
-        </Text>
-        <ClickCode />
-        <hr />
         <Text variant="xl/bold" tag="h3">
           Playground
         </Text>
         <Story />
+        <hr />
+        <Text variant="xs/semibold">
+          copy the code below to use the component in your project. You can also
+        </Text>
+        <ClickCode />
       </div>
     ),
   ],

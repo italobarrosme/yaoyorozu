@@ -28,7 +28,7 @@ export const DefaultComponent = ({
   return (
     <>
       <InputDatePicker
-        label={label}
+        label={isRangeDate ? 'Check-in and check-out' : label}
         icon={icon}
         className={className}
         error={error}

@@ -1,2 +1,6 @@
-export { CodeDecoratorDefault, DefaultComponent } from './CodeDecoratorDefault'
-export { NestedComponent, CodeDecoratorNested } from './CodeDecoratorNested'
+export {
+  CodeDecoratorDefault,
+  DefaultComponent,
+  NestedCode,
+  NestedComponent,
+} from './CodeDecorator'

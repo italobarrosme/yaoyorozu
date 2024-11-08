@@ -1,5 +1,5 @@
-export { DefaultComponent, ZebraStripedComponent } from './ComponentDecorator'
 export {
-  CodeDecoratorDefault,
-  CodeDecoratorZebraStriped,
-} from './CodeDecorator'
+  ZebraStripedCode,
+  ZebraStripedComponent,
+} from './CodeDecoratorZebraStriped'
+export { DefaultCode, DefaultComponent } from './CodeDecoratorDefault'

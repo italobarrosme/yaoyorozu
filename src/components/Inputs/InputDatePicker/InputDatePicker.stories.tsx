@@ -69,16 +69,16 @@ type InputDatePickerStory = StoryObj<typeof InputDatePicker>
 export const Default: InputDatePickerStory = {
   decorators: [
     (Story) => (
-      <div className="flex flex-col gap-4 w-full min-h-[700px]">
-        <Text variant="xs/semibold">
-          copy the code below to use the component in your project. You can also
-        </Text>
-        <CodeDecoratorDefault />
-        <hr />
+      <div className="flex flex-col gap-4 w-full">
         <Text variant="xl/bold" tag="h3">
           Playground
         </Text>
         <Story />
+        <hr />
+        <Text variant="xs/semibold">
+          copy the code below to use the component in your project. You can also
+        </Text>
+        <CodeDecoratorDefault />
       </div>
     ),
   ],

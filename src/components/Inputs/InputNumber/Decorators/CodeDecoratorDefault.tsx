@@ -28,7 +28,7 @@ export const DefaultComponent = ({
   dark,
   ...props
 }: InputNumberProps) => {
-  const handleValue = (value: number) => {
+  const handlerValue = (value: number) => {
     console.log(value, 'value number')
   }
 
@@ -41,7 +41,7 @@ export const DefaultComponent = ({
       auxiliary={auxiliary}
       currency={currency}
       dark={dark}
-      onChangeValue={handleValue}
+      onChangeValue={handlerValue}
       {...props}
     />
   )
