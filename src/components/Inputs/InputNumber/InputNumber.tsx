@@ -77,7 +77,7 @@ export const InputNumber = forwardRef<HTMLInputElement, InputNumberProps>(
             ref={ref}
             {...props}
             className={cn(
-              'h-10 w-full text-inherit rounded-md border border-primary-regular p-2 outline-none placeholder:text-neutral-light focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-regular focus-visible:ring-offset-2',
+              'h-10 w-full text-neutral-dark rounded-md border border-primary-regular p-2 outline-none placeholder:text-neutral-light focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-regular focus-visible:ring-offset-2',
               {
                 'border-feedback-error': error,
               },

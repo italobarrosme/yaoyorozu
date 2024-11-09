@@ -33,6 +33,7 @@ export type InputSelectProps = {
   defaultValue?: string
   isCheck?: boolean
   link?: LinkProps
+  dark?: boolean
 } & SelectHTMLAttributes<HTMLSelectElement>
 
 type OptionListProps = Pick<InputSelectProps, 'options' | 'isCheck'>
@@ -43,13 +44,13 @@ const OptionList = ({ options, isCheck }: OptionListProps) => {
       {options.map(({ label, value }) => (
         <SelectItem
           isCheck={isCheck}
-          className="hover:bg-primary-regular/10 font-bold cursor-pointer rounded-md transition-colors duration-300"
+          className={cn(
+            'hover:bg-primary-regular/10 cursor-pointer rounded-md transition-colors duration-300 bg-neutral-white'
+          )}
           value={value}
           key={value}
         >
-          <Text variant="sm/normal" className="text-neutral-black">
-            {label}
-          </Text>
+          <Text>{label}</Text>
         </SelectItem>
       ))}
     </>
@@ -70,8 +71,9 @@ export const InputSelect = ({
   errorMessage,
   accessoryText,
   link,
+  dark,
 }: InputSelectProps) => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(true)
 
   return (
     <Select
@@ -84,7 +86,9 @@ export const InputSelect = ({
           {label && (
             <label
               htmlFor={id}
-              className={cn('font-semibold text-inherit mb-1')}
+              className={cn('font-semibold text-inherit mb-2', {
+                'text-neutral-white': dark,
+              })}
             >
               {label}
             </label>
@@ -103,20 +107,23 @@ export const InputSelect = ({
           isOpen={isOpen}
           aria-label={label}
           className={cn(
-            'flex w-full cursor-pointer items-center rounded-md border sm:min-w-[320px] sm:border-solid group hover:bg-primary-light transition-colors delay-300',
+            'flex w-full cursor-pointer items-center rounded-md border bg-neutral-white sm:min-w-[320px] sm:border-solid group hover:bg-primary-light transition-colors delay-300',
             [
               hasError
                 ? 'border-feedback-error text-feedback-error'
                 : 'border-neutral-light text-primary-regular ',
             ],
             {
-              'text-neutral-black bg-neutral-light hover:bg-neutral-lightest':
+              'text-neutral-dark bg-neutral-light hover:bg-neutral-lightest':
                 disabled,
             },
             { 'border-primary-regular': !disabled && !hasError },
             {
               'focus:outline-none focus:ring-2 focus:ring-primary-regular focus:ring-offset-2':
                 !disabled,
+            },
+            {
+              'bg-neutral-dark !text-neutral-white': dark,
             },
             className
           )}
@@ -141,14 +148,14 @@ export const InputSelect = ({
             tag="small"
             className={cn(
               'mt-1',
-              hasError ? 'text-feedback-error' : 'text-neutral-black'
+              hasError ? 'text-feedback-error' : 'text-neutral-dark'
             )}
           >
             {accessoryText}
           </Text>
         )}
       </div>
-      <SelectContent className="bg-white">
+      <SelectContent className={'bg-neutral-white'}>
         <OptionList options={options} isCheck={isCheck} />
       </SelectContent>
     </Select>

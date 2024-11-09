@@ -66,12 +66,13 @@ export const SidePanel = ({
   orientation = 'right',
   children,
   trigger,
+  className,
   ...props
 }: SidePanelProps) => {
   return (
     <Dialog {...props}>
       <DialogTrigger asChild>{trigger}</DialogTrigger>
-      <DialogContentSidePanel orientation={orientation}>
+      <DialogContentSidePanel orientation={orientation} className={className}>
         {children}
       </DialogContentSidePanel>
     </Dialog>

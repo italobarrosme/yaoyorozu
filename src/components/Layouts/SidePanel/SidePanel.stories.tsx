@@ -33,6 +33,12 @@ const SidePanelMeta: Meta<typeof SidePanel> = {
         options: ['left', 'right'],
       },
     },
+    className: {
+      description: 'The className of the side panel',
+      control: {
+        type: 'text',
+      },
+    },
   },
   args: {
     children: 'Side panel content',
@@ -79,8 +85,12 @@ export const Default: SidePanelStory = {
       </div>
     ),
   ],
-  render: ({ children, trigger, orientation }) => (
-    <DefaultComponent trigger={trigger} orientation={orientation}>
+  render: ({ children, trigger, orientation, className }) => (
+    <DefaultComponent
+      trigger={trigger}
+      orientation={orientation}
+      className={className}
+    >
       {children}
     </DefaultComponent>
   ),

@@ -25,6 +25,7 @@ export const DefaultComponent = ({
   onValueChange,
   isCheck,
   link,
+  dark,
   ...props
 }: InputSelectProps) => {
   return (
@@ -38,7 +39,9 @@ export const DefaultComponent = ({
         accessoryText={accessoryText}
         isCheck={isCheck}
         link={link}
+        dark={dark}
         onValueChange={onValueChange}
+        className="text-xs text-neutral-dark"
         {...props}
       />
     </>

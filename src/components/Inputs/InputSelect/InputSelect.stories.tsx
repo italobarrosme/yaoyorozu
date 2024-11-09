@@ -54,6 +54,11 @@ const InputSelectMeta: Meta<typeof InputSelect> = {
       control: 'text',
       description: 'The link of the input',
     },
+    dark: {
+      control: 'boolean',
+      description: 'The dark state of the input',
+      defaultValue: false,
+    },
   },
   parameters: {
     docs: {
@@ -104,6 +109,7 @@ export const Default: InputSelectStory = {
     accessoryText: '',
     isCheck: false,
     link: undefined,
+    dark: true,
     onValueChange: (value) => console.log(value),
   },
   render: ({
@@ -115,6 +121,7 @@ export const Default: InputSelectStory = {
     accessoryText,
     isCheck,
     link,
+    dark,
     onValueChange,
   }) => (
     <DefaultComponent
@@ -126,6 +133,7 @@ export const Default: InputSelectStory = {
       accessoryText={accessoryText}
       isCheck={isCheck}
       link={link}
+      dark={dark}
       onValueChange={onValueChange}
     />
   ),
