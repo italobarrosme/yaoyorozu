@@ -46,6 +46,12 @@ const InputDatePickerMeta: Meta<typeof InputDatePicker> = {
         disable: true,
       },
     },
+    defaultValue: {
+      description: `The default value of the input, the format must be 'dd/MM/yyyy'`,
+      control: {
+        disable: true,
+      },
+    },
   },
   parameters: {
     docs: {
@@ -85,6 +91,7 @@ export const Default: InputDatePickerStory = {
   args: {
     label: 'Select your date born',
     name: 'input',
+    defaultValue: '04/06/1992',
   },
   render: ({
     label,
@@ -94,6 +101,7 @@ export const Default: InputDatePickerStory = {
     auxiliary,
     dark,
     isRangeDate,
+    defaultValue,
     ...props
   }) => (
     <DefaultComponent
@@ -103,6 +111,7 @@ export const Default: InputDatePickerStory = {
       error={error}
       auxiliary={auxiliary}
       dark={dark}
+      defaultValue={defaultValue}
       isRangeDate={isRangeDate}
       {...props}
     />

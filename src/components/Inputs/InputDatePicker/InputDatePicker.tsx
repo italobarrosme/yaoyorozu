@@ -27,6 +27,11 @@ export type InputDatePickerProps = {
   calendarProps?: CalendarProps
 } & InputHTMLAttributes<HTMLInputElement>
 
+const convertStringToDate = (date: string) => {
+  const [day, month, year] = date.split('/')
+  return new Date(Number(year), Number(month) - 1, Number(day))
+}
+
 export const InputDatePicker = forwardRef<
   HTMLInputElement,
   InputDatePickerProps
@@ -42,12 +47,15 @@ export const InputDatePicker = forwardRef<
       error,
       calendarProps,
       emitValue,
+      defaultValue,
       ...props
     },
     ref
   ) => {
     const [isCalendarOpen, setIsCalendarOpen] = useState(false)
-    const [date, setDate] = useState<Date | undefined>(new Date())
+    const [date, setDate] = useState<Date | undefined>(
+      convertStringToDate(defaultValue as string)
+    )
     const refCalendar = useRef<HTMLDivElement>(null)
 
     const handleClickOutside = () => {
@@ -165,6 +173,7 @@ export const InputDatePicker = forwardRef<
           <Calendar
             {...calendarProps}
             mode="single"
+            defaultMonth={date || new Date()}
             numberOfMonths={1}
             ref={refCalendar}
             className={cn(
