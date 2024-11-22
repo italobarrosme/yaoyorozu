@@ -50,6 +50,18 @@ export {
   type SidePanelProps,
   SidePanelButtonClose,
 } from './components/Layouts/SidePanel'
+export {
+  Dialog,
+  DialogPortal,
+  DialogOverlay,
+  DialogClose,
+  DialogTrigger,
+  DialogContent,
+  DialogHeader,
+  DialogFooter,
+  DialogTitle,
+  DialogDescription,
+} from './components/Layouts/Dialog'
 
 // Inputs
 export {
