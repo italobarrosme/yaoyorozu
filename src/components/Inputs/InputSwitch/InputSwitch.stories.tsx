@@ -18,6 +18,10 @@ const InputSwitchMeta: Meta<typeof InputSwitch> = {
       description: 'The id of the input',
       defaultValue: 'input',
     },
+    dark: {
+      control: 'boolean',
+      description: 'The dark mode of the input',
+    },
     className: {
       control: 'text',
       description: 'The class name of the input',
@@ -63,11 +67,12 @@ export const Default: InputSwitchStory = {
       console.log('changed', value)
     },
   },
-  render: ({ label, id, onCheckedChange, ...props }) => {
+  render: ({ label, id, onCheckedChange, dark, ...props }) => {
     return (
       <DefaultComponent
         label={label}
         id={id}
+        dark={dark}
         onCheckedChange={onCheckedChange}
         {...props}
       />

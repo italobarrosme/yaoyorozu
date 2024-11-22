@@ -35,6 +35,7 @@ export type InputSwitchProps = {
   id: string
   label?: string
   className?: string
+  dark?: boolean
 } & React.ComponentProps<typeof Switch>
 
 export const InputSwitch = ({
@@ -42,12 +43,20 @@ export const InputSwitch = ({
   label,
   className,
   onCheckedChange,
+  dark = false,
   ...props
 }: InputSwitchProps) => {
   return (
     <div className={cn(`flex gap-4`, className)}>
-      <label htmlFor={id}>{label}</label>
       <Switch id={id} onCheckedChange={onCheckedChange} {...props} />
+      <label
+        htmlFor={id}
+        className={cn('font-semibold text-inherit', {
+          'text-neutral-white': dark,
+        })}
+      >
+        {label}
+      </label>
     </div>
   )
 }

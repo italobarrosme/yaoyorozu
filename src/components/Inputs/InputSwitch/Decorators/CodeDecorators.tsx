@@ -23,11 +23,13 @@ export const DefaultComponent = ({
   label,
   id,
   onCheckedChange,
+  dark,
   ...props
 }: InputSwitchProps) => {
   return (
     <InputSwitch
       label={label}
+      dark={dark}
       id={id}
       onCheckedChange={onCheckedChange}
       {...props}

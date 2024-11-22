@@ -35,6 +35,8 @@ export type InputSliderProps = {
   isShowValue?: boolean
   defaultValue?: number[]
   onChangeValue: (value: number[]) => void
+  percentage?: boolean
+  dark?: boolean
 } & React.ComponentProps<typeof Slider>
 
 export const InputSlider = ({
@@ -45,20 +47,36 @@ export const InputSlider = ({
   onChangeValue,
   max = 100,
   step = 1,
+  dark = false,
+  percentage = false,
   ...props
 }: InputSliderProps) => {
   return (
-    <div className="flex flex-col">
-      {label && (
-        <label htmlFor={name} className="font-semibold text-inherit mb-1">
-          {label}
-        </label>
-      )}
-      {isShowValue && (
-        <span className="text-lg font-bold text-neutral-dark mb-1 w-full flex justify-center items-center">
-          {defaultValue}
-        </span>
-      )}
+    <div className="flex flex-col gap-4">
+      <div className="flex justify-between">
+        {label && (
+          <label
+            htmlFor={name}
+            className={cn('font-semibold text-inherit', {
+              'text-neutral-white': dark,
+            })}
+          >
+            {label}
+          </label>
+        )}
+        {isShowValue && (
+          <span
+            className={cn(
+              'text-lg font-bold text-inherit mb-1 w-full flex justify-end items-center',
+              {
+                'text-neutral-white': dark,
+              }
+            )}
+          >
+            {defaultValue} {percentage ? '%' : ''}
+          </span>
+        )}
+      </div>
       <Slider
         defaultValue={defaultValue}
         max={max}

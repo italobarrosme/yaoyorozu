@@ -102,7 +102,7 @@ export const InputDatePicker = forwardRef<
             type="text"
             readOnly
             className={cn(
-              'h-10 w-full text-inherit cursor-pointer rounded-md border-2 border-primary-regular p-2 outline-none placeholder:text-neutral-light focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-regular focus-visible:ring-offset-2',
+              'h-10 w-full text-neutral-dark cursor-pointer rounded-md border-2 border-primary-regular p-2 outline-none placeholder:text-neutral-light focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-regular focus-visible:ring-offset-2',
               {
                 'border-feedback-error': error,
               },

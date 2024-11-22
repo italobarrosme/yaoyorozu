@@ -42,6 +42,15 @@ const InputSliderMeta: Meta<typeof InputSlider> = {
       control: 'text',
       description: 'The class name of the input',
     },
+    dark: {
+      control: 'boolean',
+      description: 'The dark mode of the input',
+    },
+    percentage: {
+      control: 'boolean',
+      description:
+        'The percentage view of the input, needs to be used with isShowValue',
+    },
   },
   parameters: {
     docs: {
@@ -82,15 +91,19 @@ export const Default: InputSliderStory = {
     max,
     defaultValue,
     step,
+    dark,
+    percentage,
     ...props
   }) => (
     <DefaultComponent
       isShowValue={isShowValue}
       defaultValue={defaultValue}
+      dark={dark}
       max={max}
       step={step}
       label={label}
       name={name}
+      percentage={percentage}
       className={className}
       {...props}
     />

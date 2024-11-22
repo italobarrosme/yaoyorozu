@@ -21,12 +21,12 @@ const Checkbox = React.forwardRef<
     <CheckboxPrimitive.Indicator
       className={cn('flex items-center justify-center text-current')}
     >
-      <button>
+      <span>
         <Icon
           icon={'iconamoon:check-bold'}
           className="h-4 w-4 text-neutral-white"
         />
-      </button>
+      </span>
     </CheckboxPrimitive.Indicator>
   </CheckboxPrimitive.Root>
 ))
@@ -38,21 +38,38 @@ export type InputCheckboxProps = {
   label?: string
   className?: string
   error?: string
+  dark?: boolean
 } & React.ComponentProps<typeof Checkbox>
 
 export const InputCheckbox = ({
   label,
   className,
   error,
+  dark = false,
   ...props
 }: InputCheckboxProps) => {
   return (
     <div className="flex flex-col w-full gap-2">
       <div className={cn('flex items-center gap-4', className)}>
         <Checkbox id={props.name} {...props} />
-        <label id={props.name}>{label}</label>
+        <label
+          id={props.name}
+          className={cn('font-semibold text-inherit', {
+            'text-neutral-white': dark,
+          })}
+        >
+          {label}
+        </label>
       </div>
-      {error && <span className="text-red-500 text-xs">{error}</span>}
+      {error && (
+        <span
+          className="text-feedback-error text-xs font-semibold"
+          aria-live="polite"
+          aria-atomic="true"
+        >
+          {error}
+        </span>
+      )}
     </div>
   )
 }
