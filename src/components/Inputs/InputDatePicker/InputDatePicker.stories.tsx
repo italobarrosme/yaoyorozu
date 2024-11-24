@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { InputDatePicker } from '.'
 import { CodeDecoratorDefault, DefaultComponent } from './Decorators'
 import { Text } from '../../Texts/Text'
+import { add, format } from 'date-fns'
 
 const InputDatePickerMeta: Meta<typeof InputDatePicker> = {
   title: 'Components/Inputs/InputDatePicker',
@@ -91,7 +92,7 @@ export const Default: InputDatePickerStory = {
   args: {
     label: 'Select your date born',
     name: 'input',
-    defaultValue: '04/06/1992',
+    defaultValue: format(add(new Date(), { months: 1 }), 'dd/MM/yyyy'),
   },
   render: ({
     label,

@@ -54,7 +54,7 @@ export const InputDatePicker = forwardRef<
   ) => {
     const [isCalendarOpen, setIsCalendarOpen] = useState(false)
     const [date, setDate] = useState<Date | undefined>(
-      convertStringToDate(defaultValue as string)
+      defaultValue ? convertStringToDate(defaultValue as string) : undefined
     )
     const refCalendar = useRef<HTMLDivElement>(null)
 
@@ -152,10 +152,7 @@ export const InputDatePicker = forwardRef<
           <Calendar
             {...calendarProps}
             className={cn(
-              'absolute z-10 top-20 left-0 shadow-lg bg-neutral-white',
-              {
-                'bg-neutral-dark text-neutral-white': dark,
-              }
+              'absolute z-10 top-20 left-0 shadow-lg bg-neutral-white'
             )}
             initialFocus
             mode="range"
@@ -177,10 +174,7 @@ export const InputDatePicker = forwardRef<
             numberOfMonths={1}
             ref={refCalendar}
             className={cn(
-              'absolute z-10 top-20 left-0 shadow-lg  bg-neutral-white',
-              {
-                'bg-neutral-dark text-neutral-white': dark,
-              }
+              'absolute z-10 top-20 left-0 shadow-lg  bg-neutral-white'
             )}
             onSelect={(day) => {
               setDate(day)
